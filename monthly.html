@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monthly Report PDF Generator</title>
+    <link rel="stylesheet" href="monthlyreport.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+    <header>
+        <nav class="main-navbar">
+            <ul>
+                <li><a href="index.html">Lab Analysis</a></li>
+                <li><a href="monthly.html" class="active">Monthly Report</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="app-container">
+        <div class="editor-pane">
+            <header>
+                <h2>1. Paste Monthly Report JSON</h2>
+                <p>Paste your data below and click "Load Editor". Edit the generated fields to see a live preview.</p>
+            </header>
+            <textarea id="json-input" placeholder="Paste your monthly report JSON data here..."></textarea>
+            <button id="load-button">Load Editor & Preview</button>
+            <div id="editor-form-container">
+            </div>
+        </div>
+
+        <div class="preview-pane">
+            <header>
+                <h2>2. Live PDF Preview</h2>
+                <button id="download-button">Download as PDF</button>
+            </header>
+            <div id="pdf-preview">
+                <div class="placeholder">
+                    <p>Load data to see the preview.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="monthlyreport.js"></script>
+</body>
+
+</html>
