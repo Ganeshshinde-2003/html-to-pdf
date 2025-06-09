@@ -1,24 +1,37 @@
-/* Basic Setup */
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
 body,
 html {
   margin: 0;
   padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
-    Arial, sans-serif;
+  font-family: "Manrope", sans-serif;
+  font-optical-sizing: auto;
   background-color: #f0f2f5;
   color: #333;
+  box-sizing: border-box;
+}
+
+/* Add this to your style.css file */
+.avoid-break {
+  page-break-inside: avoid !important;
+  break-inside: avoid !important;
+}
+
+.tight-for-pdf {
+  padding: 0 !important;
+  margin: 0 !important;
 }
 
 /* Main App Layout */
 .app-container {
   display: flex;
-  height: 100vh;
+  /* Adjusted height to account for the new main navbar */
+  height: calc(100vh - 50px);
   width: 100vw;
 }
 
 .editor-pane,
 .preview-pane {
-  flex: 1; /* Each pane takes up half the width */
+  width: 50%; /* Each pane takes up half the width */
   padding: 20px;
   overflow-y: auto;
   box-sizing: border-box;
@@ -29,7 +42,8 @@ html {
   border-right: 1px solid #d9d9d9;
 }
 
-header {
+.editor-pane header,
+.preview-pane header {
   border-bottom: 1px solid #e8e8e8;
   padding-bottom: 15px;
   margin-bottom: 20px;
@@ -66,40 +80,19 @@ button:hover {
   background-color: #0056b3;
 }
 
-#editor-form-container {
-  margin-top: 20px;
-}
-
-.form-section {
-  background-color: #f9f9f9;
-  border: 1px solid #e0e0e0;
-  border-radius: 5px;
-  padding: 15px;
-  margin-bottom: 15px;
-}
-
-.form-section h3,
-.form-section h4 {
-  margin-top: 0;
-  color: #333;
-  border-bottom: 1px solid #ddd;
-  padding-bottom: 5px;
-}
-.form-section h4 {
-  margin-top: 15px;
-}
-.form-section fieldset {
+#editor-form-container fieldset {
   border: 1px dashed #ccc;
   padding: 10px;
   margin-top: 10px;
   border-radius: 4px;
 }
-.form-section legend {
+
+#editor-form-container legend {
   font-weight: bold;
   color: #0056b3;
 }
 
-.form-section label {
+#editor-form-container label {
   display: block;
   font-weight: bold;
   margin-top: 10px;
@@ -108,8 +101,8 @@ button:hover {
   color: #555;
 }
 
-.form-section input[type="text"],
-.form-section textarea {
+#editor-form-container input[type="text"],
+#editor-form-container textarea {
   width: 100%;
   padding: 8px;
   border: 1px solid #ccc;
@@ -117,135 +110,387 @@ button:hover {
   box-sizing: border-box;
 }
 
-/* PDF Preview Styling */
+/* ==============================================
+PDF PREVIEW STYLES
+==============================================
+*/
 #pdf-preview {
   background-color: #fff;
   border: 1px solid #ccc;
-  padding: 30px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  min-height: 80vh;
+  /* A4 paper aspect ratio for a more realistic preview */
+  width: 8.27in;
+  min-height: 11.69in;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+/* This class is added during PDF generation for higher quality rendering */
+.pdf-render-view {
+  width: auto;
+  height: auto;
+  box-shadow: none;
+  border: none;
+  margin: 0;
+  /* padding: 0.5in; */
 }
 
 #pdf-preview .placeholder {
-  display: flex;
+  /* display: flex; */
   justify-content: center;
   align-items: center;
   height: 100%;
   color: #888;
 }
 
-.highlight {
-  background-color: #e6f7ff;
-  color: #0056b3;
-  font-weight: bold;
-  padding: 2px 4px;
-  border-radius: 3px;
+.c1 {
+  font-size: 16px;
+  color: #f67e3c;
+  font-weight: 500;
+}
+.c2 {
+  font-size: 16px;
+  color: #1e8e3e;
+  font-weight: 500;
 }
 
-/* Report element styles */
+/* --- General Report Typography & Layout --- */
+.report-header h1 {
+  font-size: 30px;
+  font-weight: 600;
+  padding: 20px 30px;
+  color: #1a1a1a;
+  margin: 0 !important;
+  border-bottom: 1px solid #9e9a98;
+}
+.report-header .last-update {
+  font-size: 18px;
+  color: #2b2928;
+  font-weight: 500;
+  padding: 20px 30px;
+  border-bottom: 1px solid #9e9a98;
+  margin: 0;
+}
+.report-header .last-update span {
+  color: #023936;
+  font-weight: 700;
+}
+
 .report-section {
   margin-bottom: 30px;
   page-break-inside: avoid;
 }
 .report-section h3 {
-  color: #0056b3;
-  border-bottom: 2px solid #007bff;
-  padding-bottom: 5px;
-  font-size: 1.5em;
+  color: #333;
+  font-weight: 600;
+  font-size: 20px;
+  margin-bottom: 15px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #f0f0f0;
 }
 .report-section h4 {
-  color: #333;
-  margin-top: 20px;
+  color: #2b2928;
+  margin-top: 25px;
   margin-bottom: 10px;
-  font-size: 1.2em;
-  border-bottom: 1px solid #eee;
-  padding-bottom: 5px;
-}
-.report-section h5 {
-  font-size: 1em;
-  color: #007bff;
-  margin-top: 15px;
-  margin-bottom: 5px;
+  font-size: 24px;
+  font-weight: 600;
 }
 .report-section p,
 .report-section li {
-  line-height: 1.6;
+  text-align: left;
+  margin-top: 20px;
+  font-size: 16px;
+  color: #656160;
 }
 ul,
 ol {
   padding-left: 20px;
 }
-.guidance-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-}
-.guidance-category ul {
-  list-style-type: none;
-  padding: 0;
-}
-.guidance-category li {
-  background-color: #f9f9f9;
-  padding: 8px;
-  border-left: 3px solid #007bff;
-  margin-bottom: 5px;
-  border-radius: 0 4px 4px 0;
-}
-.action-plan-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 15px;
-}
 
-/* NEW STYLES FOR BIOMARKER RESULTS */
-.summary-boxes {
-  display: flex;
-  gap: 15px;
-  margin: 20px 0;
-  flex-wrap: wrap;
+/* ==============================================
+NEW BIOMARKER CHART STYLES
+==============================================
+*/
+.biomarker-chart-container {
+  background-color: #f9fafb;
+  border-radius: 8px;
+  margin-bottom: 25px;
+  page-break-inside: avoid;
 }
-.summary-box {
-  flex: 1;
-  padding: 15px;
-  border-radius: 5px;
-  text-align: center;
-  color: white;
+.biomarker-chart-container .meta-info {
+  font-size: 18px;
+  color: #2b2928;
+  font-weight: 300;
 }
-.summary-box .count {
+.biomarker-chart-container .meta-info span {
   display: block;
-  font-size: 2em;
-  font-weight: bold;
+  margin-bottom: 4px;
 }
-.summary-box.optimal {
-  background-color: #28a745;
-}
-.summary-box.attention {
-  background-color: #dc3545;
-}
-.summary-box.mind {
-  background-color: #ffc107;
-  color: #333;
+.biomarker-warraper {
+  background: linear-gradient(to bottom, #e6ebf5, #f1f5e6, #f4f8f4);
+  padding: 20px 30px;
 }
 
+.biomarker-chart-container h3 {
+  font-size: 32px;
+  font-weight: 500;
+}
+
+.chart-wrapper {
+  border: 1px solid #023936;
+  border-radius: 10px;
+  padding: 0 20px;
+}
+.chart-area {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  height: 400px; /* Container height for bars */
+  width: 100%;
+}
+.chart-bar-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  width: 40%; /* Give each bar group a width */
+}
+.bar-label {
+  font-size: 30px;
+  font-weight: 600;
+  color: #2b2928;
+}
+.bar {
+  width: 100%; /* Make bar fill its group's width */
+  max-width: 120px; /* But not too wide */
+  border-radius: 15px 15px 0 0;
+  transition: height 0.5s ease-out;
+}
+.bar.optimal {
+  background-color: #537767;
+} /* Green */
+.bar.mind {
+  background-color: #d98600;
+} /* Amber */
+.bar.attention {
+  background-color: #5D2555;
+} /* Red */
+.bar-title {
+  font-size: 13px;
+  color: #2b2928;
+  font-weight: 400;
+}
+.chart-summary {
+  text-align: left;
+  margin-top: 20px;
+  font-size: 16px;
+  color: #656160;
+}
+
+/* ==============================================
+DETAILED BIOMARKER CARD STYLES
+==============================================
+*/
 .biomarkers-container {
   margin-top: 20px;
 }
-.biomarker-card {
-  border: 1px solid #ddd;
-  border-left-width: 5px;
-  padding: 15px;
-  margin-bottom: 15px;
-  border-radius: 5px;
-  page-break-inside: avoid;
+.categories-wrapper {
+  padding: 20px 30px;
 }
-.biomarker-card.status-optimal {
-  border-left-color: #28a745;
+.missing-info-container {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #2b2928;
+  font-size: 16px;
+  margin-bottom: 5px;
 }
-.biomarker-card.status-attention_needed {
-  border-left-color: #dc3545;
+.circular-indicatorM {
+  width: 10px;
+  height: 10px;
+  background-color: #9E9A98;
+  border-radius: 50%;
 }
-.biomarker-card.status-keep_in_mind {
-  border-left-color: #ffc107;
+.circular-indicatorO {
+  width: 10px;
+  height: 10px;
+  background-color: #537767;
+  border-radius: 50%;
+}
+.circular-indicatorK {
+  width: 10px;
+  height: 10px;
+  background-color: #D98600;
+  border-radius: 50%;
+}
+.circular-indicatorA {
+  width: 10px;
+  height: 10px;
+  background-color: #5D2555;
+  border-radius: 50%;
+}
+
+.circular-indicator-optimal{
+  width: 25px;
+  height: 25px;
+  background-color: #537767;
+  border-radius: 50%;
+}
+
+.circular-indicator-attention_needed{
+  width: 25px;
+  height: 25px;
+  background-color: #D98600;
+  border-radius: 50%;
+}
+
+.circular-indicator-keep_in_mind{
+  width: 25px;
+  height: 25px;
+  background-color: #5D2555;
+  border-radius: 50%;
+}
+
+.categoris-value{
+  display: flex;
+  gap: 100px;
+}
+
+.biomarker-result-div{
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-top: 5px;
+  margin-bottom: 20px;
+}
+
+.biomarker-card{
+  display: flex;
+  flex-direction: column;
+  margin-top: 80px;
+  padding-bottom: 80px;
+  border-bottom: 1px solid #656160;
+}
+.biomarker-box-card{
+  width: 50%;
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+}
+.biomarker-box-card h5{
+  font-size: 24px;
+  color: #000;
+  font-weight: 500;
+  margin: 0;
+}
+
+.biomarker-box-card p{
+  color: #000000;
+}
+.result-show{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 50px 0;
+}
+.result-show .result-value-optimal{
+  font-size: 50px;
+  color: #537767;
+  margin: 0;
+}
+
+.result-show .result-unit-optimal{
+  font-size: 20px;
+  color: #537767;
+  margin: 0;
+}
+
+.result-show .result-value-keep_in_mind{
+  font-size: 50px;
+  color: #5D2555;
+  margin: 0;
+}
+
+.result-show .result-unit-keep_in_mind{
+  font-size: 20px;
+  color: #5D2555;
+  margin: 0;
+}
+
+.result-show .result-value-attention_needed{
+  font-size: 50px;
+  color: #D98600;
+  margin: 0;
+}
+
+.result-show .result-unit-attention_needed{
+  font-size: 20px;
+  color: #D98600;
+  margin: 0;
+}
+
+.range-show{
+  align-self: self-start;
+  display: flex;
+  gap: 5px;
+}
+
+.range-indicator {
+  width: 10px;
+  height: 50px;
+  border-radius: 40px;
+  background-color: #CCCCCC;
+}
+
+.range-indicator-optimal {
+  background-color: #537767;
+}
+
+.range-indicator-attention_needed {
+  background-color: #D98600;
+}
+
+.range-indicator-keep_in_mind {
+  background-color: #5D2555;
+}
+
+.range-content{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+}
+
+.range-content p{
+  margin: 0 !important;
+  font: 14px !important;
+}
+
+.biomarker-box-card-optimal{
+  align-self: center;
+  border-radius: 10px;
+  border: 1px solid #A1A9BC;
+  padding: 20px;
+  margin: 30px 0;
+  background-color: #EBF0E8;
+}
+
+.biomarker-box-card-attention_needed{
+  align-self: center;
+  border-radius: 10px;
+  border: 1px solid #A1A9BC;
+  padding: 20px;
+  margin: 30px 0;
+  background-color: #FFF8E5;
+}
+
+.biomarker-box-card-keep_in_mind{
+  align-self: center;
+  border-radius: 10px;
+  border: 1px solid #A1A9BC;
+  padding: 20px;
+  margin: 30px 0;
+  background-color: #DBCFD2;
 }
 
 .biomarker-header {
@@ -256,7 +501,9 @@ ol {
 }
 .biomarker-header h5 {
   margin: 0;
-  font-size: 1.1em;
+  font-size: 24px;
+  font-weight: 600;
+  color: #333;
 }
 .biomarker-result {
   font-weight: bold;
@@ -266,8 +513,42 @@ ol {
   margin: 5px 0;
 }
 
+.p-grey{
+  color: #656160;
+  font-size: 18px;
+  font-weight: 400;
+}
+.crucial{
+  border-bottom: 1px solid #9e9a98;
+}
+.crucial-ind{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: start;
+  margin-bottom:40px 
+}
+
+.crucial h4{
+  margin-bottom: 30px;
+}
+.crucial p{
+  margin: 0;
+}
+.crucial .crucial-name{
+  color: #2b2928;
+  width: fit-content;
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0;
+}
+
+/* ==============================================
+MAIN NAVBAR (No changes made here)
+==============================================
+*/
 .main-navbar {
-  background-color: #2c3e50; /* A dark blue background */
+  background-color: #2c3e50;
   padding: 10px 30px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
@@ -276,10 +557,10 @@ ol {
   padding: 0;
   list-style: none;
   display: flex;
-  gap: 25px; /* Space between the links */
+  gap: 25px;
 }
 .main-navbar a {
-  color: #ecf0f1; /* A light grey color for text */
+  color: #ecf0f1;
   text-decoration: none;
   font-size: 16px;
   padding: 8px 15px;
@@ -287,11 +568,10 @@ ol {
   transition: background-color 0.3s;
 }
 .main-navbar a:hover {
-  background-color: #34495e; /* A slightly lighter blue on hover */
+  background-color: #34495e;
 }
-/* Style for the highlighted/active link */
 .main-navbar a.active {
-  background-color: #e74c3c; /* A red color to indicate it's active */
+  background-color: #e74c3c;
   color: white;
   font-weight: bold;
 }
