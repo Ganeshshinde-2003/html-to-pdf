@@ -10,15 +10,10 @@ html {
   box-sizing: border-box;
 }
 
-/* Add this to your style.css file */
-.avoid-break {
-  page-break-inside: avoid !important;
-  break-inside: avoid !important;
-}
-
-.tight-for-pdf {
-  padding: 0 !important;
-  margin: 0 !important;
+/* Add this class to your style.css file */
+.page-break-before {
+  page-break-before: always !important;
+  break-before: page !important;
 }
 
 /* Main App Layout */
@@ -245,7 +240,7 @@ NEW BIOMARKER CHART STYLES
   display: flex;
   justify-content: space-around;
   align-items: flex-end;
-  height: 400px; /* Container height for bars */
+  height: 300px; /* Container height for bars */
   width: 100%;
 }
 .chart-bar-group {
@@ -273,7 +268,7 @@ NEW BIOMARKER CHART STYLES
   background-color: #d98600;
 } /* Amber */
 .bar.attention {
-  background-color: #5D2555;
+  background-color: #5d2555;
 } /* Red */
 .bar-title {
   font-size: 13px;
@@ -308,7 +303,7 @@ DETAILED BIOMARKER CARD STYLES
 .circular-indicatorM {
   width: 10px;
   height: 10px;
-  background-color: #9E9A98;
+  background-color: #9e9a98;
   border-radius: 50%;
 }
 .circular-indicatorO {
@@ -320,43 +315,43 @@ DETAILED BIOMARKER CARD STYLES
 .circular-indicatorK {
   width: 10px;
   height: 10px;
-  background-color: #D98600;
+  background-color: #d98600;
   border-radius: 50%;
 }
 .circular-indicatorA {
   width: 10px;
   height: 10px;
-  background-color: #5D2555;
+  background-color: #5d2555;
   border-radius: 50%;
 }
 
-.circular-indicator-optimal{
+.circular-indicator-optimal {
   width: 25px;
   height: 25px;
   background-color: #537767;
   border-radius: 50%;
 }
 
-.circular-indicator-attention_needed{
+.circular-indicator-attention_needed {
   width: 25px;
   height: 25px;
-  background-color: #D98600;
+  background-color: #d98600;
   border-radius: 50%;
 }
 
-.circular-indicator-keep_in_mind{
+.circular-indicator-keep_in_mind {
   width: 25px;
   height: 25px;
-  background-color: #5D2555;
+  background-color: #5d2555;
   border-radius: 50%;
 }
 
-.categoris-value{
+.categoris-value {
   display: flex;
   gap: 100px;
 }
 
-.biomarker-result-div{
+.biomarker-result-div {
   display: flex;
   gap: 10px;
   align-items: center;
@@ -364,72 +359,78 @@ DETAILED BIOMARKER CARD STYLES
   margin-bottom: 20px;
 }
 
-.biomarker-card{
+/* Add this class to your style.css file */
+.first-biomarker-card {
+  /* This removes any top margin or padding the other cards might have */
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+.biomarker-card {
   display: flex;
   flex-direction: column;
-  margin-top: 80px;
-  padding-bottom: 80px;
+  padding: 80px 30px;
   border-bottom: 1px solid #656160;
 }
-.biomarker-box-card{
+.biomarker-box-card {
   width: 50%;
   display: flex;
-  flex-direction:column;
+  flex-direction: column;
   align-items: center;
 }
-.biomarker-box-card h5{
+.biomarker-box-card h5 {
   font-size: 24px;
   color: #000;
   font-weight: 500;
   margin: 0;
 }
 
-.biomarker-box-card p{
+.biomarker-box-card p {
   color: #000000;
 }
-.result-show{
+.result-show {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 50px 0;
 }
-.result-show .result-value-optimal{
+.result-show .result-value-optimal {
   font-size: 50px;
   color: #537767;
   margin: 0;
 }
 
-.result-show .result-unit-optimal{
+.result-show .result-unit-optimal {
   font-size: 20px;
   color: #537767;
   margin: 0;
 }
 
-.result-show .result-value-keep_in_mind{
+.result-show .result-value-keep_in_mind {
   font-size: 50px;
-  color: #5D2555;
+  color: #5d2555;
   margin: 0;
 }
 
-.result-show .result-unit-keep_in_mind{
+.result-show .result-unit-keep_in_mind {
   font-size: 20px;
-  color: #5D2555;
+  color: #5d2555;
   margin: 0;
 }
 
-.result-show .result-value-attention_needed{
+.result-show .result-value-attention_needed {
   font-size: 50px;
-  color: #D98600;
+  color: #d98600;
   margin: 0;
 }
 
-.result-show .result-unit-attention_needed{
+.result-show .result-unit-attention_needed {
   font-size: 20px;
-  color: #D98600;
+  color: #d98600;
   margin: 0;
 }
 
-.range-show{
+.range-show {
   align-self: self-start;
   display: flex;
   gap: 5px;
@@ -439,7 +440,7 @@ DETAILED BIOMARKER CARD STYLES
   width: 10px;
   height: 50px;
   border-radius: 40px;
-  background-color: #CCCCCC;
+  background-color: #cccccc;
 }
 
 .range-indicator-optimal {
@@ -447,50 +448,50 @@ DETAILED BIOMARKER CARD STYLES
 }
 
 .range-indicator-attention_needed {
-  background-color: #D98600;
+  background-color: #d98600;
 }
 
 .range-indicator-keep_in_mind {
-  background-color: #5D2555;
+  background-color: #5d2555;
 }
 
-.range-content{
+.range-content {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: start;
 }
 
-.range-content p{
+.range-content p {
   margin: 0 !important;
   font: 14px !important;
 }
 
-.biomarker-box-card-optimal{
+.biomarker-box-card-optimal {
   align-self: center;
   border-radius: 10px;
-  border: 1px solid #A1A9BC;
+  border: 1px solid #a1a9bc;
   padding: 20px;
   margin: 30px 0;
-  background-color: #EBF0E8;
+  background-color: #ebf0e8;
 }
 
-.biomarker-box-card-attention_needed{
+.biomarker-box-card-attention_needed {
   align-self: center;
   border-radius: 10px;
-  border: 1px solid #A1A9BC;
+  border: 1px solid #a1a9bc;
   padding: 20px;
   margin: 30px 0;
-  background-color: #FFF8E5;
+  background-color: #fff8e5;
 }
 
-.biomarker-box-card-keep_in_mind{
+.biomarker-box-card-keep_in_mind {
   align-self: center;
   border-radius: 10px;
-  border: 1px solid #A1A9BC;
+  border: 1px solid #a1a9bc;
   padding: 20px;
   margin: 30px 0;
-  background-color: #DBCFD2;
+  background-color: #dbcfd2;
 }
 
 .biomarker-header {
@@ -513,29 +514,29 @@ DETAILED BIOMARKER CARD STYLES
   margin: 5px 0;
 }
 
-.p-grey{
+.p-grey {
   color: #656160;
   font-size: 18px;
   font-weight: 400;
 }
-.crucial{
+.crucial {
   border-bottom: 1px solid #9e9a98;
 }
-.crucial-ind{
+.crucial-ind {
   display: flex;
   flex-direction: column;
   gap: 10px;
   align-items: start;
-  margin-bottom:40px 
+  margin-bottom: 40px;
 }
 
-.crucial h4{
+.crucial h4 {
   margin-bottom: 30px;
 }
-.crucial p{
+.crucial p {
   margin: 0;
 }
-.crucial .crucial-name{
+.crucial .crucial-name {
   color: #2b2928;
   width: fit-content;
   font-size: 24px;
