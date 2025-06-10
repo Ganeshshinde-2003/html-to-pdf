@@ -744,3 +744,77 @@ MAIN NAVBAR (No changes made here)
 .guidance-category span{
   font-weight: 600;
 }
+.pillar-intro{
+ margin: 0 !important;
+}
+.suppliment-wrapper h4{
+  font-size: 24px;
+  margin: 0;
+  margin-top: 25px;
+  margin-bottom: 10px;
+}
+
+.recommendations-container{
+  padding: 0 30px;
+  margin-top: 40px;
+}
+
+.supplement-recommendation-card{
+  border: 1px solid #C9C5C3;
+  border-radius: 10px;
+  margin-bottom: 40px;
+  padding: 20px;
+}
+
+.supplement-recommendation-card h4, .supplement-recommendation-card p{
+  margin: 0;
+}
+
+.supplement-recommendation-card h4{
+  font-size: 24px;
+  color: #2B2928;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.supplement-recommendation-card div{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.supplement-recommendation-card div span{
+ font-size: 16px;
+ font-weight: 700;
+}
+.supplement-recommendation-card div p{
+ font-size: 16px;
+ font-weight: 400;
+}
+
+.action-wrapper h4{
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.action-plan-details{
+  padding: 0 30px;
+  padding-bottom: 40px;
+}
+
+.action-plan-category h5{
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0;
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
+.action-plan-category .action-item p{
+  margin: 0;
+}
+.action-plan-category .action-item{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 5px;
+}
