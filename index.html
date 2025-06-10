@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JSON to PDF Generator</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
     <header>
@@ -36,6 +34,14 @@
                 <h2>2. Live PDF Preview</h2>
                 <button id="download-button">Download as PDF</button>
             </header>
+
+            <div class="tab-container">
+                <button class="tab-button active" data-tab="biomarkers">Biomarkers</button>
+                <button class="tab-button" data-tab="4pillars">4 Pillars</button>
+                <button class="tab-button" data-tab="supplements">Supplement & Action Plan</button>
+            </div>
+
+
             <div id="pdf-preview">
                 <div class="placeholder">
                     <p>Load data to see the preview.</p>
@@ -45,8 +51,9 @@
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html-to-image/1.11.11/html-to-image.min.js"></script> <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html-to-image/1.11.11/html-to-image.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
 
 </body>
-
 </html>
