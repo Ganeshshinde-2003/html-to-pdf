@@ -507,8 +507,7 @@ DETAILED BIOMARKER CARD STYLES
 
 .biomarker-box-card-optimal {
   align-self: center;
-  border-radius: 10px;
-  border: 1px solid #a1a9bc;
+  border-radius: 20px;
   padding: 20px;
   margin: 30px 0;
   background-color: #ebf0e8;
@@ -516,8 +515,7 @@ DETAILED BIOMARKER CARD STYLES
 
 .biomarker-box-card-attention_needed {
   align-self: center;
-  border-radius: 10px;
-  border: 1px solid #a1a9bc;
+  border-radius: 20px;
   padding: 20px;
   margin: 30px 0;
   background-color: #fff8e5;
@@ -525,8 +523,7 @@ DETAILED BIOMARKER CARD STYLES
 
 .biomarker-box-card-keep_in_mind {
   align-self: center;
-  border-radius: 10px;
-  border: 1px solid #a1a9bc;
+  border-radius: 20px;
   padding: 20px;
   margin: 30px 0;
   background-color: #dbcfd2;
