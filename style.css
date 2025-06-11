@@ -26,7 +26,7 @@ html {
 
 .editor-pane,
 .preview-pane {
-  width: 50%; /* Each pane takes up half the width */
+  width: 50%;
   padding: 20px;
   overflow-y: auto;
   box-sizing: border-box;
@@ -35,6 +35,10 @@ html {
 .editor-pane {
   background-color: #ffffff;
   border-right: 1px solid #d9d9d9;
+}
+
+.tab-container{
+  margin-bottom: 20px;
 }
 
 .editor-pane header,
@@ -139,30 +143,31 @@ PDF PREVIEW STYLES
 }
 
 .c1 {
-  font-size: 16px;
+  font-size: 32px;
   color: #f67e3c;
   font-weight: 500;
 }
 .c2 {
-  font-size: 16px;
+  font-size: 32px;
   color: #1e8e3e;
   font-weight: 500;
 }
 
 /* --- General Report Typography & Layout --- */
 .report-header h1 {
-  font-size: 30px;
-  font-weight: 600;
-  padding: 20px 30px;
+  font-size: 52px;
+  font-weight: 500;
+  padding: 20px 40px;
+  padding-top: 80px;
   color: #1a1a1a;
   margin: 0 !important;
   border-bottom: 1px solid #9e9a98;
 }
 .report-header .last-update {
-  font-size: 18px;
+  font-size: 30px;
   color: #2b2928;
-  font-weight: 500;
-  padding: 20px 30px;
+  font-weight: 400;
+  padding: 40px;
   border-bottom: 1px solid #9e9a98;
   margin: 0;
 }
@@ -172,29 +177,34 @@ PDF PREVIEW STYLES
 }
 
 .report-section {
-  margin-bottom: 30px;
   page-break-inside: avoid;
 }
 .report-section h3 {
   color: #333;
   font-weight: 600;
-  font-size: 20px;
+  font-size: 50px !important;
   margin-bottom: 15px;
   padding-bottom: 8px;
-  border-bottom: 2px solid #f0f0f0;
 }
 .report-section h4 {
   color: #2b2928;
-  margin-top: 25px;
+  margin-top: 20px;
   margin-bottom: 10px;
-  font-size: 24px;
-  font-weight: 600;
+  font-size: 50px;
+  font-weight: 400;
 }
+.why-it-matters-h4{
+  margin-top: 50px !important;
+}
+.biomarker-warraper h4{
+  margin-top: 100px !important;
+}
+
 .report-section p,
 .report-section li {
   text-align: left;
   margin-top: 20px;
-  font-size: 16px;
+  font-size: 32px;
   color: #656160;
 }
 ul,
@@ -212,18 +222,36 @@ NEW BIOMARKER CHART STYLES
   margin-bottom: 25px;
   page-break-inside: avoid;
 }
-.biomarker-chart-container .meta-info {
-  font-size: 18px;
+.biomarker-chart-container .meta-info{
+  font-size: 25px;
   color: #2b2928;
   font-weight: 300;
+  margin-bottom: 50px;
+}
+.pillar-meta-info, .suppliment-meta-info{
+  font-size: 25px;
+  color: #2b2928;
+  font-weight: 300;
+  margin-bottom: 50px;
+}
+.pillar-meta-info span, .suppliment-meta-info span {
+  display: block;
+  margin-bottom: 4px;
 }
 .biomarker-chart-container .meta-info span {
   display: block;
   margin-bottom: 4px;
 }
+.biomarker-chart-container .meta-info span strong{
+  font-weight: 500;
+}
+.pillar-meta-info span strong, .suppliment-meta-info span strong{
+  font-weight: 500;
+}
 .biomarker-warraper {
-  background: linear-gradient(to bottom, #e6ebf5, #f1f5e6, #f4f8f4);
-  padding: 20px 30px;
+  background-color: #F1F0F2;
+  padding: 50px 40px;
+  padding-bottom: 100px;
 }
 
 .biomarker-chart-container h3 {
@@ -235,12 +263,14 @@ NEW BIOMARKER CHART STYLES
   border: 1px solid #023936;
   border-radius: 10px;
   padding: 0 20px;
+  background-color: white;
+  margin-bottom: 100px;
 }
 .chart-area {
   display: flex;
   justify-content: space-around;
   align-items: flex-end;
-  height: 300px; /* Container height for bars */
+  height: 400px; /* Container height for bars */
   width: 100%;
 }
 .chart-bar-group {
@@ -251,13 +281,13 @@ NEW BIOMARKER CHART STYLES
   width: 40%; /* Give each bar group a width */
 }
 .bar-label {
-  font-size: 30px;
+  font-size: 40px;
   font-weight: 600;
   color: #2b2928;
 }
 .bar {
   width: 100%; /* Make bar fill its group's width */
-  max-width: 120px; /* But not too wide */
+  max-width: 210px; /* But not too wide */
   border-radius: 15px 15px 0 0;
   transition: height 0.5s ease-out;
 }
@@ -271,7 +301,7 @@ NEW BIOMARKER CHART STYLES
   background-color: #5d2555;
 } /* Red */
 .bar-title {
-  font-size: 13px;
+  font-size: 15px;
   color: #2b2928;
   font-weight: 400;
 }
@@ -287,17 +317,23 @@ DETAILED BIOMARKER CARD STYLES
 ==============================================
 */
 .biomarkers-container {
-  margin-top: 20px;
+  margin-top: 60px;
 }
 .categories-wrapper {
-  padding: 20px 30px;
+  padding: 20px 40px;
+  padding-bottom: 50px;
+  border-bottom: 1px solid #a1a9bc;
+}
+.categories-wrapper h4{
+  font-size: 70px;
+  margin-bottom: 60px;
 }
 .missing-info-container {
   display: flex;
   align-items: center;
   gap: 5px;
   color: #2b2928;
-  font-size: 16px;
+  font-size: 30px;
   margin-bottom: 5px;
 }
 .circular-indicatorM {
@@ -369,24 +405,25 @@ DETAILED BIOMARKER CARD STYLES
 .biomarker-card {
   display: flex;
   flex-direction: column;
-  padding: 80px 30px;
+  padding: 80px 40px;
   border-bottom: 1px solid #656160;
 }
 .biomarker-box-card {
-  width: 50%;
+  width: 93%;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 .biomarker-box-card h5 {
-  font-size: 24px;
+  font-size: 40px;
   color: #000;
-  font-weight: 500;
+  font-weight: 400;
   margin: 0;
 }
 
 .biomarker-box-card p {
   color: #000000;
+  font-size: 24px;
 }
 .result-show {
   display: flex;
@@ -395,13 +432,14 @@ DETAILED BIOMARKER CARD STYLES
   margin: 50px 0;
 }
 .result-show .result-value-optimal {
-  font-size: 50px;
+  font-size: 90px;
+  font-weight: 500;
   color: #537767;
   margin: 0;
 }
 
 .result-show .result-unit-optimal {
-  font-size: 20px;
+  font-size: 30px;
   color: #537767;
   margin: 0;
 }
@@ -433,12 +471,12 @@ DETAILED BIOMARKER CARD STYLES
 .range-show {
   align-self: self-start;
   display: flex;
-  gap: 5px;
+  gap: 15px;
 }
 
 .range-indicator {
   width: 10px;
-  height: 50px;
+  height: 90px;
   border-radius: 40px;
   background-color: #cccccc;
 }
@@ -502,16 +540,24 @@ DETAILED BIOMARKER CARD STYLES
 }
 .biomarker-header h5 {
   margin: 0;
-  font-size: 24px;
+  font-size: 40px;
   font-weight: 600;
   color: #333;
 }
 .biomarker-result {
-  font-weight: bold;
-  font-size: 1.1em;
+  font-weight: 400;
+  font-size: 24px;
 }
 .biomarker-card p {
   margin: 5px 0;
+}
+
+.biomarker-card .range-p{
+  text-align: center;
+}
+
+.pillers-wrapper h4{
+  margin-top: 0 !important;
 }
 
 .p-grey {
@@ -531,17 +577,25 @@ DETAILED BIOMARKER CARD STYLES
 }
 
 .crucial h4 {
-  margin-bottom: 30px;
+  font-size: 50px;
+  margin: 50px 0;
 }
 .crucial p {
   margin: 0;
 }
 .crucial .crucial-name {
-  color: #2b2928;
+  color: #333;
   width: fit-content;
-  font-size: 24px;
+  font-size: 40px;
   font-weight: 600;
   margin: 0;
+}
+.health-recommendation {
+  border: none;
+  background-color: #F4F8F4;
+}
+.health-recommendation h4{
+  font-size: 50px;
 }
 
 /* ==============================================
@@ -586,7 +640,7 @@ MAIN NAVBAR (No changes made here)
   flex-direction: column;
 }
 .pillars-chart-container {
-  width: fit-content;
+  width: 91%;
   align-self: center;
   margin: 80px 0;
   display: flex;
@@ -608,7 +662,7 @@ MAIN NAVBAR (No changes made here)
 .pillars-summary p,
 .pillars-summary span {
   color: #000;
-  font-size: 14px;
+  font-size: 24px;
 }
 
 .status-needs-alignment span {
@@ -629,8 +683,8 @@ MAIN NAVBAR (No changes made here)
 }
 
 #pillars-chart {
-  height: 400px !important;
-  width: 400px !important;
+  height: 500px !important;
+  width: 600px !important;
 }
 
 .pillar-header {
@@ -643,9 +697,9 @@ MAIN NAVBAR (No changes made here)
 }
 .pillar-header h4 {
   margin: 0;
-  padding: 20px 30px;
+  padding: 20px 40px;
   color: black;
-  font-size: 24px;
+  font-size: 32px;
   font-weight: 500;
 }
 
@@ -654,14 +708,14 @@ MAIN NAVBAR (No changes made here)
 }
 
 .pillar-seciton-one {
-  padding: 0 30px;
-  border-bottom: 1px solid #C9C5C3;
+  padding: 0 40px;
+  border-bottom: 1px solid #c9c5c3;
   padding-bottom: 40px;
 }
 
-.pillar-seciton-two{
-  padding: 40px 30px;
-  border-bottom: 1px solid #C9C5C3;
+.pillar-seciton-two {
+  padding: 40px;
+  border-bottom: 1px solid #c9c5c3;
 }
 
 .pillar-wrapper h4 {
@@ -676,7 +730,8 @@ MAIN NAVBAR (No changes made here)
   align-items: center;
 }
 .pillar-name-svg h4 {
-  font-weight: 700;
+  font-size: 50px;
+  font-weight: 600;
 }
 .why-pillar {
   margin: 40px 0;
@@ -685,26 +740,36 @@ MAIN NAVBAR (No changes made here)
   gap: 10px;
 }
 .why-pillar h4 {
-  font-size: 18px;
-  font-weight: 700;
+  font-size: 32px;
+  font-weight: 600;
   margin: 0;
   color: #474240;
 }
 .why-pillar p {
-  font-size: 18px;
+  font-size: 32px;
   font-weight: 400;
   margin: 0;
   color: #474240;
 }
 
-.personal-recommnedation .heading-section, .pillar-seciton-two .heading-section {
+.scroe-points span{
+  font-size: 32px;
+}
+
+.personal-recommnedation .heading-section,
+.pillar-seciton-two .heading-section {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.personal-recommnedation .heading-section h4, .pillar-seciton-two .heading-section h4 {
+.personal-recommnedation .heading-section h4,
+.pillar-seciton-two .heading-section h4 {
   margin: 0;
-  margin-bottom: 20px;
+  font-size: 32px;
+  font-weight: 600;
+}
+.heading-section{
+  margin-bottom: 30px;
 }
 .score-why-list .scroe-points {
   display: flex !important;
@@ -720,101 +785,116 @@ MAIN NAVBAR (No changes made here)
 .recommnedation-list p {
   margin: 0;
   margin-bottom: 5px;
-  font-size: 18px;
+  font-size: 32px;
   color: #474240;
 }
 
-.guidance-category{
+.guidance-category {
   display: flex;
   flex-direction: column;
   gap: 0 !important;
 }
-.guidance-category h5{
+.guidance-category h5 {
   margin: 0;
-  font-size: 18px;
-  color: #1E8E3E;
+  font-size: 32px;
+  color: #1e8e3e;
 }
-.guidance-wrapper{
+.guidance-wrapper {
   display: flex;
   flex-direction: column;
   margin-top: 40px;
   gap: 20px !important;
 }
 
-.guidance-category span{
+.guidance-category span {
   font-weight: 600;
 }
-.pillar-intro{
- margin: 0 !important;
+.pillar-intro {
+  margin: 0 !important;
+  font-size: 32px;
+  color: #656160;
 }
-.suppliment-wrapper h4{
-  font-size: 24px;
+.suppliment-wrapper h4 {
+  font-size: 50px;
+  font-weight: 400;
   margin: 0;
   margin-top: 25px;
+  color: #000;
   margin-bottom: 10px;
 }
 
-.recommendations-container{
-  padding: 0 30px;
-  margin-top: 40px;
+.recommendations-container {
+  padding: 0 40px;
+  margin-top: 100px;
 }
 
-.supplement-recommendation-card{
-  border: 1px solid #C9C5C3;
+.supplement-recommendation-card {
+  border: 1px solid #c9c5c3;
   border-radius: 10px;
-  margin-bottom: 40px;
+  margin-bottom: 100px;
   padding: 20px;
 }
 
-.supplement-recommendation-card h4, .supplement-recommendation-card p{
+.supplement-recommendation-card h4,
+.supplement-recommendation-card p {
   margin: 0;
 }
 
-.supplement-recommendation-card h4{
-  font-size: 24px;
-  color: #2B2928;
-  font-weight: 500;
-  margin-bottom: 20px;
+.supplement-recommendation-card h4 {
+  font-size: 40px;
+  color: #2b2928;
+  font-weight: 400;
+  margin-bottom: 40px;
 }
 
-.supplement-recommendation-card div{
+.supplement-recommendation-card div {
   display: flex;
   flex-direction: column;
-  margin-bottom: 15px;
+  margin-bottom: 25px;
 }
 
-.supplement-recommendation-card div span{
- font-size: 16px;
- font-weight: 700;
+.supplement-recommendation-card div span {
+  font-size: 32px;
 }
-.supplement-recommendation-card div p{
- font-size: 16px;
- font-weight: 400;
+.supplement-recommendation-card div p {
+  font-size: 32px;
+  color: #656160;
 }
-
-.action-wrapper h4{
+.recommendation-name{
+  font-weight: 500;
+}
+.action-wrapper h4 {
   margin: 0;
   margin-bottom: 10px;
 }
 
-.action-plan-details{
-  padding: 0 30px;
-  padding-bottom: 40px;
+.action-plan-details {
+  padding: 40px;
 }
 
-.action-plan-category h5{
-  font-size: 18px;
-  font-weight: 700;
+.action-plan-category h5 {
+  font-size: 32px;
+  font-weight: 500;
   margin: 0;
-  margin-top: 20px;
-  margin-bottom: 5px;
+  margin-top: 50px;
+  margin-bottom: 20px;
 }
-.action-plan-category .action-item p{
+.action-plan-category .action-item p {
   margin: 0;
+  font-size: 32px;
+  color: #656160;
 }
-.action-plan-category .action-item{
+.action-plan-category .action-item {
   display: flex;
   align-items: center;
   gap: 5px;
   margin-bottom: 5px;
+}
+
+.action-item .bullet{
+  font-size: 32px;
+}
+.action-wrapper{
+  padding-bottom: 50px !important;
+  margin-top: 100px !important;
 }
