@@ -1073,7 +1073,7 @@ Holistic <br/>Coaches, Clinicians</span>
               backgroundColor: "#02393666", // Teal fill
               borderColor: "#023936", // Teal line
               // --- UPDATED: Increased border width to make rounding visible ---
-              borderWidth: 2,
+              borderWidth:3,
               // --- UPDATED: This property rounds the corners where lines meet ---
               borderJoinStyle: "round",
               // --- UPDATED: Ensure lines are straight ---
@@ -1101,7 +1101,7 @@ Holistic <br/>Coaches, Clinicians</span>
               // Keep the concentric grid lines
               grid: {
                 color: "rgba(0, 0, 0, 0.08)",
-                lineWidth: 1,
+                lineWidth: 2,
               },
               pointLabels: {
                 font: {
