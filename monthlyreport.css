@@ -32,6 +32,63 @@ h2 {
   color: #0056b3;
 }
 
+/* Editor Styling */
+#json-input {
+  width: 100%;
+  height: 150px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 10px;
+  font-family: monospace;
+  margin-bottom: 10px;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+#editor-form-container fieldset {
+  border: 1px dashed #ccc;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 4px;
+}
+
+#editor-form-container legend {
+  font-weight: bold;
+  color: #0056b3;
+}
+
+#editor-form-container label {
+  display: block;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  font-size: 0.9em;
+  color: #555;
+}
+
+#editor-form-container input[type="text"],
+#editor-form-container textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+
 /* ==============================================
 MAIN NAVBAR (No changes made here)
 ==============================================

@@ -9,247 +9,247 @@ document.addEventListener("DOMContentLoaded", () => {
   let currentData = {};
   let radarChartInstance = null; // To hold the chart instance
 
-  // --- **** DEFAULT DATA FOR DEVELOPMENT **** ---
-  const defaultData = {
-    monthly_overview_summary: {
-      summary:
-        "This month, you experienced fluctuations in mood and energy. While you reported periods of feeling happy and energized, you also frequently logged feelings of anxiety, depression, and being down. **C1[Fatigue]C1** was a recurring symptom, alongside occasional headaches. The average sleep duration is not available, impacting sleep analysis. Limited data availability impacts the precision of this summary.",
-      top_symptoms: ["anxiety", "depression", "fatigue", "cramps", "headaches"],
-      health_reflection:
-        "Your health this month shows a mix of positive and challenging periods. While there were days of high energy and positive mood, the frequent recurrence of **C1[anxiety and fatigue]C1** suggests a need to focus on stress management and consistent self-care practices. Addressing these **C1[symptoms]C1** may improve overall well-being.",
-    },
-    hormonal_balance_insight: {
-      score_or_message:
-        "**C1[Needs Attention]C1** due to **C2[high stress]C2** and **C1[irregular eating patterns]C1**.",
-      tied_to_logs: [
-        "Frequent reports of **C1[anxiety and depression]C1** in Logged Symptoms",
-        "Reports of feeling **C1[nauseous and uncomfortable]C1** after meals in Eat Well",
-        "**C1[High stress]C1** reported in Recover Well",
-        "**C1[Trouble falling asleep]C1** in Sleep Well",
-      ],
-      likely_root_causes: [
-        "**C2[High stress]C2** levels impacting hormonal balance",
-        "**C1[Inconsistent meal timing and potential nutrient deficiencies]C1** affecting energy and mood",
-      ],
-    },
-    logged_patterns: {
-      eat_well: {
-        did_well: [
-          "Trying to reduce sugar intake",
-          "Taking supplements (Vitamin D or Omega-3)",
-          "Staying hydrated",
-        ],
-        areas_to_improve: [
-          "Experiencing nausea and discomfort after meals",
-          "Inconsistent meal satisfaction",
-          "Reports of unhealthy food choices",
-          "Skipping meals",
-        ],
-        recommendations: [
-          "Focus on balanced meals with whole foods",
-          "Identify food sensitivities contributing to nausea",
-          "Eat regularly to stabilize blood sugar",
-        ],
-        Guidance: [
-          "Focus on incorporating **C1[whole, unprocessed foods]C1** into your diet to support overall health and hormonal balance.",
-          "Experiment with different foods and meal timings to identify any triggers for **C1[nausea and discomfort]C1**.",
-          "Plan your meals ahead to ensure you're getting adequate nutrients and avoiding **C1[skipping meals]C1**.",
-        ],
-        metrics: {
-          days_logged: 20,
-          average_meal_satisfaction_score: 2,
-          processed_food_days_percentage: 10,
-        },
-      },
-      sleep_well: {
-        did_well: [
-          "Practicing breathing exercises",
-          "Aiming for 7-9 hours of sleep on some nights",
-          "Good sunlight exposure on some days",
-        ],
-        areas_to_improve: [
-          "Trouble falling asleep",
-          "Inconsistent sleep quality",
-          "Late-night work",
-          "Late-night snacks",
-          "Working out just before sleep",
-          "Inadequate hydration",
-        ],
-        recommendations: [
-          "Establish a relaxing bedtime routine",
-          "Avoid screens and heavy meals before bed",
-          "Ensure adequate hydration throughout the day",
-        ],
-        Guidance: [
-          "Create a **C1[consistent bedtime routine]C1** to signal your body that it's time to wind down and prepare for sleep.",
-          "Avoid **C1[screen time and heavy meals]C1** at least an hour before bed to improve sleep quality.",
-          "Consider incorporating **C1[relaxation techniques]C1**, such as meditation or deep breathing, into your evening routine.",
-        ],
-        metrics: {
-          days_logged: 17,
-          average_sleep_quality_score: 3,
-          average_sleep_hours: 7,
-          consistent_bedtime_percentage: 20,
-        },
-      },
-      move_well: {
-        did_well: [
-          "Engaging in regular workouts",
-          "Enjoying physical activity",
-          "Balancing cardio and strength training",
-        ],
-        areas_to_improve: [
-          "Feeling tired during or after workouts",
-          "Limited sunlight exposure",
-          "Balancing workouts with rest",
-        ],
-        recommendations: [
-          "Incorporate rest days into your workout routine",
-          "Ensure adequate hydration and nutrition to support energy levels",
-          "Prioritize outdoor workouts for sunlight exposure",
-        ],
-        Guidance: [
-          "Balance your **C1[workouts with rest and recovery]C1** to prevent burnout and support muscle repair.",
-          "Ensure you're adequately hydrated and nourished to fuel your workouts and maintain **C2[energy levels]C2**.",
-          "Incorporate **C1[outdoor activities]C1** to enjoy the benefits of sunlight and fresh air.",
-        ],
-        metrics: {
-          days_logged: 19,
-          activity_days_percentage: 100,
-          average_activity_intensity_score: 4,
-        },
-      },
-      recover_well: {
-        did_well: [
-          "Practicing aromatherapy",
-          "Scheduling me-time",
-          "Spending time outdoors",
-          "Journaling",
-          "Taking breaks",
-          "Listening to music",
-        ],
-        areas_to_improve: [
-          "Experiencing high stress levels",
-          "Overuse of social media",
-          "Skipping meals",
-          "Isolating from social connections",
-          "Constant multitasking",
-          "Procrastinating",
-          "Overworking",
-          "Perfectionism",
-        ],
-        recommendations: [
-          "Prioritize stress-reducing activities",
-          "Limit social media use",
-          "Maintain regular social connections",
-          "Practice mindfulness and time management",
-        ],
-        Guidance: [
-          "Prioritize stress-reducing activities, such as **C1[meditation, yoga, or spending time in nature]C1**, to promote relaxation and emotional well-being.",
-          "Limit your **C1[social media use]C1** to reduce exposure to stressors and promote a more positive mindset.",
-          "Maintain **C1[regular social connections]C1** to combat feelings of isolation and foster a sense of belonging.",
-        ],
-        metrics: {
-          days_logged: 20,
-          average_stress_level_score: 3,
-          recovery_activity_days_percentage: 100,
-        },
-      },
-    },
-    root_cause_tags: [
-      {
-        tag: "Stress-related hormonal disruption",
-        explanation:
-          "The frequent reports of **C1[high stress]C1** in your Recover Well logs, combined with feelings of **C1[anxiety and depression]C1**, suggest a potential disruption in hormonal balance due to **C2[chronic stress]C2**.",
-      },
-      {
-        tag: "Blood sugar instability",
-        explanation:
-          "Your Eat Well logs indicate **C1[inconsistent meal timing and reports of nausea and discomfort]C1**, which could contribute to **C2[blood sugar fluctuations and hormonal imbalances]C2**.",
-      },
-    ],
-    actionable_next_steps: {
-      food_to_enjoy: [
-        "**C1[Leafy greens]C1** for nutrient density",
-        "**C1[Healthy fats like avocado]C1** to support hormonal balance",
-        "**C1[Fiber-rich foods]C1** to promote digestive health",
-        "**C1[Whole, unprocessed foods]C1**",
-      ],
-      food_to_limit: [
-        "**C1[Sugary snacks]C1** to stabilize **C2[blood sugar]C2**",
-        "**C1[Excessive caffeine]C1** to reduce **C2[anxiety]C2**",
-        "**C1[Processed foods]C1**",
-      ],
-      rest_and_recovery: [
-        "**C1[Try 10-minute daily meditation]C1**",
-        "**C1[Schedule downtime]C1** to lower **C2[stress]C2**",
-        "**C1[Prioritize sleep hygiene]C1**",
-        "**C1[Limit social media use]C1**",
-      ],
-      daily_habits: [
-        "**C1[Drink water first thing in the morning]C1**",
-        "**C1[Set a consistent bedtime routine]C1**",
-        "**C1[Practice mindful eating]C1**",
-        "**C1[Take regular breaks during the day]C1**",
-      ],
-      movements: [
-        "**C1[Add 15-minute daily walks]C1**",
-        "**C1[Try low-impact yoga]C1** for flexibility",
-        "**C1[Balance cardio and strength training]C1**",
-        "**C1[Incorporate outdoor activities]C1**",
-      ],
-      behavior_goals: [
-        "**C1[Get 7-8 hours of sleep nightly]C1**",
-        "**C1[Eat meals at regular times]C1** to balance **C2[insulin]C2**",
-        "**C1[Manage stress levels effectively]C1**",
-        "**C1[Prioritize self-care activities]C1**",
-      ],
-      encouragement_message:
-        "You're taking important steps to improve your well-being. Keep prioritizing your **C1[health]C1** and remember that small changes can make a big difference!",
-    },
-    radar_chart_data: {
-      scores: {
-        eat_well: 3.33,
-        sleep_well: 3.33,
-        move_well: 6.67,
-        recover_well: 6.67,
-      },
-      key_behaviors: {
-        eat_well: [
-          "Reported feeling **C1[nauseous after meals]C1**",
-          "Tried to reduce **C2[sugar intake]C2**",
-        ],
-        sleep_well: [
-          "Averaged around **C2[7 hours of sleep]C2**",
-          "Reported **C1[trouble falling asleep]C1**",
-        ],
-        move_well: [
-          "Logged workouts on most days",
-          "Balanced cardio and strength training",
-        ],
-        recover_well: [
-          "Practiced aromatherapy",
-          "Experienced **C2[high stress levels]C2**",
-        ],
-      },
-      label: "Needs Attention",
-      caption: "Your routines need more support to improve hormonal health.",
-    },
-  };
+  // // --- **** DEFAULT DATA FOR DEVELOPMENT **** ---
+  // const defaultData = {
+  //   monthly_overview_summary: {
+  //     summary:
+  //       "This month, you experienced fluctuations in mood and energy. While you reported periods of feeling happy and energized, you also frequently logged feelings of anxiety, depression, and being down. **C1[Fatigue]C1** was a recurring symptom, alongside occasional headaches. The average sleep duration is not available, impacting sleep analysis. Limited data availability impacts the precision of this summary.",
+  //     top_symptoms: ["anxiety", "depression", "fatigue", "cramps", "headaches"],
+  //     health_reflection:
+  //       "Your health this month shows a mix of positive and challenging periods. While there were days of high energy and positive mood, the frequent recurrence of **C1[anxiety and fatigue]C1** suggests a need to focus on stress management and consistent self-care practices. Addressing these **C1[symptoms]C1** may improve overall well-being.",
+  //   },
+  //   hormonal_balance_insight: {
+  //     score_or_message:
+  //       "**C1[Needs Attention]C1** due to **C2[high stress]C2** and **C1[irregular eating patterns]C1**.",
+  //     tied_to_logs: [
+  //       "Frequent reports of **C1[anxiety and depression]C1** in Logged Symptoms",
+  //       "Reports of feeling **C1[nauseous and uncomfortable]C1** after meals in Eat Well",
+  //       "**C1[High stress]C1** reported in Recover Well",
+  //       "**C1[Trouble falling asleep]C1** in Sleep Well",
+  //     ],
+  //     likely_root_causes: [
+  //       "**C2[High stress]C2** levels impacting hormonal balance",
+  //       "**C1[Inconsistent meal timing and potential nutrient deficiencies]C1** affecting energy and mood",
+  //     ],
+  //   },
+  //   logged_patterns: {
+  //     eat_well: {
+  //       did_well: [
+  //         "Trying to reduce sugar intake",
+  //         "Taking supplements (Vitamin D or Omega-3)",
+  //         "Staying hydrated",
+  //       ],
+  //       areas_to_improve: [
+  //         "Experiencing nausea and discomfort after meals",
+  //         "Inconsistent meal satisfaction",
+  //         "Reports of unhealthy food choices",
+  //         "Skipping meals",
+  //       ],
+  //       recommendations: [
+  //         "Focus on balanced meals with whole foods",
+  //         "Identify food sensitivities contributing to nausea",
+  //         "Eat regularly to stabilize blood sugar",
+  //       ],
+  //       Guidance: [
+  //         "Focus on incorporating **C1[whole, unprocessed foods]C1** into your diet to support overall health and hormonal balance.",
+  //         "Experiment with different foods and meal timings to identify any triggers for **C1[nausea and discomfort]C1**.",
+  //         "Plan your meals ahead to ensure you're getting adequate nutrients and avoiding **C1[skipping meals]C1**.",
+  //       ],
+  //       metrics: {
+  //         days_logged: 20,
+  //         average_meal_satisfaction_score: 2,
+  //         processed_food_days_percentage: 10,
+  //       },
+  //     },
+  //     sleep_well: {
+  //       did_well: [
+  //         "Practicing breathing exercises",
+  //         "Aiming for 7-9 hours of sleep on some nights",
+  //         "Good sunlight exposure on some days",
+  //       ],
+  //       areas_to_improve: [
+  //         "Trouble falling asleep",
+  //         "Inconsistent sleep quality",
+  //         "Late-night work",
+  //         "Late-night snacks",
+  //         "Working out just before sleep",
+  //         "Inadequate hydration",
+  //       ],
+  //       recommendations: [
+  //         "Establish a relaxing bedtime routine",
+  //         "Avoid screens and heavy meals before bed",
+  //         "Ensure adequate hydration throughout the day",
+  //       ],
+  //       Guidance: [
+  //         "Create a **C1[consistent bedtime routine]C1** to signal your body that it's time to wind down and prepare for sleep.",
+  //         "Avoid **C1[screen time and heavy meals]C1** at least an hour before bed to improve sleep quality.",
+  //         "Consider incorporating **C1[relaxation techniques]C1**, such as meditation or deep breathing, into your evening routine.",
+  //       ],
+  //       metrics: {
+  //         days_logged: 17,
+  //         average_sleep_quality_score: 3,
+  //         average_sleep_hours: 7,
+  //         consistent_bedtime_percentage: 20,
+  //       },
+  //     },
+  //     move_well: {
+  //       did_well: [
+  //         "Engaging in regular workouts",
+  //         "Enjoying physical activity",
+  //         "Balancing cardio and strength training",
+  //       ],
+  //       areas_to_improve: [
+  //         "Feeling tired during or after workouts",
+  //         "Limited sunlight exposure",
+  //         "Balancing workouts with rest",
+  //       ],
+  //       recommendations: [
+  //         "Incorporate rest days into your workout routine",
+  //         "Ensure adequate hydration and nutrition to support energy levels",
+  //         "Prioritize outdoor workouts for sunlight exposure",
+  //       ],
+  //       Guidance: [
+  //         "Balance your **C1[workouts with rest and recovery]C1** to prevent burnout and support muscle repair.",
+  //         "Ensure you're adequately hydrated and nourished to fuel your workouts and maintain **C2[energy levels]C2**.",
+  //         "Incorporate **C1[outdoor activities]C1** to enjoy the benefits of sunlight and fresh air.",
+  //       ],
+  //       metrics: {
+  //         days_logged: 19,
+  //         activity_days_percentage: 100,
+  //         average_activity_intensity_score: 4,
+  //       },
+  //     },
+  //     recover_well: {
+  //       did_well: [
+  //         "Practicing aromatherapy",
+  //         "Scheduling me-time",
+  //         "Spending time outdoors",
+  //         "Journaling",
+  //         "Taking breaks",
+  //         "Listening to music",
+  //       ],
+  //       areas_to_improve: [
+  //         "Experiencing high stress levels",
+  //         "Overuse of social media",
+  //         "Skipping meals",
+  //         "Isolating from social connections",
+  //         "Constant multitasking",
+  //         "Procrastinating",
+  //         "Overworking",
+  //         "Perfectionism",
+  //       ],
+  //       recommendations: [
+  //         "Prioritize stress-reducing activities",
+  //         "Limit social media use",
+  //         "Maintain regular social connections",
+  //         "Practice mindfulness and time management",
+  //       ],
+  //       Guidance: [
+  //         "Prioritize stress-reducing activities, such as **C1[meditation, yoga, or spending time in nature]C1**, to promote relaxation and emotional well-being.",
+  //         "Limit your **C1[social media use]C1** to reduce exposure to stressors and promote a more positive mindset.",
+  //         "Maintain **C1[regular social connections]C1** to combat feelings of isolation and foster a sense of belonging.",
+  //       ],
+  //       metrics: {
+  //         days_logged: 20,
+  //         average_stress_level_score: 3,
+  //         recovery_activity_days_percentage: 100,
+  //       },
+  //     },
+  //   },
+  //   root_cause_tags: [
+  //     {
+  //       tag: "Stress-related hormonal disruption",
+  //       explanation:
+  //         "The frequent reports of **C1[high stress]C1** in your Recover Well logs, combined with feelings of **C1[anxiety and depression]C1**, suggest a potential disruption in hormonal balance due to **C2[chronic stress]C2**.",
+  //     },
+  //     {
+  //       tag: "Blood sugar instability",
+  //       explanation:
+  //         "Your Eat Well logs indicate **C1[inconsistent meal timing and reports of nausea and discomfort]C1**, which could contribute to **C2[blood sugar fluctuations and hormonal imbalances]C2**.",
+  //     },
+  //   ],
+  //   actionable_next_steps: {
+  //     food_to_enjoy: [
+  //       "**C1[Leafy greens]C1** for nutrient density",
+  //       "**C1[Healthy fats like avocado]C1** to support hormonal balance",
+  //       "**C1[Fiber-rich foods]C1** to promote digestive health",
+  //       "**C1[Whole, unprocessed foods]C1**",
+  //     ],
+  //     food_to_limit: [
+  //       "**C1[Sugary snacks]C1** to stabilize **C2[blood sugar]C2**",
+  //       "**C1[Excessive caffeine]C1** to reduce **C2[anxiety]C2**",
+  //       "**C1[Processed foods]C1**",
+  //     ],
+  //     rest_and_recovery: [
+  //       "**C1[Try 10-minute daily meditation]C1**",
+  //       "**C1[Schedule downtime]C1** to lower **C2[stress]C2**",
+  //       "**C1[Prioritize sleep hygiene]C1**",
+  //       "**C1[Limit social media use]C1**",
+  //     ],
+  //     daily_habits: [
+  //       "**C1[Drink water first thing in the morning]C1**",
+  //       "**C1[Set a consistent bedtime routine]C1**",
+  //       "**C1[Practice mindful eating]C1**",
+  //       "**C1[Take regular breaks during the day]C1**",
+  //     ],
+  //     movements: [
+  //       "**C1[Add 15-minute daily walks]C1**",
+  //       "**C1[Try low-impact yoga]C1** for flexibility",
+  //       "**C1[Balance cardio and strength training]C1**",
+  //       "**C1[Incorporate outdoor activities]C1**",
+  //     ],
+  //     behavior_goals: [
+  //       "**C1[Get 7-8 hours of sleep nightly]C1**",
+  //       "**C1[Eat meals at regular times]C1** to balance **C2[insulin]C2**",
+  //       "**C1[Manage stress levels effectively]C1**",
+  //       "**C1[Prioritize self-care activities]C1**",
+  //     ],
+  //     encouragement_message:
+  //       "You're taking important steps to improve your well-being. Keep prioritizing your **C1[health]C1** and remember that small changes can make a big difference!",
+  //   },
+  //   radar_chart_data: {
+  //     scores: {
+  //       eat_well: 3.33,
+  //       sleep_well: 3.33,
+  //       move_well: 6.67,
+  //       recover_well: 6.67,
+  //     },
+  //     key_behaviors: {
+  //       eat_well: [
+  //         "Reported feeling **C1[nauseous after meals]C1**",
+  //         "Tried to reduce **C2[sugar intake]C2**",
+  //       ],
+  //       sleep_well: [
+  //         "Averaged around **C2[7 hours of sleep]C2**",
+  //         "Reported **C1[trouble falling asleep]C1**",
+  //       ],
+  //       move_well: [
+  //         "Logged workouts on most days",
+  //         "Balanced cardio and strength training",
+  //       ],
+  //       recover_well: [
+  //         "Practiced aromatherapy",
+  //         "Experienced **C2[high stress levels]C2**",
+  //       ],
+  //     },
+  //     label: "Needs Attention",
+  //     caption: "Your routines need more support to improve hormonal health.",
+  //   },
+  // };
 
-  // --- **** INITIALIZE APP ON PAGE LOAD **** ---
-  // This block automatically loads the default data for you.
-  function initializeApp() {
-    // Put the default data into the text area
-    jsonInput.value = JSON.stringify(defaultData, null, 2);
-    // Set the currentData object to the default data
-    currentData = defaultData;
-    // Render the editor and the preview with the default data
-    renderEditor(currentData);
-    renderPreview(currentData);
-  }
+  // // --- **** INITIALIZE APP ON PAGE LOAD **** ---
+  // // This block automatically loads the default data for you.
+  // function initializeApp() {
+  //   // Put the default data into the text area
+  //   jsonInput.value = JSON.stringify(defaultData, null, 2);
+  //   // Set the currentData object to the default data
+  //   currentData = defaultData;
+  //   // Render the editor and the preview with the default data
+  //   renderEditor(currentData);
+  //   renderPreview(currentData);
+  // }
 
-  initializeApp();
+  // initializeApp();
 
   // --- Event Listeners ---
   loadButton.addEventListener("click", handleLoadData);
