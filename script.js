@@ -1271,10 +1271,10 @@ Holistic <br />Coaches, Clinicians</span>
           summary.keep_in_mind_count,
           summary.attention_needed_count
         );
-        const optimalHeight = (summary.optimal_count / maxCount) * 280 + 15;
-        const mindHeight = (summary.keep_in_mind_count / maxCount) * 280 + 15;
+        const optimalHeight = (summary.optimal_count / maxCount) * 260 + 15;
+        const mindHeight = (summary.keep_in_mind_count / maxCount) * 260 + 15;
         const attentionHeight =
-          (summary.attention_needed_count / maxCount) * 280 + 15;
+          (summary.attention_needed_count / maxCount) * 260 + 15;
 
         html += `
                    <h3>${totalBiomarkers} Biomarkers</h3>
