@@ -261,7 +261,7 @@ NEW BIOMARKER CHART STYLES
 
 .chart-wrapper {
   border: 1px solid #023936;
-  border-radius: 10px;
+  border-radius: 25px;
   padding: 0 20px;
   background-color: white;
   margin-bottom: 100px;
@@ -301,7 +301,7 @@ NEW BIOMARKER CHART STYLES
   background-color: #5d2555;
 } /* Red */
 .bar-title {
-  font-size: 15px;
+  font-size: 20px;
   color: #2b2928;
   font-weight: 400;
 }
