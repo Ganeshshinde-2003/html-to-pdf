@@ -233,10 +233,24 @@ button:hover {
 #pdf-preview {
   background-color: #fff;
   border: 1px solid #ccc;
-  padding-top: 100px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  min-height: 80vh;
+  /* A4 paper aspect ratio for a more realistic preview */
+  width: 8.27in;
+  min-height: 11.69in;
+  margin: 0 auto;
+  box-sizing: border-box;
 }
+
+/* This class is added during PDF generation for higher quality rendering */
+.pdf-render-view {
+  width: auto;
+  height: auto;
+  box-shadow: none;
+  border: none;
+  margin: 0;
+  /* padding: 0.5in; */
+}
+
 #pdf-preview .placeholder {
   display: flex;
   justify-content: center;
