@@ -120,7 +120,6 @@ PDF PREVIEW STYLES
   /* A4 paper aspect ratio for a more realistic preview */
   width: 8.27in;
   min-height: 11.69in;
-  margin: 0 auto;
   box-sizing: border-box;
 }
 
