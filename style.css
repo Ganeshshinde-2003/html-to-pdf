@@ -894,3 +894,8 @@ MAIN NAVBAR (No changes made here)
   padding-bottom: 50px !important;
   margin-top: 100px !important;
 }
+.health-recommendation-item{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
