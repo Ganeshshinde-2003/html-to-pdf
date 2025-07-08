@@ -11,634 +11,634 @@ document.addEventListener("DOMContentLoaded", () => {
   let activeTab = "biomarkers"; // Default active tab
   // let pillarChartInstance = null;
 
-  // const defaultData = {
-  //   lab_analysis: {
-  //     overall_summary:
-  //       "Based on your lab results and health assessment, there are a few key areas to focus on. Your **C1[low Estradiol]C1** and **C1[high SHBG]C1** could be contributing to some of the symptoms you're experiencing, such as **C1[cramps]C1** and **C1[bloating]C1**. Additionally, your **C2[elevated TSH]C2** and **C2[high Cortisol AM]C2** suggest that your thyroid and stress response may need some attention. It's important to address these imbalances to support your overall hormonal health and well-being. Making dietary adjustments, incorporating stress-reducing activities, and consulting with your healthcare provider can help you achieve hormonal harmony.",
-  //     biomarkers_tested_count: 13,
-  //     biomarker_categories_summary: {
-  //       description_text:
-  //         "Out of **C1[13]C1** tests, **C2[8]C2** are optimal, **C2[0]C2** need keeping in mind, and **C2[5]C2** need attention. This means that while some of your hormone levels are within the normal range, there are a few that could benefit from some support. Addressing the biomarkers that need attention can help improve your overall hormonal balance and alleviate some of the symptoms you're experiencing. It's important to work with your healthcare provider to develop a personalized plan that addresses your specific needs and goals. By focusing on these key areas, you can take proactive steps towards achieving optimal hormonal health.",
-  //       optimal_count: 8,
-  //       keep_in_mind_count: 0,
-  //       attention_needed_count: 5,
-  //     },
-  //     detailed_biomarkers: [
-  //       {
-  //         name: "Cholesterol, Total",
-  //         status: "optimal",
-  //         status_label: "Good (Green)",
-  //         result: "168 mg/dL",
-  //         range: "100-199",
-  //         cycle_impact:
-  //           "Cholesterol is essential for hormone production, and its levels don't directly fluctuate with your menstrual cycle, but maintaining healthy levels supports overall hormonal balance.",
-  //         why_it_matters:
-  //           "Your cholesterol level is within the normal range, which is important for overall health and hormone production. Cholesterol is a building block for hormones like estrogen and progesterone, so maintaining healthy levels is crucial for hormonal balance. Think of cholesterol as the raw material your body uses to create these essential hormones. Keeping it in the optimal range ensures your body has what it needs to function properly.",
-  //       },
-  //       {
-  //         name: "Triglycerides",
-  //         status: "optimal",
-  //         status_label: "Good (Green)",
-  //         result: "59 mg/dL",
-  //         range: "0-149",
-  //         cycle_impact:
-  //           "Triglycerides don't directly fluctuate with the menstrual cycle, but maintaining healthy levels supports overall metabolic health, which indirectly influences hormonal balance.",
-  //         why_it_matters:
-  //           "Your triglyceride level is within the normal range, which is a good indicator of your metabolic health. Triglycerides are a type of fat in your blood, and high levels can increase your risk of heart disease and other health problems. Keeping your triglycerides in the optimal range supports your overall well-being and helps your body function efficiently. Think of triglycerides as fuel for your body, but too much can clog the engine.",
-  //       },
-  //       {
-  //         name: "HDL Cholesterol",
-  //         status: "optimal",
-  //         status_label: "Good (Green)",
-  //         result: "75 mg/dL",
-  //         range: ">39",
-  //         cycle_impact:
-  //           "HDL cholesterol doesn't directly fluctuate with the menstrual cycle, but maintaining healthy levels supports cardiovascular health, which is important for overall hormonal balance.",
-  //         why_it_matters:
-  //           'Your HDL cholesterol level is within the normal range, which is beneficial for your heart health. HDL cholesterol is often referred to as "good" cholesterol because it helps remove other forms of cholesterol from your bloodstream. Maintaining healthy HDL levels supports your cardiovascular system and helps protect against heart disease. Think of HDL as a street sweeper, clearing away excess cholesterol from your arteries.',
-  //       },
-  //       {
-  //         name: "VLDL Cholesterol Cal",
-  //         status: "optimal",
-  //         status_label: "Good (Green)",
-  //         result: "12 mg/dL",
-  //         range: "5-40",
-  //         cycle_impact:
-  //           "VLDL cholesterol doesn't directly fluctuate with the menstrual cycle, but maintaining healthy levels supports overall metabolic health, which indirectly influences hormonal balance.",
-  //         why_it_matters:
-  //           "Your VLDL cholesterol level is within the normal range, which is a good indicator of your metabolic health. VLDL cholesterol carries triglycerides in your blood, and high levels can contribute to the buildup of plaque in your arteries. Keeping your VLDL levels in the optimal range supports your cardiovascular system and helps prevent heart disease. Think of VLDL as a delivery truck, carrying fats to your cells, but too many trucks can cause traffic jams.",
-  //       },
-  //       {
-  //         name: "LDL Chol Calc (NIH)",
-  //         status: "optimal",
-  //         status_label: "Good (Green)",
-  //         result: "81 mg/dL",
-  //         range: "0-99",
-  //         cycle_impact:
-  //           "LDL cholesterol doesn't directly fluctuate with the menstrual cycle, but maintaining healthy levels supports cardiovascular health, which is important for overall hormonal balance.",
-  //         why_it_matters:
-  //           'Your LDL cholesterol level is within the normal range, which is important for your heart health. LDL cholesterol is sometimes referred to as "bad" cholesterol because it can contribute to the buildup of plaque in your arteries. Keeping your LDL levels in the optimal range supports your cardiovascular system and helps prevent heart disease. Think of LDL as a construction crew, building up plaque in your arteries if levels are too high.',
-  //       },
-  //       {
-  //         name: "Hemoglobin A1c",
-  //         status: "optimal",
-  //         status_label: "Good (Green)",
-  //         result: "5.5 %",
-  //         range: "4.8-5.6",
-  //         cycle_impact:
-  //           "Hemoglobin A1c provides an average of your blood sugar levels over the past 2-3 months and is not directly impacted by your menstrual cycle.",
-  //         why_it_matters:
-  //           "Your Hemoglobin A1c level is within the normal range, indicating good blood sugar control. This is important for overall health and can help prevent the development of diabetes. Think of Hemoglobin A1c as a report card for your blood sugar levels, showing how well you've been managing them over time. Keeping it in the optimal range supports your energy levels and reduces your risk of chronic diseases.",
-  //       },
-  //       {
-  //         name: "T4,Free(Direct)",
-  //         status: "optimal",
-  //         status_label: "Good (Green)",
-  //         result: "1.11 ng/dL",
-  //         range: "0.82-1.77",
-  //         cycle_impact:
-  //           "Thyroid hormones like T4 are essential for regulating metabolism and energy levels, and while they don't directly fluctuate with the menstrual cycle, they can influence its regularity and symptoms.",
-  //         why_it_matters:
-  //           "Your free T4 level is within the normal range, which is a good indicator of your thyroid function. T4 is a thyroid hormone that helps regulate your metabolism, energy levels, and overall growth and development. Keeping your T4 levels in the optimal range supports your energy levels and helps your body function efficiently. Think of T4 as the gas pedal for your metabolism, controlling how quickly your body burns fuel.",
-  //       },
-  //       {
-  //         name: "Prolactin",
-  //         status: "optimal",
-  //         status_label: "Good (Green)",
-  //         result: "23.8 ng/mL",
-  //         range: "4.8-33.4",
-  //         cycle_impact:
-  //           "Prolactin levels can fluctuate during the menstrual cycle, particularly during ovulation and the luteal phase, and can influence breast tenderness and mood changes.",
-  //         why_it_matters:
-  //           "Your prolactin level is within the normal range, which is important for reproductive health and breast milk production. Prolactin is a hormone that stimulates milk production after childbirth and also plays a role in regulating the menstrual cycle. Keeping your prolactin levels in the optimal range supports your reproductive health and overall well-being. Think of prolactin as the milk-making hormone, ensuring you can nourish a baby if needed.",
-  //       },
-  //       {
-  //         name: "Testosterone, Total, LC/MS",
-  //         status: "optimal",
-  //         status_label: "Good (Green)",
-  //         result: "22 ng/dL",
-  //         range: "10 - 55",
-  //         cycle_impact:
-  //           "Testosterone levels can fluctuate slightly during the menstrual cycle, with a small peak around ovulation, and can influence libido and energy levels.",
-  //         why_it_matters:
-  //           "Your testosterone level is within the normal range for premenopausal women, which is important for maintaining muscle mass, bone density, and libido. Testosterone is often thought of as a male hormone, but it also plays a crucial role in women's health. Keeping your testosterone levels in the optimal range supports your energy levels, mood, and overall well-being. Think of testosterone as the strength hormone, helping you stay strong and energetic.",
-  //       },
-  //       {
-  //         name: "Reverse T3, Serum",
-  //         status: "optimal",
-  //         status_label: "Good (Green)",
-  //         result: "11.4 ng/dL",
-  //         range: "9.2 - 24.1",
-  //         cycle_impact:
-  //           "Reverse T3 doesn't directly fluctuate with the menstrual cycle, but it can be affected by stress and inflammation, which can indirectly influence hormonal balance.",
-  //         why_it_matters:
-  //           "Your reverse T3 level is within the normal range, which is a good indicator of your thyroid hormone conversion. Reverse T3 is a hormone that can block the effects of T3, the active form of thyroid hormone. Keeping your reverse T3 levels in the optimal range supports your thyroid function and helps your body use thyroid hormone efficiently. Think of reverse T3 as a brake on your thyroid, slowing down its activity if levels are too high.",
-  //       },
-  //       {
-  //         name: "Triiodothyronine (T3), Free",
-  //         status: "optimal",
-  //         status_label: "Good (Green)",
-  //         result: "2.7 pg/mL",
-  //         range: "2.0-4.4",
-  //         cycle_impact:
-  //           "Thyroid hormones like T3 are essential for regulating metabolism and energy levels, and while they don't directly fluctuate with the menstrual cycle, they can influence its regularity and symptoms.",
-  //         why_it_matters:
-  //           "Your free T3 level is within the normal range, which is a good indicator of your thyroid function. T3 is the active form of thyroid hormone that helps regulate your metabolism, energy levels, and overall growth and development. Keeping your T3 levels in the optimal range supports your energy levels and helps your body function efficiently. Think of T3 as the key that unlocks your cells' energy potential.",
-  //       },
-  //       {
-  //         name: "TSH",
-  //         status: "attention_needed",
-  //         status_label: "Needs Attention (Red)",
-  //         result: "4.310 uIU/mL",
-  //         range: "0.450-4.500",
-  //         cycle_impact:
-  //           "TSH levels don't directly fluctuate with the menstrual cycle, but thyroid function is crucial for hormonal balance and can influence cycle regularity and symptoms.",
-  //         why_it_matters:
-  //           "Your TSH level is slightly elevated, which could indicate that your thyroid is working harder to produce thyroid hormones. TSH, or thyroid-stimulating hormone, is produced by the pituitary gland and tells the thyroid gland to release T4 and T3. An elevated TSH level may suggest that your thyroid is underactive, which can lead to symptoms like **C1[fatigue]C1**, **C1[constipation]C1**, and **C1[bloating]C1**. Think of TSH as the messenger that tells your thyroid how much hormone to make.",
-  //       },
-  //       {
-  //         name: "Estradiol",
-  //         status: "attention_needed",
-  //         status_label: "Needs Attention (Red)",
-  //         result: "<5.0 pg/mL",
-  //         range:
-  //           "Adult Female Range: Follicular phase 12.5 - 166.0, Ovulation phase 85.8 - 498.0, Luteal phase 43.8 - 211.0, Postmenopausal <6.0 - 54.7, Pregnancy 1st trimester 215.0 - >4300.0",
-  //         cycle_impact:
-  //           "Estradiol levels fluctuate significantly during the menstrual cycle, influencing the development of the uterine lining, cervical mucus, and various symptoms like mood changes and breast tenderness.",
-  //         why_it_matters:
-  //           "Your estradiol level is low, which could indicate that your ovaries are not producing enough estrogen. Estradiol is a form of estrogen that plays a crucial role in regulating the menstrual cycle, bone health, and mood. Low estradiol levels can lead to symptoms like **C1[irregular periods]C1**, **C1[vaginal dryness]C1**, and **C1[mood swings]C1**. Think of estradiol as the conductor of your menstrual cycle, orchestrating the events that lead to ovulation and menstruation.",
-  //       },
-  //       {
-  //         name: "Progesterone",
-  //         status: "attention_needed",
-  //         status_label: "Needs Attention (Red)",
-  //         result: "0.2 ng/mL",
-  //         range:
-  //           "Follicular phase 0.1 - 0.9, Luteal phase 1.8 - 23.9, Ovulation phase 0.1 - 12.0, Pregnant First trimester 11.0 - 44.3, Second trimester 25.4 - 83.3, Third trimester 58.7 - 214.0, Postmenopausal 0.0 - 0.1",
-  //         cycle_impact:
-  //           "Progesterone levels rise after ovulation during the luteal phase, preparing the uterine lining for implantation and influencing symptoms like breast tenderness and mood changes.",
-  //         why_it_matters:
-  //           "Your progesterone level is low, which could indicate that you are not ovulating regularly or that your luteal phase is too short. Progesterone is a hormone that helps prepare the uterine lining for implantation of a fertilized egg and also plays a role in regulating the menstrual cycle. Low progesterone levels can lead to symptoms like **C1[irregular periods]C1**, **C1[difficulty conceiving]C1**, and **C1[increased PMS symptoms]C1**. Think of progesterone as the gardener that prepares the soil for planting, ensuring the uterine lining is ready for a fertilized egg.",
-  //       },
-  //       {
-  //         name: "Estrogens, Total",
-  //         status: "attention_needed",
-  //         status_label: "Needs Attention (Red)",
-  //         result: "85 pg/mL",
-  //         range:
-  //           "Prepubertal < 40, Female Cycle: 1-10 Days 16 - 328, 11-20 Days 34 - 501, 21-30 Days 48 - 350, Post-Menopausal 40 - 244",
-  //         cycle_impact:
-  //           "Total estrogen levels fluctuate throughout the menstrual cycle, influencing the development of the uterine lining, cervical mucus, and various symptoms like mood changes and breast tenderness.",
-  //         why_it_matters:
-  //           "Your total estrogen level is low, which could indicate that your ovaries are not producing enough estrogen. Estrogens play a crucial role in regulating the menstrual cycle, bone health, and mood. Low estrogen levels can lead to symptoms like **C1[irregular periods]C1**, **C1[vaginal dryness]C1**, and **C1[mood swings]C1**. Think of estrogens as the conductor of your menstrual cycle, orchestrating the events that lead to ovulation and menstruation.",
-  //       },
-  //       {
-  //         name: "Sex Horm Binding Glob, Serum",
-  //         status: "attention_needed",
-  //         status_label: "Needs Attention (Red)",
-  //         result: "130.0 High",
-  //         range: "24.6-122.0",
-  //         cycle_impact:
-  //           "SHBG levels can be influenced by hormonal fluctuations during the menstrual cycle, and they can affect the availability of hormones like testosterone and estrogen.",
-  //         why_it_matters:
-  //           "Your SHBG level is high, which means that more of your sex hormones, like testosterone and estrogen, are bound and unavailable for your body to use. SHBG, or sex hormone-binding globulin, is a protein that binds to sex hormones in the blood. High SHBG levels can lead to symptoms like **C1[low libido]C1**, **C1[fatigue]C1**, and **C1[irregular periods]C1**. Think of SHBG as a taxi that carries sex hormones around, but if there are too many taxis, fewer hormones are available for your body to use.",
-  //       },
-  //       {
-  //         name: "Cortisol - AM",
-  //         status: "attention_needed",
-  //         status_label: "Needs Attention (Red)",
-  //         result: "20.3 High",
-  //         range: "6.2-19.4",
-  //         cycle_impact:
-  //           "Cortisol levels can fluctuate during the menstrual cycle, particularly in response to stress, and can influence mood, energy levels, and sleep patterns.",
-  //         why_it_matters:
-  //           "Your morning cortisol level is elevated, which could indicate that you are experiencing chronic stress. Cortisol is a hormone that helps your body respond to stress, but chronically elevated levels can lead to symptoms like **C1[anxiety]C1**, **C1[insomnia]C1**, and **C1[weight gain]C1**. Think of cortisol as the alarm system in your body, alerting you to danger, but if the alarm is constantly going off, it can wear you down.",
-  //       },
-  //     ],
-  //     crucial_biomarkers_to_measure: [
-  //       {
-  //         name: "DHEA, Serum",
-  //         importance:
-  //           "Test **C2[DHEA, Serum]C2** to check stress levels because of **C1[work and life stress]C1**.",
-  //       },
-  //     ],
-  //     health_recommendation_summary: [
-  //       "Retest **C2[DHEA, Serum]C2** to understand **C1[stress]C1**.",
-  //       "Consider lifestyle changes to reduce **C1[stress]C1** and support **C2[healthy cortisol levels]C2**.",
-  //     ],
-  //   },
-  //   four_pillars: {
-  //     introduction:
-  //       "Based on your health assessment and lab results, let's take a look at how you're doing in four key areas: eating, sleeping, moving, and recovering. Your **C1[low estradiol]C1** and **C1[high cortisol]C1** suggest that you may benefit from making some adjustments to your lifestyle to support your hormonal health. By focusing on these four pillars, you can take proactive steps towards achieving optimal well-being.",
-  //     pillars: [
-  //       {
-  //         name: "Eat Well",
-  //         score: 4,
-  //         score_rationale: [
-  //           "Eat Well got 4 because **C1[inconsistent eating habits]C1** means missing energy.",
-  //           "Eating regularly helps your body stay strong.",
-  //         ],
-  //         why_it_matters:
-  //           "Good food helps balance **C2[hormones]C2** for **C1[bloating]C1**, like fueling a car.",
-  //         personalized_recommendations: [
-  //           "Eat **C1[fiber-rich vegetables]C1** for **C1[constipation]C1**.",
-  //           "Incorporate phytoestrogen-rich foods like flaxseeds and soy to support **C2[low estrogen levels]C2**.",
-  //         ],
-  //         root_cause_correlation:
-  //           "Fiber helps **C1[constipation]C1** caused by **C2[low estrogen]C2**.",
-  //         science_based_explanation:
-  //           "Fiber clears **C2[extra hormones]C2** to ease **C1[mood swings]C1**, like cleaning out clutter.",
-  //         additional_guidance: {
-  //           description:
-  //             "Since you mentioned inconsistent eating habits, here are some general tips to help you eat well and support your hormonal health.",
-  //           structure: {
-  //             recommended_foods: [
-  //               {
-  //                 name: "Leafy Greens",
-  //                 description:
-  //                   "Rich in vitamins and minerals that support overall health.",
-  //               },
-  //               {
-  //                 name: "Chia Seeds",
-  //                 description:
-  //                   "High in fiber, which helps with digestion and hormone balance.",
-  //               },
-  //             ],
-  //             cautious_foods: [
-  //               {
-  //                 name: "Processed Foods",
-  //                 description:
-  //                   "Low in nutrients and can disrupt hormone balance.",
-  //               },
-  //               {
-  //                 name: "Sugary Drinks",
-  //                 description:
-  //                   "Can lead to blood sugar imbalances and hormone fluctuations.",
-  //               },
-  //             ],
-  //             recommended_workouts: [
-  //               {
-  //                 name: "Yoga",
-  //                 description: "Reduces stress and improves flexibility.",
-  //               },
-  //               {
-  //                 name: "Walking",
-  //                 description: "Gentle exercise that boosts energy levels.",
-  //               },
-  //             ],
-  //             avoid_habits_move: [
-  //               {
-  //                 name: "Sitting for Long Periods",
-  //                 description: "Can lead to stiffness and reduced circulation.",
-  //               },
-  //               {
-  //                 name: "Skipping Meals",
-  //                 description:
-  //                   "Disrupts blood sugar levels and hormone balance.",
-  //               },
-  //             ],
-  //             recommended_recovery_tips: [
-  //               {
-  //                 name: "Mindfulness Meditation",
-  //                 description: "Reduces stress and promotes relaxation.",
-  //               },
-  //               {
-  //                 name: "Deep Breathing Exercises",
-  //                 description:
-  //                   "Calms the nervous system and lowers cortisol levels.",
-  //               },
-  //             ],
-  //             avoid_habits_rest_recover: [
-  //               {
-  //                 name: "Screen Time Before Bed",
-  //                 description:
-  //                   "Disrupts sleep patterns and hormone production.",
-  //               },
-  //               {
-  //                 name: "Caffeine Late in the Day",
-  //                 description: "Can interfere with sleep and increase anxiety.",
-  //               },
-  //             ],
-  //           },
-  //         },
-  //       },
-  //       {
-  //         name: "Sleep Well",
-  //         score: 5,
-  //         score_rationale: [
-  //           "Sleep Well got 5 because **C1[inconsistent sleep]C1** means less rest.",
-  //           "Regular sleep helps your body recharge.",
-  //         ],
-  //         why_it_matters:
-  //           "Good sleep helps balance **C2[cortisol]C2** for **C1[stress]C1**, like a phone charging overnight.",
-  //         personalized_recommendations: [
-  //           "Aim for **C2[7-9 hours]C2** of sleep to balance **C2[cortisol levels]C2**.",
-  //           "Establish a consistent sleep schedule to regulate your body's natural sleep-wake cycle.",
-  //         ],
-  //         root_cause_correlation:
-  //           "Consistent sleep helps lower **C2[high cortisol]C2**, which can cause **C1[bloating]C1**.",
-  //         science_based_explanation:
-  //           "Sleep regulates **C2[hormones]C2** to ease **C1[mood swings]C1**, like resetting a computer.",
-  //         additional_guidance: {
-  //           description:
-  //             "Since you mentioned inconsistent sleep, here are some general tips to help you sleep well and support your hormonal health.",
-  //           structure: {
-  //             recommended_foods: [
-  //               {
-  //                 name: "Chamomile Tea",
-  //                 description: "Promotes relaxation and sleep.",
-  //               },
-  //               {
-  //                 name: "Almonds",
-  //                 description: "Contain magnesium, which helps with sleep.",
-  //               },
-  //             ],
-  //             cautious_foods: [
-  //               {
-  //                 name: "Caffeine",
-  //                 description: "Can interfere with sleep.",
-  //               },
-  //               { name: "Alcohol", description: "Disrupts sleep patterns." },
-  //             ],
-  //             recommended_workouts: [
-  //               {
-  //                 name: "Yoga",
-  //                 description: "Reduces stress and promotes relaxation.",
-  //               },
-  //               {
-  //                 name: "Walking",
-  //                 description: "Gentle exercise that boosts energy levels.",
-  //               },
-  //             ],
-  //             avoid_habits_move: [
-  //               {
-  //                 name: "Exercising Too Close to Bedtime",
-  //                 description: "Can interfere with sleep.",
-  //               },
-  //               {
-  //                 name: "Sitting for Long Periods",
-  //                 description: "Can lead to stiffness and reduced circulation.",
-  //               },
-  //             ],
-  //             recommended_recovery_tips: [
-  //               {
-  //                 name: "Warm Bath",
-  //                 description: "Relaxes muscles and promotes sleep.",
-  //               },
-  //               {
-  //                 name: "Reading",
-  //                 description: "Calms the mind and prepares for sleep.",
-  //               },
-  //             ],
-  //             avoid_habits_rest_recover: [
-  //               {
-  //                 name: "Screen Time Before Bed",
-  //                 description:
-  //                   "Disrupts sleep patterns and hormone production.",
-  //               },
-  //               {
-  //                 name: "Caffeine Late in the Day",
-  //                 description: "Can interfere with sleep and increase anxiety.",
-  //               },
-  //             ],
-  //           },
-  //         },
-  //       },
-  //       {
-  //         name: "Move Well",
-  //         score: 6,
-  //         score_rationale: [
-  //           "Move Well got 6 because **C1[sedentary job]C1** means less movement.",
-  //           "Daily exercise helps your body stay active.",
-  //         ],
-  //         why_it_matters:
-  //           "Good movement helps balance **C2[hormones]C2** for **C1[energy]C1**, like oiling a machine.",
-  //         personalized_recommendations: [
-  //           "Incorporate daily movement like walking or stretching to combat the effects of a **C1[sedentary job]C1**.",
-  //           "Engage in regular exercise to support **C2[hormone balance]C2** and reduce **C1[stress]C1**.",
-  //         ],
-  //         root_cause_correlation:
-  //           "Daily movement helps lower **C2[high cortisol]C2**, which can cause **C1[bloating]C1**.",
-  //         science_based_explanation:
-  //           "Exercise regulates **C2[hormones]C2** to ease **C1[mood swings]C1**, like tuning an engine.",
-  //         additional_guidance: {
-  //           description:
-  //             "Since you mentioned a sedentary job, here are some general tips to help you move well and support your hormonal health.",
-  //           structure: {
-  //             recommended_foods: [
-  //               {
-  //                 name: "Fruits",
-  //                 description: "Provide energy and essential nutrients.",
-  //               },
-  //               {
-  //                 name: "Vegetables",
-  //                 description:
-  //                   "Rich in vitamins and minerals that support overall health.",
-  //               },
-  //             ],
-  //             cautious_foods: [
-  //               {
-  //                 name: "Processed Foods",
-  //                 description:
-  //                   "Low in nutrients and can disrupt hormone balance.",
-  //               },
-  //               {
-  //                 name: "Sugary Drinks",
-  //                 description:
-  //                   "Can lead to blood sugar imbalances and hormone fluctuations.",
-  //               },
-  //             ],
-  //             recommended_workouts: [
-  //               {
-  //                 name: "Walking",
-  //                 description: "Gentle exercise that boosts energy levels.",
-  //               },
-  //               {
-  //                 name: "Stretching",
-  //                 description: "Improves flexibility and reduces stiffness.",
-  //               },
-  //             ],
-  //             avoid_habits_move: [
-  //               {
-  //                 name: "Sitting for Long Periods",
-  //                 description: "Can lead to stiffness and reduced circulation.",
-  //               },
-  //               {
-  //                 name: "Skipping Meals",
-  //                 description:
-  //                   "Disrupts blood sugar levels and hormone balance.",
-  //               },
-  //             ],
-  //             recommended_recovery_tips: [
-  //               {
-  //                 name: "Foam Rolling",
-  //                 description:
-  //                   "Releases muscle tension and improves circulation.",
-  //               },
-  //               {
-  //                 name: "Epsom Salt Bath",
-  //                 description: "Relaxes muscles and reduces inflammation.",
-  //               },
-  //             ],
-  //             avoid_habits_rest_recover: [
-  //               {
-  //                 name: "Overtraining",
-  //                 description: "Can lead to fatigue and hormone imbalances.",
-  //               },
-  //               {
-  //                 name: "Ignoring Pain",
-  //                 description: "Can lead to injuries and prolonged recovery.",
-  //               },
-  //             ],
-  //           },
-  //         },
-  //       },
-  //       {
-  //         name: "Recover Well",
-  //         score: 5,
-  //         score_rationale: [
-  //           "Recover Well got 5 because **C1[work and life stress]C1** means less relaxation.",
-  //           "Relaxation helps your body recharge.",
-  //         ],
-  //         why_it_matters:
-  //           "Good recovery helps balance **C2[cortisol]C2** for **C1[stress]C1**, like a vacation for your mind.",
-  //         personalized_recommendations: [
-  //           "Incorporate calming activities like mindfulness or meditation to lower **C2[cortisol levels]C2**.",
-  //           "Prioritize stress management techniques to support **C2[hormone balance]C2** and reduce **C1[anxiety]C1**.",
-  //         ],
-  //         root_cause_correlation:
-  //           "Calming activities help lower **C2[high cortisol]C2**, which can cause **C1[bloating]C1**.",
-  //         science_based_explanation:
-  //           "Relaxation regulates **C2[hormones]C2** to ease **C1[mood swings]C1**, like defusing a bomb.",
-  //         additional_guidance: {
-  //           description:
-  //             "Since you mentioned work and life stress, here are some general tips to help you recover well and support your hormonal health.",
-  //           structure: {
-  //             recommended_foods: [
-  //               {
-  //                 name: "Omega-3 Fatty Acids",
-  //                 description: "Reduce inflammation and support brain health.",
-  //               },
-  //               {
-  //                 name: "Magnesium-Rich Foods",
-  //                 description: "Promote relaxation and sleep.",
-  //               },
-  //             ],
-  //             cautious_foods: [
-  //               {
-  //                 name: "Processed Foods",
-  //                 description:
-  //                   "Low in nutrients and can disrupt hormone balance.",
-  //               },
-  //               {
-  //                 name: "Sugary Drinks",
-  //                 description:
-  //                   "Can lead to blood sugar imbalances and hormone fluctuations.",
-  //               },
-  //             ],
-  //             recommended_workouts: [
-  //               {
-  //                 name: "Yoga",
-  //                 description: "Reduces stress and improves flexibility.",
-  //               },
-  //               {
-  //                 name: "Walking",
-  //                 description: "Gentle exercise that boosts energy levels.",
-  //               },
-  //             ],
-  //             avoid_habits_move: [
-  //               {
-  //                 name: "Overtraining",
-  //                 description: "Can lead to fatigue and hormone imbalances.",
-  //               },
-  //               {
-  //                 name: "Ignoring Pain",
-  //                 description: "Can lead to injuries and prolonged recovery.",
-  //               },
-  //             ],
-  //             recommended_recovery_tips: [
-  //               {
-  //                 name: "Mindfulness Meditation",
-  //                 description: "Reduces stress and promotes relaxation.",
-  //               },
-  //               {
-  //                 name: "Deep Breathing Exercises",
-  //                 description:
-  //                   "Calms the nervous system and lowers cortisol levels.",
-  //               },
-  //             ],
-  //             avoid_habits_rest_recover: [
-  //               {
-  //                 name: "Screen Time Before Bed",
-  //                 description:
-  //                   "Disrupts sleep patterns and hormone production.",
-  //               },
-  //               {
-  //                 name: "Caffeine Late in the Day",
-  //                 description: "Can interfere with sleep and increase anxiety.",
-  //               },
-  //             ],
-  //           },
-  //         },
-  //       },
-  //     ],
-  //   },
-  //   supplements: {
-  //     description:
-  //       "Based on your lab results and health assessment, these supplements may help with **C1[low estradiol]C1**, **C1[high cortisol]C1**, and **C1[stress]C1**.",
-  //     structure: {
-  //       recommendations: [
-  //         {
-  //           name: "Magnesium",
-  //           rationale:
-  //             "For **C2[low Estradiol]C2** and **C1[mood swings]C1**, helps calm your body.",
-  //           expected_outcomes: "Better **C1[sleep]C1**, like a restful night.",
-  //           dosage_and_timing: "**C2[200 mg daily, evening]C2**.",
-  //           situational_cyclical_considerations:
-  //             "Use in **C1[second half of cycle]C1** for **C1[cramps]C1**.",
-  //         },
-  //         {
-  //           name: "Vitamin D",
-  //           rationale:
-  //             "For **C2[low Estradiol]C2** and **C1[mood swings]C1**, helps support bone health and mood.",
-  //           expected_outcomes: "Improved **C1[mood]C1**, like a sunny day.",
-  //           dosage_and_timing: "**C2[2000 IU daily, morning]C2**.",
-  //           situational_cyclical_considerations:
-  //             "Use throughout the cycle for consistent support.",
-  //         },
-  //       ],
-  //       conclusion: "Stick to advice and check with a doctor.",
-  //     },
-  //   },
-  //   action_plan: {
-  //     description:
-  //       "Here’s how to improve **C1[energy]C1** and reduce **C1[stress]C1**.",
-  //     structure: {
-  //       foods_to_enjoy: [
-  //         "Eat **C1[vegetables]C1** for **C1[constipation]C1**.",
-  //         "Include phytoestrogen-rich foods like flaxseeds and soy to support **C2[low estrogen levels]C2**.",
-  //       ],
-  //       foods_to_limit: [
-  //         "Limit **C2[milk]C2** for **C1[lactose issues]C1**.",
-  //         "Reduce processed foods and sugary drinks to support hormone balance.",
-  //       ],
-  //       daily_habits: [
-  //         "Sleep **C2[7-9 hours]C2** to balance **C1[stress]C1**.",
-  //         "Establish a consistent sleep schedule to regulate your body's natural sleep-wake cycle.",
-  //       ],
-  //       rest_and_recovery: [
-  //         "Try **C1[meditation]C1** for **C1[stress]C1**.",
-  //         "Incorporate calming activities like mindfulness or deep breathing exercises to lower **C2[cortisol levels]C2**.",
-  //       ],
-  //       movement: [
-  //         "**C1[Yoga]C1** for **C1[stress]C1**.",
-  //         "Engage in regular exercise to support **C2[hormone balance]C2** and reduce **C1[anxiety]C1**.",
-  //       ],
-  //     },
-  //   },
-  // };
+  const defaultData = {
+    lab_analysis: {
+      overall_summary:
+        "Based on your lab results and health assessment, there are a few key areas to focus on. Your **C1[low Estradiol]C1** and **C1[high SHBG]C1** could be contributing to some of the symptoms you're experiencing, such as **C1[cramps]C1** and **C1[bloating]C1**. Additionally, your **C2[elevated TSH]C2** and **C2[high Cortisol AM]C2** suggest that your thyroid and stress response may need some attention. It's important to address these imbalances to support your overall hormonal health and well-being. Making dietary adjustments, incorporating stress-reducing activities, and consulting with your healthcare provider can help you achieve hormonal harmony.",
+      biomarkers_tested_count: 13,
+      biomarker_categories_summary: {
+        description_text:
+          "Out of **C1[13]C1** tests, **C2[8]C2** are optimal, **C2[0]C2** need keeping in mind, and **C2[5]C2** need attention. This means that while some of your hormone levels are within the normal range, there are a few that could benefit from some support. Addressing the biomarkers that need attention can help improve your overall hormonal balance and alleviate some of the symptoms you're experiencing. It's important to work with your healthcare provider to develop a personalized plan that addresses your specific needs and goals. By focusing on these key areas, you can take proactive steps towards achieving optimal hormonal health.",
+        optimal_count: 8,
+        keep_in_mind_count: 0,
+        attention_needed_count: 5,
+      },
+      detailed_biomarkers: [
+        {
+          name: "Cholesterol, Total",
+          status: "optimal",
+          status_label: "Good (Green)",
+          result: "168 mg/dL",
+          range: "100-199",
+          cycle_impact:
+            "Cholesterol is essential for hormone production, and its levels don't directly fluctuate with your menstrual cycle, but maintaining healthy levels supports overall hormonal balance.",
+          why_it_matters:
+            "Your cholesterol level is within the normal range, which is important for overall health and hormone production. Cholesterol is a building block for hormones like estrogen and progesterone, so maintaining healthy levels is crucial for hormonal balance. Think of cholesterol as the raw material your body uses to create these essential hormones. Keeping it in the optimal range ensures your body has what it needs to function properly.",
+        },
+        {
+          name: "Triglycerides",
+          status: "optimal",
+          status_label: "Good (Green)",
+          result: "59 mg/dL",
+          range: "0-149",
+          cycle_impact:
+            "Triglycerides don't directly fluctuate with the menstrual cycle, but maintaining healthy levels supports overall metabolic health, which indirectly influences hormonal balance.",
+          why_it_matters:
+            "Your triglyceride level is within the normal range, which is a good indicator of your metabolic health. Triglycerides are a type of fat in your blood, and high levels can increase your risk of heart disease and other health problems. Keeping your triglycerides in the optimal range supports your overall well-being and helps your body function efficiently. Think of triglycerides as fuel for your body, but too much can clog the engine.",
+        },
+        {
+          name: "HDL Cholesterol",
+          status: "optimal",
+          status_label: "Good (Green)",
+          result: "75 mg/dL",
+          range: ">39",
+          cycle_impact:
+            "HDL cholesterol doesn't directly fluctuate with the menstrual cycle, but maintaining healthy levels supports cardiovascular health, which is important for overall hormonal balance.",
+          why_it_matters:
+            'Your HDL cholesterol level is within the normal range, which is beneficial for your heart health. HDL cholesterol is often referred to as "good" cholesterol because it helps remove other forms of cholesterol from your bloodstream. Maintaining healthy HDL levels supports your cardiovascular system and helps protect against heart disease. Think of HDL as a street sweeper, clearing away excess cholesterol from your arteries.',
+        },
+        {
+          name: "VLDL Cholesterol Cal",
+          status: "optimal",
+          status_label: "Good (Green)",
+          result: "12 mg/dL",
+          range: "5-40",
+          cycle_impact:
+            "VLDL cholesterol doesn't directly fluctuate with the menstrual cycle, but maintaining healthy levels supports overall metabolic health, which indirectly influences hormonal balance.",
+          why_it_matters:
+            "Your VLDL cholesterol level is within the normal range, which is a good indicator of your metabolic health. VLDL cholesterol carries triglycerides in your blood, and high levels can contribute to the buildup of plaque in your arteries. Keeping your VLDL levels in the optimal range supports your cardiovascular system and helps prevent heart disease. Think of VLDL as a delivery truck, carrying fats to your cells, but too many trucks can cause traffic jams.",
+        },
+        {
+          name: "LDL Chol Calc (NIH)",
+          status: "optimal",
+          status_label: "Good (Green)",
+          result: "81 mg/dL",
+          range: "0-99",
+          cycle_impact:
+            "LDL cholesterol doesn't directly fluctuate with the menstrual cycle, but maintaining healthy levels supports cardiovascular health, which is important for overall hormonal balance.",
+          why_it_matters:
+            'Your LDL cholesterol level is within the normal range, which is important for your heart health. LDL cholesterol is sometimes referred to as "bad" cholesterol because it can contribute to the buildup of plaque in your arteries. Keeping your LDL levels in the optimal range supports your cardiovascular system and helps prevent heart disease. Think of LDL as a construction crew, building up plaque in your arteries if levels are too high.',
+        },
+        {
+          name: "Hemoglobin A1c",
+          status: "optimal",
+          status_label: "Good (Green)",
+          result: "5.5 %",
+          range: "4.8-5.6",
+          cycle_impact:
+            "Hemoglobin A1c provides an average of your blood sugar levels over the past 2-3 months and is not directly impacted by your menstrual cycle.",
+          why_it_matters:
+            "Your Hemoglobin A1c level is within the normal range, indicating good blood sugar control. This is important for overall health and can help prevent the development of diabetes. Think of Hemoglobin A1c as a report card for your blood sugar levels, showing how well you've been managing them over time. Keeping it in the optimal range supports your energy levels and reduces your risk of chronic diseases.",
+        },
+        {
+          name: "T4,Free(Direct)",
+          status: "optimal",
+          status_label: "Good (Green)",
+          result: "1.11 ng/dL",
+          range: "0.82-1.77",
+          cycle_impact:
+            "Thyroid hormones like T4 are essential for regulating metabolism and energy levels, and while they don't directly fluctuate with the menstrual cycle, they can influence its regularity and symptoms.",
+          why_it_matters:
+            "Your free T4 level is within the normal range, which is a good indicator of your thyroid function. T4 is a thyroid hormone that helps regulate your metabolism, energy levels, and overall growth and development. Keeping your T4 levels in the optimal range supports your energy levels and helps your body function efficiently. Think of T4 as the gas pedal for your metabolism, controlling how quickly your body burns fuel.",
+        },
+        {
+          name: "Prolactin",
+          status: "optimal",
+          status_label: "Good (Green)",
+          result: "23.8 ng/mL",
+          range: "4.8-33.4",
+          cycle_impact:
+            "Prolactin levels can fluctuate during the menstrual cycle, particularly during ovulation and the luteal phase, and can influence breast tenderness and mood changes.",
+          why_it_matters:
+            "Your prolactin level is within the normal range, which is important for reproductive health and breast milk production. Prolactin is a hormone that stimulates milk production after childbirth and also plays a role in regulating the menstrual cycle. Keeping your prolactin levels in the optimal range supports your reproductive health and overall well-being. Think of prolactin as the milk-making hormone, ensuring you can nourish a baby if needed.",
+        },
+        {
+          name: "Testosterone, Total, LC/MS",
+          status: "optimal",
+          status_label: "Good (Green)",
+          result: "22 ng/dL",
+          range: "10 - 55",
+          cycle_impact:
+            "Testosterone levels can fluctuate slightly during the menstrual cycle, with a small peak around ovulation, and can influence libido and energy levels.",
+          why_it_matters:
+            "Your testosterone level is within the normal range for premenopausal women, which is important for maintaining muscle mass, bone density, and libido. Testosterone is often thought of as a male hormone, but it also plays a crucial role in women's health. Keeping your testosterone levels in the optimal range supports your energy levels, mood, and overall well-being. Think of testosterone as the strength hormone, helping you stay strong and energetic.",
+        },
+        {
+          name: "Reverse T3, Serum",
+          status: "optimal",
+          status_label: "Good (Green)",
+          result: "11.4 ng/dL",
+          range: "9.2 - 24.1",
+          cycle_impact:
+            "Reverse T3 doesn't directly fluctuate with the menstrual cycle, but it can be affected by stress and inflammation, which can indirectly influence hormonal balance.",
+          why_it_matters:
+            "Your reverse T3 level is within the normal range, which is a good indicator of your thyroid hormone conversion. Reverse T3 is a hormone that can block the effects of T3, the active form of thyroid hormone. Keeping your reverse T3 levels in the optimal range supports your thyroid function and helps your body use thyroid hormone efficiently. Think of reverse T3 as a brake on your thyroid, slowing down its activity if levels are too high.",
+        },
+        {
+          name: "Triiodothyronine (T3), Free",
+          status: "optimal",
+          status_label: "Good (Green)",
+          result: "2.7 pg/mL",
+          range: "2.0-4.4",
+          cycle_impact:
+            "Thyroid hormones like T3 are essential for regulating metabolism and energy levels, and while they don't directly fluctuate with the menstrual cycle, they can influence its regularity and symptoms.",
+          why_it_matters:
+            "Your free T3 level is within the normal range, which is a good indicator of your thyroid function. T3 is the active form of thyroid hormone that helps regulate your metabolism, energy levels, and overall growth and development. Keeping your T3 levels in the optimal range supports your energy levels and helps your body function efficiently. Think of T3 as the key that unlocks your cells' energy potential.",
+        },
+        {
+          name: "TSH",
+          status: "attention_needed",
+          status_label: "Needs Attention (Red)",
+          result: "4.310 uIU/mL",
+          range: "0.450-4.500",
+          cycle_impact:
+            "TSH levels don't directly fluctuate with the menstrual cycle, but thyroid function is crucial for hormonal balance and can influence cycle regularity and symptoms.",
+          why_it_matters:
+            "Your TSH level is slightly elevated, which could indicate that your thyroid is working harder to produce thyroid hormones. TSH, or thyroid-stimulating hormone, is produced by the pituitary gland and tells the thyroid gland to release T4 and T3. An elevated TSH level may suggest that your thyroid is underactive, which can lead to symptoms like **C1[fatigue]C1**, **C1[constipation]C1**, and **C1[bloating]C1**. Think of TSH as the messenger that tells your thyroid how much hormone to make.",
+        },
+        {
+          name: "Estradiol",
+          status: "attention_needed",
+          status_label: "Needs Attention (Red)",
+          result: "<5.0 pg/mL",
+          range:
+            "Adult Female Range: Follicular phase 12.5 - 166.0, Ovulation phase 85.8 - 498.0, Luteal phase 43.8 - 211.0, Postmenopausal <6.0 - 54.7, Pregnancy 1st trimester 215.0 - >4300.0",
+          cycle_impact:
+            "Estradiol levels fluctuate significantly during the menstrual cycle, influencing the development of the uterine lining, cervical mucus, and various symptoms like mood changes and breast tenderness.",
+          why_it_matters:
+            "Your estradiol level is low, which could indicate that your ovaries are not producing enough estrogen. Estradiol is a form of estrogen that plays a crucial role in regulating the menstrual cycle, bone health, and mood. Low estradiol levels can lead to symptoms like **C1[irregular periods]C1**, **C1[vaginal dryness]C1**, and **C1[mood swings]C1**. Think of estradiol as the conductor of your menstrual cycle, orchestrating the events that lead to ovulation and menstruation.",
+        },
+        {
+          name: "Progesterone",
+          status: "attention_needed",
+          status_label: "Needs Attention (Red)",
+          result: "0.2 ng/mL",
+          range:
+            "Follicular phase 0.1 - 0.9, Luteal phase 1.8 - 23.9, Ovulation phase 0.1 - 12.0, Pregnant First trimester 11.0 - 44.3, Second trimester 25.4 - 83.3, Third trimester 58.7 - 214.0, Postmenopausal 0.0 - 0.1",
+          cycle_impact:
+            "Progesterone levels rise after ovulation during the luteal phase, preparing the uterine lining for implantation and influencing symptoms like breast tenderness and mood changes.",
+          why_it_matters:
+            "Your progesterone level is low, which could indicate that you are not ovulating regularly or that your luteal phase is too short. Progesterone is a hormone that helps prepare the uterine lining for implantation of a fertilized egg and also plays a role in regulating the menstrual cycle. Low progesterone levels can lead to symptoms like **C1[irregular periods]C1**, **C1[difficulty conceiving]C1**, and **C1[increased PMS symptoms]C1**. Think of progesterone as the gardener that prepares the soil for planting, ensuring the uterine lining is ready for a fertilized egg.",
+        },
+        {
+          name: "Estrogens, Total",
+          status: "attention_needed",
+          status_label: "Needs Attention (Red)",
+          result: "85 pg/mL",
+          range:
+            "Prepubertal < 40, Female Cycle: 1-10 Days 16 - 328, 11-20 Days 34 - 501, 21-30 Days 48 - 350, Post-Menopausal 40 - 244",
+          cycle_impact:
+            "Total estrogen levels fluctuate throughout the menstrual cycle, influencing the development of the uterine lining, cervical mucus, and various symptoms like mood changes and breast tenderness.",
+          why_it_matters:
+            "Your total estrogen level is low, which could indicate that your ovaries are not producing enough estrogen. Estrogens play a crucial role in regulating the menstrual cycle, bone health, and mood. Low estrogen levels can lead to symptoms like **C1[irregular periods]C1**, **C1[vaginal dryness]C1**, and **C1[mood swings]C1**. Think of estrogens as the conductor of your menstrual cycle, orchestrating the events that lead to ovulation and menstruation.",
+        },
+        {
+          name: "Sex Horm Binding Glob, Serum",
+          status: "attention_needed",
+          status_label: "Needs Attention (Red)",
+          result: "130.0 High",
+          range: "24.6-122.0",
+          cycle_impact:
+            "SHBG levels can be influenced by hormonal fluctuations during the menstrual cycle, and they can affect the availability of hormones like testosterone and estrogen.",
+          why_it_matters:
+            "Your SHBG level is high, which means that more of your sex hormones, like testosterone and estrogen, are bound and unavailable for your body to use. SHBG, or sex hormone-binding globulin, is a protein that binds to sex hormones in the blood. High SHBG levels can lead to symptoms like **C1[low libido]C1**, **C1[fatigue]C1**, and **C1[irregular periods]C1**. Think of SHBG as a taxi that carries sex hormones around, but if there are too many taxis, fewer hormones are available for your body to use.",
+        },
+        {
+          name: "Cortisol - AM",
+          status: "attention_needed",
+          status_label: "Needs Attention (Red)",
+          result: "20.3 High",
+          range: "6.2-19.4",
+          cycle_impact:
+            "Cortisol levels can fluctuate during the menstrual cycle, particularly in response to stress, and can influence mood, energy levels, and sleep patterns.",
+          why_it_matters:
+            "Your morning cortisol level is elevated, which could indicate that you are experiencing chronic stress. Cortisol is a hormone that helps your body respond to stress, but chronically elevated levels can lead to symptoms like **C1[anxiety]C1**, **C1[insomnia]C1**, and **C1[weight gain]C1**. Think of cortisol as the alarm system in your body, alerting you to danger, but if the alarm is constantly going off, it can wear you down.",
+        },
+      ],
+      crucial_biomarkers_to_measure: [
+        {
+          name: "DHEA, Serum",
+          importance:
+            "Test **C2[DHEA, Serum]C2** to check stress levels because of **C1[work and life stress]C1**.",
+        },
+      ],
+      health_recommendation_summary: [
+        "Retest **C2[DHEA, Serum]C2** to understand **C1[stress]C1**.",
+        "Consider lifestyle changes to reduce **C1[stress]C1** and support **C2[healthy cortisol levels]C2**.",
+      ],
+    },
+    four_pillars: {
+      introduction:
+        "Based on your health assessment and lab results, let's take a look at how you're doing in four key areas: eating, sleeping, moving, and recovering. Your **C1[low estradiol]C1** and **C1[high cortisol]C1** suggest that you may benefit from making some adjustments to your lifestyle to support your hormonal health. By focusing on these four pillars, you can take proactive steps towards achieving optimal well-being.",
+      pillars: [
+        {
+          name: "Eat Well",
+          score: 4,
+          score_rationale: [
+            "Eat Well got 4 because **C1[inconsistent eating habits]C1** means missing energy.",
+            "Eating regularly helps your body stay strong.",
+          ],
+          why_it_matters:
+            "Good food helps balance **C2[hormones]C2** for **C1[bloating]C1**, like fueling a car.",
+          personalized_recommendations: [
+            "Eat **C1[fiber-rich vegetables]C1** for **C1[constipation]C1**.",
+            "Incorporate phytoestrogen-rich foods like flaxseeds and soy to support **C2[low estrogen levels]C2**.",
+          ],
+          root_cause_correlation:
+            "Fiber helps **C1[constipation]C1** caused by **C2[low estrogen]C2**.",
+          science_based_explanation:
+            "Fiber clears **C2[extra hormones]C2** to ease **C1[mood swings]C1**, like cleaning out clutter.",
+          additional_guidance: {
+            description:
+              "Since you mentioned inconsistent eating habits, here are some general tips to help you eat well and support your hormonal health.",
+            structure: {
+              recommended_foods: [
+                {
+                  name: "Leafy Greens",
+                  description:
+                    "Rich in vitamins and minerals that support overall health.",
+                },
+                {
+                  name: "Chia Seeds",
+                  description:
+                    "High in fiber, which helps with digestion and hormone balance.",
+                },
+              ],
+              cautious_foods: [
+                {
+                  name: "Processed Foods",
+                  description:
+                    "Low in nutrients and can disrupt hormone balance.",
+                },
+                {
+                  name: "Sugary Drinks",
+                  description:
+                    "Can lead to blood sugar imbalances and hormone fluctuations.",
+                },
+              ],
+              recommended_workouts: [
+                {
+                  name: "Yoga",
+                  description: "Reduces stress and improves flexibility.",
+                },
+                {
+                  name: "Walking",
+                  description: "Gentle exercise that boosts energy levels.",
+                },
+              ],
+              avoid_habits_move: [
+                {
+                  name: "Sitting for Long Periods",
+                  description: "Can lead to stiffness and reduced circulation.",
+                },
+                {
+                  name: "Skipping Meals",
+                  description:
+                    "Disrupts blood sugar levels and hormone balance.",
+                },
+              ],
+              recommended_recovery_tips: [
+                {
+                  name: "Mindfulness Meditation",
+                  description: "Reduces stress and promotes relaxation.",
+                },
+                {
+                  name: "Deep Breathing Exercises",
+                  description:
+                    "Calms the nervous system and lowers cortisol levels.",
+                },
+              ],
+              avoid_habits_rest_recover: [
+                {
+                  name: "Screen Time Before Bed",
+                  description:
+                    "Disrupts sleep patterns and hormone production.",
+                },
+                {
+                  name: "Caffeine Late in the Day",
+                  description: "Can interfere with sleep and increase anxiety.",
+                },
+              ],
+            },
+          },
+        },
+        {
+          name: "Sleep Well",
+          score: 5,
+          score_rationale: [
+            "Sleep Well got 5 because **C1[inconsistent sleep]C1** means less rest.",
+            "Regular sleep helps your body recharge.",
+          ],
+          why_it_matters:
+            "Good sleep helps balance **C2[cortisol]C2** for **C1[stress]C1**, like a phone charging overnight.",
+          personalized_recommendations: [
+            "Aim for **C2[7-9 hours]C2** of sleep to balance **C2[cortisol levels]C2**.",
+            "Establish a consistent sleep schedule to regulate your body's natural sleep-wake cycle.",
+          ],
+          root_cause_correlation:
+            "Consistent sleep helps lower **C2[high cortisol]C2**, which can cause **C1[bloating]C1**.",
+          science_based_explanation:
+            "Sleep regulates **C2[hormones]C2** to ease **C1[mood swings]C1**, like resetting a computer.",
+          additional_guidance: {
+            description:
+              "Since you mentioned inconsistent sleep, here are some general tips to help you sleep well and support your hormonal health.",
+            structure: {
+              recommended_foods: [
+                {
+                  name: "Chamomile Tea",
+                  description: "Promotes relaxation and sleep.",
+                },
+                {
+                  name: "Almonds",
+                  description: "Contain magnesium, which helps with sleep.",
+                },
+              ],
+              cautious_foods: [
+                {
+                  name: "Caffeine",
+                  description: "Can interfere with sleep.",
+                },
+                { name: "Alcohol", description: "Disrupts sleep patterns." },
+              ],
+              recommended_workouts: [
+                {
+                  name: "Yoga",
+                  description: "Reduces stress and promotes relaxation.",
+                },
+                {
+                  name: "Walking",
+                  description: "Gentle exercise that boosts energy levels.",
+                },
+              ],
+              avoid_habits_move: [
+                {
+                  name: "Exercising Too Close to Bedtime",
+                  description: "Can interfere with sleep.",
+                },
+                {
+                  name: "Sitting for Long Periods",
+                  description: "Can lead to stiffness and reduced circulation.",
+                },
+              ],
+              recommended_recovery_tips: [
+                {
+                  name: "Warm Bath",
+                  description: "Relaxes muscles and promotes sleep.",
+                },
+                {
+                  name: "Reading",
+                  description: "Calms the mind and prepares for sleep.",
+                },
+              ],
+              avoid_habits_rest_recover: [
+                {
+                  name: "Screen Time Before Bed",
+                  description:
+                    "Disrupts sleep patterns and hormone production.",
+                },
+                {
+                  name: "Caffeine Late in the Day",
+                  description: "Can interfere with sleep and increase anxiety.",
+                },
+              ],
+            },
+          },
+        },
+        {
+          name: "Move Well",
+          score: 6,
+          score_rationale: [
+            "Move Well got 6 because **C1[sedentary job]C1** means less movement.",
+            "Daily exercise helps your body stay active.",
+          ],
+          why_it_matters:
+            "Good movement helps balance **C2[hormones]C2** for **C1[energy]C1**, like oiling a machine.",
+          personalized_recommendations: [
+            "Incorporate daily movement like walking or stretching to combat the effects of a **C1[sedentary job]C1**.",
+            "Engage in regular exercise to support **C2[hormone balance]C2** and reduce **C1[stress]C1**.",
+          ],
+          root_cause_correlation:
+            "Daily movement helps lower **C2[high cortisol]C2**, which can cause **C1[bloating]C1**.",
+          science_based_explanation:
+            "Exercise regulates **C2[hormones]C2** to ease **C1[mood swings]C1**, like tuning an engine.",
+          additional_guidance: {
+            description:
+              "Since you mentioned a sedentary job, here are some general tips to help you move well and support your hormonal health.",
+            structure: {
+              recommended_foods: [
+                {
+                  name: "Fruits",
+                  description: "Provide energy and essential nutrients.",
+                },
+                {
+                  name: "Vegetables",
+                  description:
+                    "Rich in vitamins and minerals that support overall health.",
+                },
+              ],
+              cautious_foods: [
+                {
+                  name: "Processed Foods",
+                  description:
+                    "Low in nutrients and can disrupt hormone balance.",
+                },
+                {
+                  name: "Sugary Drinks",
+                  description:
+                    "Can lead to blood sugar imbalances and hormone fluctuations.",
+                },
+              ],
+              recommended_workouts: [
+                {
+                  name: "Walking",
+                  description: "Gentle exercise that boosts energy levels.",
+                },
+                {
+                  name: "Stretching",
+                  description: "Improves flexibility and reduces stiffness.",
+                },
+              ],
+              avoid_habits_move: [
+                {
+                  name: "Sitting for Long Periods",
+                  description: "Can lead to stiffness and reduced circulation.",
+                },
+                {
+                  name: "Skipping Meals",
+                  description:
+                    "Disrupts blood sugar levels and hormone balance.",
+                },
+              ],
+              recommended_recovery_tips: [
+                {
+                  name: "Foam Rolling",
+                  description:
+                    "Releases muscle tension and improves circulation.",
+                },
+                {
+                  name: "Epsom Salt Bath",
+                  description: "Relaxes muscles and reduces inflammation.",
+                },
+              ],
+              avoid_habits_rest_recover: [
+                {
+                  name: "Overtraining",
+                  description: "Can lead to fatigue and hormone imbalances.",
+                },
+                {
+                  name: "Ignoring Pain",
+                  description: "Can lead to injuries and prolonged recovery.",
+                },
+              ],
+            },
+          },
+        },
+        {
+          name: "Recover Well",
+          score: 5,
+          score_rationale: [
+            "Recover Well got 5 because **C1[work and life stress]C1** means less relaxation.",
+            "Relaxation helps your body recharge.",
+          ],
+          why_it_matters:
+            "Good recovery helps balance **C2[cortisol]C2** for **C1[stress]C1**, like a vacation for your mind.",
+          personalized_recommendations: [
+            "Incorporate calming activities like mindfulness or meditation to lower **C2[cortisol levels]C2**.",
+            "Prioritize stress management techniques to support **C2[hormone balance]C2** and reduce **C1[anxiety]C1**.",
+          ],
+          root_cause_correlation:
+            "Calming activities help lower **C2[high cortisol]C2**, which can cause **C1[bloating]C1**.",
+          science_based_explanation:
+            "Relaxation regulates **C2[hormones]C2** to ease **C1[mood swings]C1**, like defusing a bomb.",
+          additional_guidance: {
+            description:
+              "Since you mentioned work and life stress, here are some general tips to help you recover well and support your hormonal health.",
+            structure: {
+              recommended_foods: [
+                {
+                  name: "Omega-3 Fatty Acids",
+                  description: "Reduce inflammation and support brain health.",
+                },
+                {
+                  name: "Magnesium-Rich Foods",
+                  description: "Promote relaxation and sleep.",
+                },
+              ],
+              cautious_foods: [
+                {
+                  name: "Processed Foods",
+                  description:
+                    "Low in nutrients and can disrupt hormone balance.",
+                },
+                {
+                  name: "Sugary Drinks",
+                  description:
+                    "Can lead to blood sugar imbalances and hormone fluctuations.",
+                },
+              ],
+              recommended_workouts: [
+                {
+                  name: "Yoga",
+                  description: "Reduces stress and improves flexibility.",
+                },
+                {
+                  name: "Walking",
+                  description: "Gentle exercise that boosts energy levels.",
+                },
+              ],
+              avoid_habits_move: [
+                {
+                  name: "Overtraining",
+                  description: "Can lead to fatigue and hormone imbalances.",
+                },
+                {
+                  name: "Ignoring Pain",
+                  description: "Can lead to injuries and prolonged recovery.",
+                },
+              ],
+              recommended_recovery_tips: [
+                {
+                  name: "Mindfulness Meditation",
+                  description: "Reduces stress and promotes relaxation.",
+                },
+                {
+                  name: "Deep Breathing Exercises",
+                  description:
+                    "Calms the nervous system and lowers cortisol levels.",
+                },
+              ],
+              avoid_habits_rest_recover: [
+                {
+                  name: "Screen Time Before Bed",
+                  description:
+                    "Disrupts sleep patterns and hormone production.",
+                },
+                {
+                  name: "Caffeine Late in the Day",
+                  description: "Can interfere with sleep and increase anxiety.",
+                },
+              ],
+            },
+          },
+        },
+      ],
+    },
+    supplements: {
+      description:
+        "Based on your lab results and health assessment, these supplements may help with **C1[low estradiol]C1**, **C1[high cortisol]C1**, and **C1[stress]C1**.",
+      structure: {
+        recommendations: [
+          {
+            name: "Magnesium",
+            rationale:
+              "For **C2[low Estradiol]C2** and **C1[mood swings]C1**, helps calm your body.",
+            expected_outcomes: "Better **C1[sleep]C1**, like a restful night.",
+            dosage_and_timing: "**C2[200 mg daily, evening]C2**.",
+            situational_cyclical_considerations:
+              "Use in **C1[second half of cycle]C1** for **C1[cramps]C1**.",
+          },
+          {
+            name: "Vitamin D",
+            rationale:
+              "For **C2[low Estradiol]C2** and **C1[mood swings]C1**, helps support bone health and mood.",
+            expected_outcomes: "Improved **C1[mood]C1**, like a sunny day.",
+            dosage_and_timing: "**C2[2000 IU daily, morning]C2**.",
+            situational_cyclical_considerations:
+              "Use throughout the cycle for consistent support.",
+          },
+        ],
+        conclusion: "Stick to advice and check with a doctor.",
+      },
+    },
+    action_plan: {
+      description:
+        "Here’s how to improve **C1[energy]C1** and reduce **C1[stress]C1**.",
+      structure: {
+        foods_to_enjoy: [
+          "Eat **C1[vegetables]C1** for **C1[constipation]C1**.",
+          "Include phytoestrogen-rich foods like flaxseeds and soy to support **C2[low estrogen levels]C2**.",
+        ],
+        foods_to_limit: [
+          "Limit **C2[milk]C2** for **C1[lactose issues]C1**.",
+          "Reduce processed foods and sugary drinks to support hormone balance.",
+        ],
+        daily_habits: [
+          "Sleep **C2[7-9 hours]C2** to balance **C1[stress]C1**.",
+          "Establish a consistent sleep schedule to regulate your body's natural sleep-wake cycle.",
+        ],
+        rest_and_recovery: [
+          "Try **C1[meditation]C1** for **C1[stress]C1**.",
+          "Incorporate calming activities like mindfulness or deep breathing exercises to lower **C2[cortisol levels]C2**.",
+        ],
+        movement: [
+          "**C1[Yoga]C1** for **C1[stress]C1**.",
+          "Engage in regular exercise to support **C2[hormone balance]C2** and reduce **C1[anxiety]C1**.",
+        ],
+      },
+    },
+  };
 
-  // jsonInput.value = JSON.stringify(defaultData, null, 2);
+  jsonInput.value = JSON.stringify(defaultData, null, 2);
   // Render the initial view on page load
   updateActiveTab();
   renderContentForActiveTab();
@@ -854,7 +854,10 @@ document.addEventListener("DOMContentLoaded", () => {
     // Build HTML Structure
     let html = `
       <div class="report-header">
-          <h1>Holistic Health</h1>
+          <div class="report-title">
+            <h1>Holistic Health</h1>
+            <img src="icons/actionPlan.svg" alt="actionPlan Icon" class="report-icon">
+          </div>
           <p class="last-update">Last update: <span>${new Date().toLocaleDateString(
             "en-US",
             { month: "long", day: "numeric", year: "numeric" }
@@ -1073,7 +1076,7 @@ Holistic <br/>Coaches, Clinicians</span>
               backgroundColor: "#02393666", // Teal fill
               borderColor: "#023936", // Teal line
               // --- UPDATED: Increased border width to make rounding visible ---
-              borderWidth:3,
+              borderWidth: 3,
               // --- UPDATED: This property rounds the corners where lines meet ---
               borderJoinStyle: "round",
               // --- UPDATED: Ensure lines are straight ---
@@ -1161,7 +1164,10 @@ Holistic <br/>Coaches, Clinicians</span>
 
     let html = `
               <div class="report-header">
+              <div class="report-title">
                 <h1>Suppliment & Action Plan</h1>
+                <img src="icons/suppliment.svg" alt="actionPlan Icon" class="report-icon">
+              </div>
                 <p class="last-update">Last update: <span>${new Date().toLocaleDateString(
                   "en-US",
                   { month: "long", day: "numeric", year: "numeric" }
@@ -1238,7 +1244,10 @@ Holistic <br />Coaches, Clinicians</span>
 
     html += `
          <div class="report-header">
-               <h1>Biomarker Analysis</h1>
+              <div class="report-title">
+                <h1>Biomarker Analysis</h1>
+                <img src="icons/biomerker.svg" alt="actionPlan Icon" class="report-icon">
+              </div>
                <p class="last-update">Last update: <span>${new Date().toLocaleDateString(
                  "en-US",
                  { month: "long", day: "numeric", year: "numeric" }
@@ -1351,11 +1360,17 @@ Holistic <br />Coaches, Clinicians</span>
                                <div class="range-show"><div class="range-indicator range-indicator-${
                                  bm.status
                                }"></div><div class="range-content">
-                                    <p>${bm.status_label.replace(/\s*\(.*?\)\s*/g, '').trim()}</p>
+                                    <p>${bm.status_label
+                                      .replace(/\s*\(.*?\)\s*/g, "")
+                                      .trim()}</p>
                                     <p class="last-update">${new Date().toLocaleDateString(
-                         "en-US",
-                         { month: "long", day: "numeric", year: "numeric" }
-                       )}</p></div></div>
+                                      "en-US",
+                                      {
+                                        month: "long",
+                                        day: "numeric",
+                                        year: "numeric",
+                                      }
+                                    )}</p></div></div>
                          </div>
                          <h4>Cycle Impact</h4>
                          <p class="p-grey">${handleMarkup(bm.cycle_impact)}</p>
@@ -1405,10 +1420,14 @@ Holistic <br />Coaches, Clinicians</span>
                          <h4>Health Recommendation Summary</h4>
                          <div class="biomarkers-container">
                                ${lab.health_recommendation_summary
-                                 .map((bm) => `<div class="health-recommendation-item">
+                                 .map(
+                                   (
+                                     bm
+                                   ) => `<div class="health-recommendation-item">
                                   <p>•</p>
                                   <p>${handleMarkup(bm)}</p>
-                                 </div>`)
+                                 </div>`
+                                 )
                                  .join("")}
                          </div>
                    </div>`;

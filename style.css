@@ -899,3 +899,22 @@ MAIN NAVBAR (No changes made here)
   align-items: center;
   gap: 10px;
 }
+.report-title h1{
+  border-bottom: none !important;
+  padding-top: 0 !important;
+}
+.report-title {
+  display: flex;
+  align-items: self-start;
+  justify-content: space-between;
+  gap: 10px;
+  border-bottom: 1px solid #9e9a98;
+  padding-top: 80px;
+}
+.report-icon {
+  padding-top: 10px;
+  padding-right: 40px;
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
