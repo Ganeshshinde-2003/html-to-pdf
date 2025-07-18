@@ -979,7 +979,7 @@ MAIN NAVBAR (No changes made here)
 
 .supplement-recommendation-card {
   border: 1px solid #9E9A98;
-  margin-bottom: 100px;
+  margin-bottom: 100px !important;
   border-radius: 20px;
   padding: 40px;
   background-color: white;
@@ -1119,7 +1119,8 @@ MAIN NAVBAR (No changes made here)
   margin: 0 !important;
   color: #656160;
   font-weight: 600;
-  margin-bottom: 30px !important;
+  font-size: 22px;
+  margin-bottom: 10px !important;
 }
 
 .supplement-recommendation-card-wrapper h4 {
