@@ -1012,7 +1012,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let html = `
               <div class="report-header">
               <div class="report-title">
-                <h1>Suppliments</h1>
+                <h1>Supplements</h1>
                 <img src="icons/suppliment.svg" alt="actionPlan Icon" class="report-icon">
               </div>
                 <p class="last-update">Last update: <span>${new Date().toLocaleDateString(
