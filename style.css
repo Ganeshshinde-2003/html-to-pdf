@@ -334,8 +334,8 @@ DETAILED BIOMARKER CARD STYLES
   margin-top: 60px;
 }
 .categories-wrapper {
-  padding: 20px 40px;
-  padding-bottom: 50px;
+  padding: 40px;
+  padding-bottom: 160px !important;
   border-bottom: 1px solid #a1a9bc;
 }
 .categories-wrapper h4 {
@@ -768,6 +768,7 @@ MAIN NAVBAR (No changes made here)
 
 .pillar-seciton-three {
   padding: 80px 40px;
+  padding-bottom: 160px !important;
 }
 .pillar-wrapper h4 {
   font-size: 32px;
@@ -979,7 +980,6 @@ MAIN NAVBAR (No changes made here)
 
 .supplement-recommendation-card {
   border: 1px solid #9E9A98;
-  margin-bottom: 100px !important;
   border-radius: 20px;
   padding: 40px;
   background-color: white;
@@ -1071,7 +1071,7 @@ MAIN NAVBAR (No changes made here)
   justify-content: space-between;
   gap: 10px;
   border-bottom: 1px solid #9e9a98;
-  padding-top: 80px;
+  padding-top: 160px;
 }
 .report-icon {
   padding-top: 10px;
@@ -1134,6 +1134,7 @@ MAIN NAVBAR (No changes made here)
   align-items: center;
   justify-content: space-between;
   margin-bottom: 30px !important;
+  margin-top: 100px !important;
 }
 .supplement-recommendation-card-wrapper .recommendation-name .inline-icon {
   width: 40px;
@@ -1159,6 +1160,7 @@ MAIN NAVBAR (No changes made here)
 
 .supplement-disclaimer-wrapper{
   padding: 100px 40px;
+  padding-bottom: 160px !important;
   background-color: white;
   display: flex;
   flex-direction: column;
