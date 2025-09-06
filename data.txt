@@ -1,2622 +1,536 @@
   const defaultData = {
   "lab_analysis": {
-    "overall_summary": "Your lab results show some key areas to focus on to improve your hormonal health. Your **C1[low estradiol]C1** level could be contributing to your **C1[menstrual cramps]C1**, **C1[PMS symptoms]C1**, and **C1[bloating]C1**.  Additionally, your **C2[high cortisol]C2** (**C2[20.3 ug/dL]C2**) and **C2[high SHBG]C2** (**C2[130.0 nmol/L]C2**) levels may be related to your **C1[work and life stress]C1** and could also be impacting your estrogen levels. Let's work together to address these imbalances and support your overall well-being.",
-    "biomarkers_tested_count": 15,
+    "overall_summary": "Your lab results show a few areas that need attention, particularly your **C1[chloride]C1** level being slightly high and your **C1[Mean Corpuscular Hemoglobin]C1** and **C1[MCH Concentration]C1** being low. These can sometimes be linked to nutrient levels. You also have a high **C2[LDL,Calc]C2** (**C2[122 mg/dL]C2**) and **C2[Non-HDL,Chol,Calc]C2** (**C2[131 mg/dL]C2**), which are important for heart health. Your **C2[Hemoglobin A1c]C2** (**C2[5.3 %]C2**) is in a good range, suggesting your blood sugar is well-managed. Given your symptoms of **C1[fatigue]C1**, **C1[mood swings]C1**, and **C1[difficulty concentrating]C1**, we'll focus on supporting your energy and hormonal balance.",
+    "biomarkers_tested_count": 50,
     "biomarker_categories_summary": {
-      "description_text": "Out of **C1[12]C1** tests, **C2[7]C2** are good, **C2[2]C2** need watching, and **C2[3]C2** need action.",
-      "optimal_count": 10,
+      "description_text": "Out of 18 tests, 13 are good, 2 need watching, and 3 need action.",
+      "optimal_count": 45,
       "keep_in_mind_count": 1,
       "attention_needed_count": 4
     },
     "detailed_biomarkers": [
       {
-        "name": "Cholesterol, Total",
+        "name": "Neutrophil Percent, Auto",
         "status": "optimal",
         "status_label": "Good (Green)",
-        "result": "168 mg/dL",
-        "range": "100-199",
-        "cycle_impact": "Cholesterol is a building block for hormones, but high levels can sometimes interfere with hormone balance.",
-        "why_it_matters": "Your total cholesterol is within a healthy range, which is important for overall health and hormone production."
+        "result": "69.4 %",
+        "range": "No Ref. Range %",
+        "cycle_impact": "Neutrophils are a type of white blood cell that helps fight infection. Their levels can fluctuate but are not directly tied to your menstrual cycle.",
+        "why_it_matters": "Your neutrophil percentage is within a typical range, indicating your immune system is functioning as expected."
       },
       {
-        "name": "Triglycerides",
+        "name": "Lymphocyte Percent, Auto",
         "status": "optimal",
         "status_label": "Good (Green)",
-        "result": "59 mg/dL",
-        "range": "0-149",
-        "cycle_impact": "High triglycerides can sometimes affect your cycle, but yours are in a good range.",
-        "why_it_matters": "Healthy triglyceride levels are important for heart health and metabolic function, which can indirectly influence your hormones."
+        "result": "19.1 %",
+        "range": "No Ref. Range %",
+        "cycle_impact": "Lymphocytes are another type of white blood cell involved in immune response. Their levels can change with stress or illness, which can indirectly affect your cycle.",
+        "why_it_matters": "Your lymphocyte percentage is within a normal range, suggesting a balanced immune response."
       },
       {
-        "name": "HDL Cholesterol",
+        "name": "Monocyte Percent, Auto",
         "status": "optimal",
         "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
+        "result": "8.2 %",
+        "range": "No Ref. Range %",
+        "cycle_impact": "Monocytes are a type of white blood cell that helps clear out dead cells and fight infection. Fluctuations can occur with inflammation, which might indirectly influence hormonal balance.",
+        "why_it_matters": "Your monocyte percentage is within a normal range, indicating your body's cleanup and immune processes are working well."
       },
       {
-        "name": "VLDL Cholesterol Cal",
+        "name": "Eosinophil Percent, Auto",
         "status": "optimal",
         "status_label": "Good (Green)",
-        "result": "12 mg/dL",
-        "range": "5-40",
-        "cycle_impact": "VLDL carries triglycerides, which can impact hormones if levels are too high.",
-        "why_it_matters": "Your VLDL is within the healthy range, suggesting good management of triglycerides and potential positive effects on hormone balance."
+        "result": "2.6 %",
+        "range": "No Ref. Range %",
+        "cycle_impact": "Eosinophils are white blood cells that often increase during allergic reactions or parasitic infections. While not directly linked to your cycle, significant increases can indicate underlying inflammation.",
+        "why_it_matters": "Your eosinophil percentage is within a normal range, suggesting no significant allergic response or parasitic issue."
       },
       {
-        "name": "LDL Chol Calc (NIH)",
+        "name": "Basophil Percent, Auto",
         "status": "optimal",
         "status_label": "Good (Green)",
-        "result": "81 mg/dL",
-        "range": "0-99",
-        "cycle_impact": "High LDL can sometimes affect hormone balance, but yours is within the optimal range.",
-        "why_it_matters": "Maintaining a healthy LDL level is important for heart health and can indirectly support hormonal balance."
+        "result": "0.4 %",
+        "range": "No Ref. Range %",
+        "cycle_impact": "Basophils are a type of white blood cell involved in allergic responses. Their levels are generally stable and not directly related to your menstrual cycle.",
+        "why_it_matters": "Your basophil percentage is within a normal range, indicating no significant allergic activity."
+      },
+      {
+        "name": "Immature Granulocytes%",
+        "status": "optimal",
+        "status_label": "Good (Green)",
+        "result": "0.3 %",
+        "range": "0.00 - 0.04 %",
+        "cycle_impact": "Immature granulocytes are a sign of the bone marrow releasing new white blood cells. A small amount is normal, but higher amounts can indicate stress on the body.",
+        "why_it_matters": "Your level of immature granulocytes is within the normal range, suggesting your bone marrow is functioning well."
+      },
+      {
+        "name": "Absolute Neut Count",
+        "status": "optimal",
+        "status_label": "Good (Green)",
+        "result": "4.72 x10E3/uL",
+        "range": "1.80 - 6.90 x10E3/uL",
+        "cycle_impact": "This count represents a specific type of white blood cell. While not directly tied to your cycle, significant changes can reflect overall health status.",
+        "why_it_matters": "Your absolute neutrophil count is within the normal range, indicating a healthy immune cell count."
+      },
+      {
+        "name": "Absolute Lymphocyte Count",
+        "status": "optimal",
+        "status_label": "Good (Green)",
+        "result": "1.30 x10E3/uL",
+        "range": "1.30 - 3.40 x10E3/uL",
+        "cycle_impact": "This count reflects a type of white blood cell. Stress or illness can affect these levels, which might indirectly influence hormonal balance.",
+        "why_it_matters": "Your absolute lymphocyte count is at the lower end of the normal range, which is good. It suggests your immune system is balanced."
+      },
+      {
+        "name": "Absolute Mono Count",
+        "status": "optimal",
+        "status_label": "Good (Green)",
+        "result": "0.56 x10E3/uL",
+        "range": "0.20 - 0.80 x10E3/uL",
+        "cycle_impact": "Monocytes are important for immune response and clearing debris. Their levels can be influenced by inflammation, which might affect hormonal health.",
+        "why_it_matters": "Your absolute monocyte count is within the normal range, indicating healthy immune cell function."
+      },
+      {
+        "name": "Absolute Eos Count",
+        "status": "optimal",
+        "status_label": "Good (Green)",
+        "result": "0.18 x10E3/uL",
+        "range": "0.00 - 0.50 x10E3/uL",
+        "cycle_impact": "Eosinophils are involved in allergic responses and fighting parasites. Their levels are generally not directly related to your menstrual cycle.",
+        "why_it_matters": "Your absolute eosinophil count is within the normal range, suggesting no significant allergic reactions or parasitic infections."
+      },
+      {
+        "name": "Absolute Baso Count",
+        "status": "optimal",
+        "status_label": "Good (Green)",
+        "result": "0.03 x10E3/uL",
+        "range": "0.00 - 0.10 x10E3/uL",
+        "cycle_impact": "Basophils are involved in allergic reactions. Their levels are usually stable and not directly linked to your menstrual cycle.",
+        "why_it_matters": "Your absolute basophil count is within the normal range, indicating no significant allergic activity."
+      },
+      {
+        "name": "Absolute Immature Gran Count",
+        "status": "optimal",
+        "status_label": "Good (Green)",
+        "result": "0.02 x10E3/uL",
+        "range": "0.00 - 0.04 x10E3/uL",
+        "cycle_impact": "This count represents immature white blood cells. A small amount is normal, but higher levels can indicate the body is under stress.",
+        "why_it_matters": "Your absolute immature granulocyte count is within the normal range, suggesting your bone marrow is functioning well."
+      },
+      {
+        "name": "White Blood Cell Count",
+        "status": "optimal",
+        "status_label": "Good (Green)",
+        "result": "6.81 x10E3/uL",
+        "range": "4.16 - 9.95 x10E3/uL",
+        "cycle_impact": "White blood cells are part of your immune system. Their levels can be affected by stress or illness, which can indirectly influence your hormonal balance.",
+        "why_it_matters": "Your white blood cell count is within the normal range, indicating your immune system is balanced."
+      },
+      {
+        "name": "Red Blood Cell Count",
+        "status": "optimal",
+        "status_label": "Good (Green)",
+        "result": "4.77 x10E6/uL",
+        "range": "3.96 - 5.09 x10E6/uL",
+        "cycle_impact": "Red blood cells carry oxygen throughout your body. Adequate oxygen is crucial for energy production, which can impact how you feel during your cycle.",
+        "why_it_matters": "Your red blood cell count is within the normal range, suggesting good oxygen transport to your tissues."
+      },
+      {
+        "name": "Hemoglobin",
+        "status": "optimal",
+        "status_label": "Good (Green)",
+        "result": "12.5 g/dL",
+        "range": "11.6 - 15.2 g/dL",
+        "cycle_impact": "Hemoglobin carries oxygen in your red blood cells. Low levels can lead to **C1[fatigue]C1** and can be more common with heavy periods.",
+        "why_it_matters": "Your hemoglobin level is good, indicating you have enough oxygen-carrying capacity in your blood."
+      },
+      {
+        "name": "Hematocrit",
+        "status": "optimal",
+        "status_label": "Good (Green)",
+        "result": "40.9 %",
+        "range": "34.9 - 45.2 %",
+        "cycle_impact": "Hematocrit is the percentage of red blood cells in your blood. It's related to hemoglobin and oxygen transport, which can affect your energy levels throughout your cycle.",
+        "why_it_matters": "Your hematocrit level is within the normal range, supporting adequate oxygen delivery."
+      },
+      {
+        "name": "Mean Corpuscular Volume",
+        "status": "optimal",
+        "status_label": "Good (Green)",
+        "result": "85.7 fL",
+        "range": "79.3 - 98.6 fL",
+        "cycle_impact": "This measures the average size of your red blood cells. It can be affected by nutrient deficiencies, which might influence your energy during your cycle.",
+        "why_it_matters": "Your red blood cells are a normal size, suggesting your body is producing them effectively."
+      },
+      {
+        "name": "Mean Corpuscular Hemoglobin",
+        "status": "attention_needed",
+        "status_label": "Needs Attention (Red)",
+        "result": "26.2 pg",
+        "range": "26.4 - 33.4 pg",
+        "cycle_impact": "This measures the average amount of hemoglobin in each red blood cell. Low levels can contribute to **C1[fatigue]C1** and may be linked to iron or B12 deficiency, which can impact your cycle.",
+        "why_it_matters": "Your Mean Corpuscular Hemoglobin is slightly low. This could indicate a potential issue with iron or vitamin B12 absorption, which are important for energy and can affect your menstrual cycle."
+      },
+      {
+        "name": "MCH Concentration",
+        "status": "attention_needed",
+        "status_label": "Needs Attention (Red)",
+        "result": "30.6 g/dL",
+        "range": "31.5 - 35.5 g/dL",
+        "cycle_impact": "This measures the concentration of hemoglobin in your red blood cells. A low value can be associated with **C1[fatigue]C1** and may suggest nutrient deficiencies that can affect your cycle.",
+        "why_it_matters": "Your MCH Concentration is slightly low. This, along with the low MCH, suggests you might benefit from checking your iron and B12 levels more closely, as these can impact your energy and menstrual cycle."
+      },
+      {
+        "name": "Red Cell Distribution Width-SD",
+        "status": "optimal",
+        "status_label": "Good (Green)",
+        "result": "42.6 fL",
+        "range": "36.9 - 48.3 fL",
+        "cycle_impact": "This measures the variation in the size of your red blood cells. Significant changes can sometimes be linked to nutrient deficiencies that might affect energy levels during your cycle.",
+        "why_it_matters": "The variation in your red blood cell size is within the normal range, indicating consistent red blood cell production."
+      },
+      {
+        "name": "Red Cell Distribution Width-CV",
+        "status": "optimal",
+        "status_label": "Good (Green)",
+        "result": "13.8 %",
+        "range": "11.1 - 15.5 %",
+        "cycle_impact": "This measures the variation in the size of your red blood cells as a percentage. It's related to RDW-SD and can be influenced by nutrient status, potentially affecting energy during your cycle.",
+        "why_it_matters": "The variation in your red blood cell size, as a percentage, is within the normal range."
+      },
+      {
+        "name": "Platelet Count, Auto",
+        "status": "optimal",
+        "status_label": "Good (Green)",
+        "result": "313 x10E3/uL",
+        "range": "143 - 398 x10E3/uL",
+        "cycle_impact": "Platelets help your blood clot. While not directly tied to your cycle, significant changes can indicate underlying health issues.",
+        "why_it_matters": "Your platelet count is within the normal range, indicating your blood's clotting ability is functioning well."
+      },
+      {
+        "name": "Mean Platelet Volume",
+        "status": "optimal",
+        "status_label": "Good (Green)",
+        "result": "10.8 fL",
+        "range": "9.3 - 13.0 fL",
+        "cycle_impact": "This measures the average size of your platelets. It can sometimes be related to inflammation or platelet production, which are not directly linked to your cycle.",
+        "why_it_matters": "Your mean platelet volume is within the normal range, suggesting your platelets are of a typical size."
+      },
+      {
+        "name": "Nucleated RBC%, automated",
+        "status": "optimal",
+        "status_label": "Good (Green)",
+        "result": "0.0 %",
+        "range": "No Ref. Range %",
+        "cycle_impact": "Nucleated red blood cells are immature red blood cells. A small amount is normal, but higher levels can indicate stress on the bone marrow.",
+        "why_it_matters": "Your level of nucleated red blood cells is zero, which is normal."
+      },
+      {
+        "name": "Absolute Nucleated RBC Count",
+        "status": "optimal",
+        "status_label": "Good (Green)",
+        "result": "0.00 x10E3/uL",
+        "range": "0.00 - 0.00 x10E3/uL",
+        "cycle_impact": "This count represents immature red blood cells. A zero count is normal and indicates healthy red blood cell production.",
+        "why_it_matters": "Your absolute nucleated red blood cell count is zero, which is normal."
+      },
+      {
+        "name": "Neutrophil Abs (Prelim)",
+        "status": "optimal",
+        "status_label": "Good (Green)",
+        "result": "4.72 x10E3/uL",
+        "range": "See Absolute Neut Ct. x10E3/uL",
+        "cycle_impact": "This is a count of a specific type of white blood cell. While not directly tied to your cycle, significant changes can reflect overall health status.",
+        "why_it_matters": "Your absolute neutrophil count is within the normal range, indicating a healthy immune cell count."
+      },
+      {
+        "name": "Sodium",
+        "status": "optimal",
+        "status_label": "Good (Green)",
+        "result": "139 mmol/L",
+        "range": "135 - 146 mmol/L",
+        "cycle_impact": "Sodium is an electrolyte important for fluid balance. Hormonal shifts can sometimes affect fluid balance, but this level is normal.",
+        "why_it_matters": "Your sodium level is within the normal range, indicating good hydration and electrolyte balance."
+      },
+      {
+        "name": "Potassium",
+        "status": "optimal",
+        "status_label": "Good (Green)",
+        "result": "4.7 mmol/L",
+        "range": "3.6 - 5.3 mmol/L",
+        "cycle_impact": "Potassium is another electrolyte crucial for nerve and muscle function, including your heart. Hormonal changes can sometimes influence electrolyte balance.",
+        "why_it_matters": "Your potassium level is within the normal range, supporting healthy nerve and muscle function."
+      },
+      {
+        "name": "Chloride",
+        "status": "keep_in_mind",
+        "status_label": "Keep in Mind (Yellow)",
+        "result": "107 mmol/L",
+        "range": "96 - 106 mmol/L",
+        "cycle_impact": "Chloride is an electrolyte that works with sodium to maintain fluid balance. Slight variations can occur, but it's not directly linked to your cycle.",
+        "why_it_matters": "Your chloride level is slightly high. This can sometimes be related to hydration or kidney function, but a slight elevation like this is often not a concern."
+      },
+      {
+        "name": "Total CO2",
+        "status": "optimal",
+        "status_label": "Good (Green)",
+        "result": "23 mmol/L",
+        "range": "20 - 30 mmol/L",
+        "cycle_impact": "Total CO2 is related to your body's acid-base balance and can be influenced by breathing and metabolism. It's not directly tied to your menstrual cycle.",
+        "why_it_matters": "Your total CO2 level is within the normal range, indicating your body's acid-base balance is stable."
+      },
+      {
+        "name": "Anion Gap",
+        "status": "optimal",
+        "status_label": "Good (Green)",
+        "result": "9 mmol/L",
+        "range": "8 - 19 mmol/L",
+        "cycle_impact": "The anion gap is a calculation that helps assess your body's acid-base balance. It's not directly related to your menstrual cycle.",
+        "why_it_matters": "Your anion gap is within the normal range, suggesting your body's acid-base balance is well-regulated."
+      },
+      {
+        "name": "Glucose",
+        "status": "optimal",
+        "status_label": "Good (Green)",
+        "result": "97 mg/dL",
+        "range": "65 - 99 mg/dL",
+        "cycle_impact": "Glucose is your body's primary energy source. Stable blood sugar is important for consistent energy throughout your cycle, and yours looks good.",
+        "why_it_matters": "Your glucose level is within the normal range, indicating your body is managing blood sugar effectively."
+      },
+      {
+        "name": "Creatinine",
+        "status": "optimal",
+        "status_label": "Good (Green)",
+        "result": "0.66 mg/dL",
+        "range": "0.60 - 1.30 mg/dL",
+        "cycle_impact": "Creatinine is a waste product from muscle activity. It's filtered by your kidneys. Kidney function is important for overall health, which can indirectly support hormonal balance.",
+        "why_it_matters": "Your creatinine level is within the normal range, suggesting your kidneys are filtering waste effectively."
+      },
+      {
+        "name": "Estimated GFR",
+        "status": "optimal",
+        "status_label": "Good (Green)",
+        "result": ">89 mL/min/1.73m2",
+        "range": "See Comment",
+        "cycle_impact": "Your estimated Glomerular Filtration Rate (eGFR) indicates how well your kidneys are filtering waste. Healthy kidney function is important for overall detoxification, which can support hormonal balance.",
+        "why_it_matters": "Your eGFR is excellent, showing your kidneys are working very well."
+      },
+      {
+        "name": "Urea Nitrogen",
+        "status": "optimal",
+        "status_label": "Good (Green)",
+        "result": "7 mg/dL",
+        "range": "7 - 22 mg/dL",
+        "cycle_impact": "Urea nitrogen is a waste product filtered by the kidneys. Normal levels indicate good kidney function, which is important for overall health and hormonal balance.",
+        "why_it_matters": "Your urea nitrogen level is at the lower end of the normal range, indicating good kidney function."
+      },
+      {
+        "name": "Calcium",
+        "status": "optimal",
+        "status_label": "Good (Green)",
+        "result": "9.1 mg/dL",
+        "range": "8.6 - 10.4 mg/dL",
+        "cycle_impact": "Calcium is vital for bone health and muscle function. Hormonal changes, especially around menopause, can affect calcium levels and bone density.",
+        "why_it_matters": "Your calcium level is within the normal range, supporting bone and muscle health."
+      },
+      {
+        "name": "Total Protein",
+        "status": "optimal",
+        "status_label": "Good (Green)",
+        "result": "7.2 g/dL",
+        "range": "6.1 - 8.2 g/dL",
+        "cycle_impact": "Total protein reflects the amount of protein in your blood, which is essential for many bodily functions, including hormone transport and immune support.",
+        "why_it_matters": "Your total protein level is within the normal range, indicating adequate protein for bodily functions."
+      },
+      {
+        "name": "Albumin",
+        "status": "optimal",
+        "status_label": "Good (Green)",
+        "result": "4.4 g/dL",
+        "range": "3.9 - 5.0 g/dL",
+        "cycle_impact": "Albumin is a protein made by the liver that helps transport hormones and other substances. Good levels support overall hormonal balance.",
+        "why_it_matters": "Your albumin level is within the normal range, indicating your liver is producing enough protein for transport functions."
+      },
+      {
+        "name": "Bilirubin,Total",
+        "status": "optimal",
+        "status_label": "Good (Green)",
+        "result": "0.5 mg/dL",
+        "range": "0.1 - 1.2 mg/dL",
+        "cycle_impact": "Bilirubin is a byproduct of red blood cell breakdown, processed by the liver. While not directly tied to your cycle, liver health is important for hormone metabolism.",
+        "why_it_matters": "Your total bilirubin level is within the normal range, indicating your liver is processing waste products effectively."
+      },
+      {
+        "name": "Alkaline Phosphatase",
+        "status": "optimal",
+        "status_label": "Good (Green)",
+        "result": "58 U/L",
+        "range": "37 - 113 U/L",
+        "cycle_impact": "Alkaline phosphatase can be elevated with bone turnover or liver issues. While not directly linked to your cycle, it's a marker of overall metabolic health.",
+        "why_it_matters": "Your alkaline phosphatase level is within the normal range, suggesting no significant bone or liver issues."
+      },
+      {
+        "name": "Aspartate Aminotransferase",
+        "status": "optimal",
+        "status_label": "Good (Green)",
+        "result": "24 U/L",
+        "range": "13 - 62 U/L",
+        "cycle_impact": "Aspartate Aminotransferase (AST) is an enzyme found in the liver and other tissues. Normal levels suggest good liver health, which is important for hormone metabolism.",
+        "why_it_matters": "Your AST level is within the normal range, indicating good liver health."
+      },
+      {
+        "name": "Alanine Aminotransferase",
+        "status": "optimal",
+        "status_label": "Good (Green)",
+        "result": "13 U/L",
+        "range": "8 - 70 U/L",
+        "cycle_impact": "Alanine Aminotransferase (ALT) is an enzyme primarily found in the liver. Normal levels are a good indicator of liver health, which is crucial for processing hormones.",
+        "why_it_matters": "Your ALT level is within the normal range, indicating good liver health."
       },
       {
         "name": "Hemoglobin A1c",
         "status": "optimal",
         "status_label": "Good (Green)",
-        "result": "5.5 %",
-        "range": "4.8-5.6",
-        "cycle_impact": "Balanced blood sugar helps regulate your cycle.",
-        "why_it_matters": "Your A1c is within the healthy range, which is important for stable blood sugar levels and can positively influence hormone regulation."
+        "result": "5.3 %",
+        "range": "below <5.7 % HbA1c",
+        "cycle_impact": "This test shows your average blood sugar over the last 3 months. Stable blood sugar is key for consistent energy and mood throughout your cycle.",
+        "why_it_matters": "Your Hgb A1c is excellent, meaning your blood sugar control is good. This is important for preventing energy crashes and supporting overall hormonal balance."
       },
       {
-        "name": "T4,Free(Direct)",
+        "name": "Cholesterol",
         "status": "optimal",
         "status_label": "Good (Green)",
-        "result": "1.11 ng/dL",
-        "range": "0.82-1.77",
-        "cycle_impact": "Thyroid hormones like T4 can influence your cycle regularity.",
-        "why_it_matters": "Your free T4 level is within the normal range, indicating healthy thyroid function, which is crucial for hormonal balance."
+        "result": "185 mg/dL",
+        "range": "See Comment",
+        "cycle_impact": "Cholesterol is a building block for hormones. While this total level is good, the breakdown (LDL and HDL) is more important for understanding heart health.",
+        "why_it_matters": "Your total cholesterol is in a good range. It's a building block for hormones, so having adequate levels is important."
+      },
+      {
+        "name": "Cholesterol,LDL,Calc",
+        "status": "attention_needed",
+        "status_label": "Needs Attention (Red)",
+        "result": "122 mg/dL",
+        "range": "below <100 mg/dL",
+        "cycle_impact": "LDL is often called 'bad' cholesterol. High levels can contribute to inflammation, which can affect hormone balance and energy levels.",
+        "why_it_matters": "Your LDL cholesterol is higher than recommended. This can be linked to diet and lifestyle and is a factor in heart health, which is interconnected with overall hormonal well-being."
+      },
+      {
+        "name": "Cholesterol, HDL",
+        "status": "optimal",
+        "status_label": "Good (Green)",
+        "result": "54 mg/dL",
+        "range": "above >50 mg/dL",
+        "cycle_impact": "HDL is 'good' cholesterol that helps clear out LDL. Higher levels are generally protective for heart health, which is linked to overall hormonal balance.",
+        "why_it_matters": "Your HDL cholesterol is in a good range, indicating your body has a healthy amount of 'good' cholesterol."
+      },
+      {
+        "name": "Triglycerides",
+        "status": "optimal",
+        "status_label": "Good (Green)",
+        "result": "43 mg/dL",
+        "range": "below <150 mg/dL",
+        "cycle_impact": "Triglycerides are a type of fat in your blood. High levels can be linked to blood sugar issues and inflammation, which can impact hormonal balance and energy.",
+        "why_it_matters": "Your triglyceride level is excellent, suggesting your body is managing fats well, likely due to good blood sugar control."
+      },
+      {
+        "name": "Non-HDL,Chol,Calc",
+        "status": "attention_needed",
+        "status_label": "Needs Attention (Red)",
+        "result": "131 mg/dL",
+        "range": "below <130 mg/dL",
+        "cycle_impact": "Non-HDL cholesterol includes all the 'bad' cholesterol particles. Higher levels are associated with increased risk for heart disease and can be linked to inflammation that affects hormones.",
+        "why_it_matters": "Your Non-HDL cholesterol is slightly elevated. This, along with the high LDL, suggests focusing on heart-healthy habits is important for your overall well-being and hormonal balance."
       },
       {
         "name": "TSH",
-        "status": "keep_in_mind",
-        "status_label": "Keep in Mind (Yellow)",
-        "result": "4.310 uIU/mL",
-        "range": "0.450-4.500",
-        "cycle_impact": "TSH helps regulate your thyroid, which can affect your cycle.",
-        "why_it_matters": "Your TSH is on the higher end of the normal range. While still within normal limits, it's worth monitoring as it could indicate potential suboptimal thyroid function in the future, which can impact your menstrual cycle and overall hormonal health."
-      },
-      {
-        "name": "Prolactin",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "23.8 ng/mL",
-        "range": "4.8-33.4",
-        "cycle_impact": "Prolactin is involved in milk production and can affect your cycle.",
-        "why_it_matters": "Your prolactin level is within the normal range, which is important for reproductive health and hormonal balance."
-      },
-      {
-        "name": "Estradiol",
-        "status": "attention_needed",
-        "status_label": "Needs Attention (Red)",
-        "result": "<5.0 pg/mL",
-        "range": "Adult Female             Range\n                                     Follicular phase     12.5 - 166.0\n                                     Ovulation phase      85.8 - 498.0\n                                     Luteal phase         43.8 - 211.0\n                                     Postmenopausal       <6.0 -  54.7\n                                    Pregnancy\n                                     1st trimester     215.0 - >4300.0",
-        "cycle_impact": "Low estradiol can cause irregular periods, **C1[cramps]C1**, and **C1[PMS symptoms]C1**.",
-        "why_it_matters": "Your estradiol is low, which could explain your **C1[menstrual cramps]C1**, **C1[PMS]C1**, and **C1[bloating]C1**. Estradiol is crucial for cycle regulation and overall hormonal health."
-      },
-      {
-        "name": "Testosterone, Total, LC/MS",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "22 ng/dL",
-        "range": "Adult Females\n  Premenopausal  10 - 55\n  Postmenopausal  7 - 40",
-        "cycle_impact": "Testosterone plays a role in your cycle, though high levels can cause irregularities.",
-        "why_it_matters": "Your testosterone level is within the normal range for premenopausal women, which is important for maintaining a healthy menstrual cycle and overall hormonal balance."
-      },
-      {
-        "name": "Progesterone",
-        "status": "attention_needed",
-        "status_label": "Needs Attention (Red)",
-        "result": "0.2 ng/mL",
-        "range": "Follicular phase       0.1 -   0.9\n                                    Luteal phase           1.8 -  23.9\n                                    Ovulation phase        0.1 -  12.0\n                                    Pregnant\n                                       First trimester    11.0 -  44.3\n                                       Second trimester   25.4 -  83.3\n                                       Third trimester    58.7 - 214.0\n                                    Postmenopausal         0.0 -   0.1",
-        "cycle_impact": "Progesterone helps regulate your cycle and prepares your body for pregnancy.",
-        "why_it_matters": "Your progesterone is low, which, along with low estradiol, could be contributing to your **C1[menstrual symptoms]C1**. Progesterone is essential for a healthy luteal phase (the second half of your cycle)."
-      },
-      {
-        "name": "Triiodothyronine (T3), Free",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "2.7 pg/mL",
-        "range": "2.0-4.4",
-        "cycle_impact": "Thyroid hormones like T3 can influence your cycle regularity.",
-        "why_it_matters": "Your free T3 is within the normal range, which is important for healthy thyroid function and hormonal balance."
-      },
-      {
-        "name": "Sex Horm Binding Glob, Serum",
-        "status": "attention_needed",
-        "status_label": "Needs Attention (Red)",
-        "result": "130.0 nmol/L",
-        "range": "24.6-122.0",
-        "cycle_impact": "SHBG influences how much of your hormones are available to your body.",
-        "why_it_matters": "Your SHBG is high, which can lower the amount of available estrogen and testosterone in your body. This could be related to your **C1[stress levels]C1** and may be contributing to your **C1[low estradiol]C1**."
-      },
-      {
-        "name": "Cortisol - AM",
-        "status": "attention_needed",
-        "status_label": "Needs Attention (Red)",
-        "result": "20.3 ug/dL",
-        "range": "6.2-19.4",
-        "cycle_impact": "High cortisol from stress can disrupt your cycle.",
-        "why_it_matters": "Your cortisol is high, likely due to your reported **C1[work and life stress]C1**.  Chronically high cortisol can disrupt your menstrual cycle and other hormonal functions."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
-        "status": "optimal",
-        "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
-      },
-      {
-        "name": "HDL Cholesterol",
         "status": "optimal",
         "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
+        "result": "1.3 mcIU/mL",
+        "range": "0.3 - 4.7 mcIU/mL",
+        "cycle_impact": "TSH is a hormone that tells your thyroid to make thyroid hormones. Thyroid hormones regulate metabolism and energy, which can significantly impact your cycle and how you feel.",
+        "why_it_matters": "Your TSH is in a great range, suggesting your thyroid is functioning well and producing enough thyroid hormone to support your metabolism and energy levels."
       },
       {
-        "name": "HDL Cholesterol",
+        "name": "Vitamin B12",
         "status": "optimal",
         "status_label": "Good (Green)",
-        "result": "75 mg/dL",
-        "range": ">39",
-        "cycle_impact": "HDL helps remove excess cholesterol, indirectly supporting hormone balance.",
-        "why_it_matters": "Having a good HDL level is protective against heart disease and can contribute to overall hormonal health."
+        "result": "453 pg/mL",
+        "range": "254 - 1,060 pg/mL",
+        "cycle_impact": "Vitamin B12 is crucial for energy production and nerve function. Low levels can cause **C1[fatigue]C1** and neurological symptoms, and can affect your cycle.",
+        "why_it_matters": "Your Vitamin B12 level is within the normal range, which is good for energy and nerve health. However, given your low MCH and MCH concentration, it's still worth ensuring you're absorbing it well."
       }
     ],
     "crucial_biomarkers_to_measure": [
       {
-        "name": "DHEA, Serum",
-        "importance": "Testing your DHEA-S levels can provide additional insights into your hormonal health and how your body responds to stress, given your **C2[high cortisol]C2** (**C2[20.3 ug/dL]C2**)."
+        "name": "Iron Panel (Ferritin, Serum Iron, TIBC)",
+        "importance": "Test your Iron Panel, especially Ferritin, to understand your iron stores. Low iron can cause **C1[fatigue]C1**, **C1[mood swings]C1**, and **C1[difficulty concentrating]C1**, which you're experiencing. This is important because your MCH and MCH concentration are low."
+      },
+      {
+        "name": "Vitamin D (25-hydroxy)",
+        "importance": "Test your Vitamin D levels. Low Vitamin D is common and can affect mood, energy, and immune function, which may be contributing to your **C1[fatigue]C1** and **C1[mood swings]C1**."
+      },
+      {
+        "name": "Magnesium",
+        "importance": "Test your Magnesium levels. Magnesium plays a role in energy production, stress management, and hormone balance. Low magnesium can worsen **C1[fatigue]C1**, **C1[mood swings]C1**, and **C1[anxiety]C1**."
       }
     ],
     "health_recommendation_summary": [
-      "Consider retesting your DHEA, Serum to get a more complete picture of your adrenal health and stress response.",
-      "Prioritize stress management techniques like meditation, yoga, or spending time in nature to help lower your **C2[high cortisol]C2** levels (**C2[20.3 ug/dL]C2**).",
-      "Focus on a balanced diet rich in whole foods, fiber, and healthy fats to support hormone production and manage **C1[bloating]C1**.",
-      "Talk to your doctor about your **C2[low estradiol]C2** (**C2[<5.0 pg/mL]C2**) and **C2[low progesterone]C2** (**C2[0.2 ng/mL]C2**) levels to discuss potential underlying causes and explore options to support your menstrual cycle and hormonal health."
+      "Focus on nutrient-dense foods to support your energy and address low MCH/MCH concentration. Think colorful fruits and vegetables, lean proteins, and healthy fats.",
+      "Prioritize consistent meal times. Eating at regular intervals helps stabilize blood sugar and energy levels, which can reduce afternoon crashes and **C1[fatigue]C1**.",
+      "Incorporate stress-management techniques daily. Since you report high stress, practices like yoga, meditation, or deep breathing can help improve your **C1[mood swings]C1** and **C1[anxiety]C1**.",
+      "Aim for 7-9 hours of sleep per night. While you get 6 hours, improving sleep quality can significantly boost your energy and reduce daytime **C1[fatigue]C1**.",
+      "Stay hydrated by drinking more water. Aim for at least 64 oz daily to support energy levels and overall bodily functions.",
+      "Retest your Iron Panel (especially Ferritin), Vitamin D, and Magnesium to get a clearer picture of your nutrient status and address your symptoms of **C1[fatigue]C1** and **C1[mood swings]C1**.",
+      "Consider a follow-up with your doctor to discuss your elevated LDL and Non-HDL cholesterol, as heart health is linked to hormonal well-being.",
+      "Continue your current exercise routine of 4-5 times per week, as physical activity is excellent for managing stress and improving energy."
     ]
   },
   "four_pillars": {
-    "introduction": "Your health assessment and lab results reveal some key areas for improvement across the four pillars of wellness. Your **C1[inconsistent eating habits]C1** and **C1[sedentary lifestyle]C1** are impacting your energy levels and hormonal balance.  Your **C1[high cortisol]C1** (**C2[20.3 ug/dL]C2**) and **C1[low estradiol]C1** (**C2[<5.0 pg/mL]C2**) levels suggest potential hormonal imbalances that can be addressed through targeted lifestyle changes. Let's explore how we can optimize each pillar for better hormonal harmony.",
+    "introduction": "Stefanie, your health journey shows a few key areas we can focus on to help you feel your best. Your energy levels and mood swings suggest we need to pay close attention to how you eat, sleep, move, and recover. Your labs show a slightly elevated LDL cholesterol, which is your 'bad' cholesterol, and your Non-HDL cholesterol is also high. While your other labs are within normal ranges, these lipid results, combined with your reported **C1[after-meal fatigue]C1** and **C1[afternoon energy dips]C1**, suggest we can optimize your nutrition and stress management to improve your overall well-being.",
     "pillars": [
       {
         "name": "Eat Well",
-        "score": 6,
+        "score": 4,
         "score_rationale": [
-          "Your Eat Well score is a 6 because your **C1[inconsistent eating habits]C1** could be contributing to your hormonal imbalances and symptoms like **C1[bloating]C1** and **C1[constipation]C1**.",
-          "Regular, balanced meals are crucial for stable blood sugar and hormone production."
+          "Your Eat Well score is 4 because you mentioned having an **C1[irregular meal schedule]C1** and sometimes skipping or delaying meals.",
+          "Eating consistently helps stabilize your energy and mood, which is important for managing your **C1[mood swings]C1** and **C1[afternoon energy dips]C1**."
         ],
-        "why_it_matters": "Nourishing your body with the right foods is like providing your cells with the premium fuel they need to function optimally. This is especially important for hormone production, which influences everything from your mood and energy levels to your menstrual cycle and sleep.",
-        "root_cause_correlation": "Addressing your **C1[inconsistent eating habits]C1** can help regulate your blood sugar, which in turn can positively influence your **C1[low estradiol]C1** and **C1[high cortisol]C1** levels.  A balanced diet rich in fiber can also improve your **C1[constipation]C1**.",
-        "science_based_explanation": "When your blood sugar fluctuates, it can disrupt the delicate balance of your hormones.  Fiber helps regulate digestion and supports the elimination of excess hormones, which can improve symptoms like **C1[bloating]C1**.",
+        "why_it_matters": "Eating regular, balanced meals helps keep your blood sugar steady, which is like keeping a steady flow of energy to your brain and body. This can directly impact your **C1[fatigue]C1** and **C1[difficulty concentrating]C1**.",
+        "root_cause_correlation": "An irregular eating pattern can disrupt your body's natural rhythms, potentially affecting hormone balance and contributing to **C1[bloating]C1** and **C1[mood swings]C1**.",
+        "science_based_explanation": "When you skip meals or eat irregularly, your body might not get the consistent fuel it needs, leading to energy crashes. Stable blood sugar also helps your brain function better, reducing **C1[difficulty concentrating]C1**.",
         "additional_guidance": {
-          "description": "Prioritizing consistent, balanced meals and snacks will support your hormonal health.  Here are some recommendations based on your reported symptoms and lab results:",
+          "description": "To support your energy and hormonal balance, here are some food recommendations and foods to be mindful of.",
           "structure": {
             "recommended_foods": [
               {
-                "name": "Cruciferous Vegetables (broccoli, cauliflower, Brussels sprouts)",
-                "description": "These veggies contain compounds that support estrogen metabolism, which can be beneficial given your **C1[low estradiol]C1**."
+                "name": "Whole Grains",
+                "description": "Like oats, quinoa, and brown rice. They provide sustained energy and fiber, which can help with **C1[bloating]C1** and keep your blood sugar stable."
               },
               {
-                "name": "Fiber-rich foods (beans, lentils, oats)",
-                "description": "Fiber promotes gut health and helps regulate bowel movements, which can help with your **C1[constipation]C1**."
+                "name": "Lean Proteins",
+                "description": "Such as chicken, fish, beans, and lentils. Protein helps you feel full and supports muscle health, which is important for your **C1[resistance training]C1**."
               },
               {
-                "name": "Magnesium-rich foods (dark leafy greens, almonds, avocados)",
-                "description": "Magnesium can help reduce stress and improve sleep quality, which is important given your **C1[high cortisol]C1**."
+                "name": "Healthy Fats",
+                "description": "Found in avocados, nuts, seeds, and olive oil. These are important for hormone production and can help manage your **C1[intense food cravings]C1**."
+              },
+              {
+                "name": "Fruits and Vegetables",
+                "description": "Aim for a variety of colors to get a wide range of vitamins and minerals. They are rich in fiber and antioxidants, which can help with **C1[fatigue]C1** and overall well-being."
               }
             ],
             "cautious_foods": [
               {
-                "name": "Dairy (milk, cheese)",
-                "description": "Since you have a milk or lactose allergy, avoiding dairy is essential to prevent allergic reactions."
+                "name": "Refined Sugars and Processed Foods",
+                "description": "These can cause rapid spikes and crashes in blood sugar, worsening **C1[afternoon energy dips]C1** and potentially impacting your mood."
               },
               {
-                "name": "Processed foods and refined sugars",
-                "description": "These foods can disrupt blood sugar balance and worsen hormonal imbalances."
+                "name": "Excessive Saturated and Trans Fats",
+                "description": "These can contribute to higher LDL cholesterol, as seen in your labs (**C2[LDL,Calc]C2[122 mg/dL]C2** is high). Focus on unsaturated fats instead."
+              },
+              {
+                "name": "Large Meals Late at Night",
+                "description": "These can interfere with sleep quality and digestion, potentially worsening **C1[bloating]C1** and **C1[acid reflux]C1**."
               }
             ]
           }
@@ -2626,37 +540,41 @@
         "name": "Sleep Well",
         "score": 5,
         "score_rationale": [
-          "Your Sleep Well score is a 5 because your **C1[inconsistent sleep]C1** can negatively impact your hormonal balance, particularly your cortisol levels.",
-          "Adequate, quality sleep is essential for hormone regulation and overall well-being."
+          "Your Sleep Well score is 5 because while you get 6 hours of sleep, you describe your sleep quality as 'fair' and experience **C1[frequent daytime fatigue]C1**.",
+          "This suggests that even though you're in bed, you might not be getting restorative sleep, which impacts your energy and **C1[mood swings]C1**."
         ],
-        "why_it_matters": "Sleep is your body's time to reset and recharge, including your hormonal system. Think of it as giving your body the downtime it needs to perform essential maintenance and repairs.",
-        "root_cause_correlation": "Improving your sleep quality can help regulate your **C1[high cortisol]C1** levels.  Consistent sleep patterns can also positively influence other hormones involved in your menstrual cycle and overall well-being.",
-        "science_based_explanation": "During sleep, your body regulates cortisol production.  Lack of sleep can disrupt this process, leading to elevated cortisol levels and associated symptoms like fatigue and difficulty concentrating.",
+        "why_it_matters": "Quality sleep is crucial for hormone regulation, stress management, and energy restoration. Poor sleep can worsen **C1[fatigue]C1**, **C1[anxiety]C1**, and **C1[difficulty concentrating]C1**.",
+        "root_cause_correlation": "Stress and an irregular schedule can disrupt your natural sleep-wake cycle, leading to less restful sleep and contributing to your **C1[daytime fatigue]C1**.",
+        "science_based_explanation": "During deep sleep, your body repairs itself and regulates hormones like cortisol and melatonin. Not getting enough quality sleep can throw these off, making you feel tired and irritable, and potentially worsening **C1[mood swings]C1**.",
         "additional_guidance": {
-          "description": "Prioritizing consistent sleep is crucial for hormonal balance. Here are some recommendations to improve your sleep quality:",
+          "description": "To improve your sleep quality and combat daytime fatigue, here are some tips.",
           "structure": {
             "recommended_recovery_tips": [
               {
-                "name": "Establish a regular sleep schedule",
-                "description": "Go to bed and wake up around the same time each day, even on weekends, to regulate your body's natural sleep-wake cycle."
+                "name": "Consistent Sleep Schedule",
+                "description": "Try to go to bed and wake up around the same time every day, even on weekends. This helps regulate your body's internal clock."
               },
               {
-                "name": "Create a relaxing bedtime routine",
-                "description": "Engage in calming activities before bed, such as taking a warm bath, reading, or listening to calming music."
+                "name": "Create a Relaxing Bedtime Routine",
+                "description": "Engage in calming activities like reading, gentle stretching, or taking a warm bath before bed to signal to your body that it's time to wind down."
               },
               {
-                "name": "Optimize your sleep environment",
-                "description": "Make sure your bedroom is dark, quiet, and cool to promote restful sleep."
+                "name": "Optimize Your Sleep Environment",
+                "description": "Ensure your bedroom is dark, quiet, and cool. Consider blackout curtains or earplugs if needed."
+              },
+              {
+                "name": "Limit Screen Time Before Bed",
+                "description": "The blue light from screens can interfere with melatonin production, making it harder to fall asleep. Your **C1[excessive screen time]C1** might be a factor."
               }
             ],
             "avoid_habits_rest_recover": [
               {
-                "name": "Avoid caffeine and alcohol before bed",
-                "description": "These substances can interfere with sleep quality and make it harder to fall asleep and stay asleep."
+                "name": "Late-Night Caffeine or Alcohol",
+                "description": "While you don't consume much caffeine, be mindful of timing. Alcohol can disrupt sleep architecture, leading to less restful sleep."
               },
               {
-                "name": "Avoid screen time before bed",
-                "description": "The blue light emitted from electronic devices can suppress melatonin production, making it harder to fall asleep."
+                "name": "Heavy Meals Close to Bedtime",
+                "description": "This can cause digestive discomfort and make it harder to fall asleep, potentially worsening **C1[bloating]C1**."
               }
             ]
           }
@@ -2666,37 +584,37 @@
         "name": "Move Well",
         "score": 7,
         "score_rationale": [
-          "Your Move Well score is a 7 because while you exercise daily, your overall activity level is sedentary due to your desk job.",
-          "Balancing regular exercise with increased daily movement is important for overall health and hormonal balance."
+          "Your Move Well score is 7 because you exercise 4-5 times per week with a mix of resistance training, yoga, and walking.",
+          "This is a good foundation, but your reported **C1[frequent daytime fatigue]C1** and **C1[afternoon energy dips]C1** suggest we can fine-tune your movement to better support your energy levels."
         ],
-        "why_it_matters": "Regular movement helps improve circulation, reduce stress, and support healthy hormone levels. Think of it as keeping the pathways of your body clear and flowing smoothly.",
-        "root_cause_correlation": "Incorporating more movement into your daily routine can help lower your **C1[high cortisol]C1** levels and improve your mood and energy levels.  It can also support healthy digestion and reduce **C1[bloating]C1**.",
-        "science_based_explanation": "Exercise helps regulate hormones like cortisol and improves insulin sensitivity.  Movement also promotes gut motility, which can alleviate constipation.",
+        "why_it_matters": "Regular movement helps manage stress, improve mood, and can positively influence hormone balance and energy levels. It's also great for cardiovascular health, which is important given your family history of **C1[heart disease]C1**.",
+        "root_cause_correlation": "While exercise is generally beneficial, if it's not balanced with adequate recovery or if done at too high an intensity without proper nutrition, it can sometimes contribute to **C1[fatigue]C1**.",
+        "science_based_explanation": "Exercise helps your body become more efficient at using energy and can improve insulin sensitivity, which helps prevent blood sugar crashes. Yoga, in particular, can help manage stress, which is a major contributor to your **C1[mood swings]C1** and **C1[anxiety]C1**.",
         "additional_guidance": {
-          "description": "While daily exercise is great, incorporating more movement throughout your day is essential. Here are some recommendations:",
+          "description": "You have a good exercise routine. Let's focus on how to optimize it for energy and stress management.",
           "structure": {
             "recommended_workouts": [
               {
-                "name": "Yoga or Pilates",
-                "description": "These practices can help reduce stress and improve flexibility and core strength."
+                "name": "Continue Resistance Training",
+                "description": "This is excellent for building muscle, which helps with metabolism and body composition. Aim for 2-3 sessions per week."
               },
               {
-                "name": "Brisk walking or cycling",
-                "description": "These are great ways to increase your daily activity levels and improve cardiovascular health."
+                "name": "Prioritize Yoga and Mindfulness",
+                "description": "Given your **C1[high stress levels]C1** and **C1[mood swings]C1**, continuing and perhaps deepening your yoga practice is highly recommended. It directly addresses stress and can improve your **C1[sleep quality]C1**."
               },
               {
-                "name": "Strength training",
-                "description": "Building muscle mass can improve metabolism and support hormonal balance."
+                "name": "Incorporate Brisk Walking",
+                "description": "Aim for 30 minutes of brisk walking most days of the week. This is a great way to boost energy, improve cardiovascular health, and manage stress without being overly taxing."
               }
             ],
             "avoid_habits_move": [
               {
-                "name": "Prolonged sitting",
-                "description": "Take frequent breaks to stand up, stretch, and walk around to counteract the negative effects of prolonged sitting."
+                "name": "Overtraining",
+                "description": "If you feel excessively fatigued after workouts, it might be a sign of overtraining. Ensure you're allowing adequate rest between intense sessions."
               },
               {
-                "name": "Overtraining",
-                "description": "Listen to your body and avoid pushing yourself too hard, as this can increase stress and negatively impact your hormones."
+                "name": "Exercising Too Close to Bedtime",
+                "description": "While you don't mention this, intense exercise too close to bedtime can sometimes interfere with sleep for some individuals."
               }
             ]
           }
@@ -2704,39 +622,43 @@
       },
       {
         "name": "Recover Well",
-        "score": 6,
+        "score": 3,
         "score_rationale": [
-          "Your Recover Well score is a 6 because you experience work and life stress, which can significantly impact your hormonal balance and overall well-being.",
-          "Managing stress through relaxation techniques is crucial for hormonal harmony."
+          "Your Recover Well score is 3 because you report **C1[high stress levels]C1** that frequently impact your mood, energy, or ability to relax.",
+          "You also experience **C1[frequent daytime fatigue]C1** and **C1[afternoon energy dips]C1**, indicating your body isn't recovering effectively from daily stressors."
         ],
-        "why_it_matters": "Recovery is not just about physical rest; it's about giving your mind and body the time and space to de-stress and rejuvenate. Think of it as allowing your system to reboot and refresh.",
-        "root_cause_correlation": "Implementing stress-reducing practices can help lower your **C1[high cortisol]C1** levels and improve your overall hormonal balance.  This can also positively impact your sleep quality and reduce symptoms like **C1[bloating]C1**.",
-        "science_based_explanation": "Chronic stress can lead to elevated cortisol levels, which can disrupt other hormonal processes.  Relaxation techniques help activate the parasympathetic nervous system, promoting a state of calm and reducing cortisol production.",
+        "why_it_matters": "Effective recovery is essential for managing stress, balancing hormones, and preventing burnout. When you don't recover well, it can exacerbate **C1[fatigue]C1**, **C1[anxiety]C1**, and **C1[irritability]C1**.",
+        "root_cause_correlation": "High stress, irregular sleep, and an inconsistent routine can all prevent your body from entering a restorative state, leading to persistent **C1[fatigue]C1** and **C1[mood swings]C1**.",
+        "science_based_explanation": "When you're stressed, your body releases cortisol. While short-term cortisol is helpful, chronic high levels can disrupt sleep, impair cognitive function (leading to **C1[difficulty concentrating]C1**), and contribute to weight gain around the midsection. Your listed stress-reducing techniques are great, but their effectiveness might be limited by other factors like sleep and nutrition.",
         "additional_guidance": {
-          "description": "Managing stress is crucial for hormonal health. Here are some recommendations to incorporate into your routine:",
+          "description": "You're already practicing many great stress-reducing techniques! Let's refine them and ensure they're working effectively for you.",
           "structure": {
             "recommended_recovery_tips": [
               {
-                "name": "Deep breathing exercises",
-                "description": "Practice deep breathing techniques throughout the day to calm your nervous system and reduce stress."
+                "name": "Prioritize Your Stress Management Techniques",
+                "description": "You listed many excellent techniques like yoga, meditation, journaling, and deep breathing. Make sure you're scheduling these into your week, especially during times of high stress, to combat **C1[anxiety]C1** and **C1[irritability]C1**."
               },
               {
-                "name": "Meditation or mindfulness",
-                "description": "Engage in regular meditation or mindfulness practices to cultivate a sense of calm and reduce stress."
+                "name": "Mindful Eating Practices",
+                "description": "Pay attention to how you feel after eating. Your report of feeling **C1[extremely tired or sluggish after eating]C1** suggests that your body may be struggling to digest or process your meals efficiently. Eating slowly and mindfully can help."
               },
               {
-                "name": "Spending time in nature",
-                "description": "Connecting with nature has been shown to reduce stress and improve overall well-being."
+                "name": "Hydration",
+                "description": "You're consuming 48-64 oz of water, which is a good start. Ensure you're staying consistently hydrated throughout the day, as dehydration can worsen **C1[fatigue]C1** and **C1[difficulty concentrating]C1**."
+              },
+              {
+                "name": "Address Environmental Stressors",
+                "description": "You mentioned exposure to **C1[harsh lighting or excessive screen time]C1**. Consider using blue light filters on your devices, taking regular breaks from screens, and ensuring your workspace lighting is comfortable."
               }
             ],
             "avoid_habits_rest_recover": [
               {
-                "name": "Overworking",
-                "description": "Set boundaries and prioritize rest to avoid burnout and chronic stress."
+                "name": "Irregular Meal Schedule",
+                "description": "As mentioned in 'Eat Well,' an irregular schedule can contribute to stress on your body and impact energy levels, worsening **C1[afternoon energy dips]C1**."
               },
               {
-                "name": "Excessive screen time",
-                "description": "Limit your exposure to screens, especially before bed, to reduce mental stimulation and promote relaxation."
+                "name": "Reliance on Caffeine/Sugar for Energy",
+                "description": "You mentioned needing caffeine or sugar to combat afternoon crashes. While you don't consume much caffeine, relying on quick fixes can create a cycle of energy highs and lows, rather than addressing the root cause of your **C1[fatigue]C1**."
               }
             ]
           }
@@ -2745,25 +667,53 @@
     ]
   },
   "supplements": {
-    "description": "Given your low **C2[estradiol]C2** (**C2[<5.0 pg/mL]C2**) and symptoms of **C1[bloating]C1**, **C1[cramps]C1**, and **C1[PMS]C1**, these supplements may be beneficial. Remember, supplements are not a replacement for a healthy lifestyle and should be discussed with your doctor.",
+    "description": "Based on your health goals and lab results, here are some supplement suggestions that might help you feel your best. Remember, these are like adding extra tools to your toolbox to support your body's natural processes.",
     "structure": {
       "recommendations": [
         {
-          "name": "Magnesium Glycinate",
-          "rationale": "Magnesium can help with **C1[PMS symptoms]C1** like **C1[cramps]C1** and **C1[mood swings]C1** by relaxing muscles and calming the nervous system.  It also supports healthy estrogen levels.",
-          "expected_outcomes": "Reduced **C1[cramps]C1**, improved mood, and better sleep.",
-          "dosage_and_timing": "200-400 mg daily, taken in the evening.",
-          "situational_cyclical_considerations": "Can be taken throughout your cycle, but may be particularly helpful during the second half of your cycle when **C1[PMS symptoms]C1** tend to be more prominent."
+          "name": "Magnesium",
+          "rationale": "You mentioned experiencing **C1[mood swings]C1**, **C1[fatigue]C1**, and **C1[difficulty concentrating]C1**. Magnesium is known to help calm the nervous system, which can be really helpful for managing stress and improving mood. It's like a natural chill pill for your body.",
+          "expected_outcomes": "May help improve **C1[sleep quality]C1**, reduce **C1[anxiety]C1**, and support energy levels.",
+          "dosage_and_timing": "Consider 200-400 mg daily, preferably in the evening, as it can promote relaxation.",
+          "situational_cyclical_considerations": "Some women find it particularly helpful in the week leading up to their period to ease **C1[bloating]C1** and **C1[cramps]C1**."
         },
         {
-          "name": "Fiber Supplement (Psyllium Husk or Ground Flaxseed)",
-          "rationale": "Fiber helps your body eliminate excess estrogen, which can contribute to **C1[bloating]C1**. It also supports gut health, which plays a role in hormone balance.",
-          "expected_outcomes": "Reduced **C1[bloating]C1** and improved regularity.",
-          "dosage_and_timing": "Follow the instructions on the product label, starting with a low dose and gradually increasing as needed.",
-          "situational_cyclical_considerations": "Can be taken daily."
+          "name": "Vitamin B12",
+          "rationale": "You're experiencing **C1[frequent daytime fatigue]C1**. Vitamin B12 is crucial for energy production in your body, helping your cells convert food into fuel. Think of it as a spark plug for your energy.",
+          "expected_outcomes": "Can help boost **C1[energy levels]C1** and combat **C1[fatigue]C1**.",
+          "dosage_and_timing": "A daily dose of 500-1000 mcg is common. It can be taken anytime during the day.",
+          "situational_cyclical_considerations": "No specific cyclical considerations, but consistent daily intake is key for energy support."
+        },
+        {
+          "name": "Vitamin D",
+          "rationale": "You're experiencing **C1[mood swings]C1** and **C1[anxiety]C1**. Vitamin D plays a role in mood regulation and overall well-being. It's like sunshine for your mood.",
+          "expected_outcomes": "May help improve **C1[mood]C1**, support immune function, and contribute to overall vitality.",
+          "dosage_and_timing": "A common recommendation is 2000-4000 IU daily. Taking it with a meal that contains fat can improve absorption.",
+          "situational_cyclical_considerations": "No specific cyclical considerations, but consistent daily intake is important."
+        },
+        {
+          "name": "Iron",
+          "rationale": "Your lab results show **C2[Mean Corpuscular Hemoglobin Low]C2** (**C2[26.2 pg]C2**) and **C2[MCH Concentration Low]C2** (**C2[30.6 g/dL]C2**), which can be indicators of lower iron levels. This can contribute to **C1[fatigue]C1** and **C1[hair loss]C1**, which you've reported.",
+          "expected_outcomes": "Can help improve **C1[energy levels]C1**, reduce **C1[fatigue]C1**, and support healthy **C1[hair growth]C1**.",
+          "dosage_and_timing": "Dosage varies, but often around 25-65 mg of elemental iron daily. It's best taken on an empty stomach for absorption, but if it causes upset, take it with a small amount of food. Avoid taking it with calcium or caffeine.",
+          "situational_cyclical_considerations": "Continue daily, especially if your periods are moderate to heavy, as this is a common way iron is lost."
+        },
+        {
+          "name": "Zinc",
+          "rationale": "You've mentioned **C1[hair loss]C1** and **C1[mood swings]C1**. Zinc is important for hair follicle health and can also play a role in mood regulation. It's like a building block for healthy hair and a stabilizer for your mood.",
+          "expected_outcomes": "May help reduce **C1[hair loss]C1** and support emotional balance.",
+          "dosage_and_timing": "A typical dose is 15-30 mg daily. It's often best absorbed when taken with food.",
+          "situational_cyclical_considerations": "No specific cyclical considerations, but consistent daily intake is beneficial."
+        },
+        {
+          "name": "Omega-3 Fatty Acids (EPA/DHA)",
+          "rationale": "You experience **C1[bloating]C1**, **C1[mood swings]C1**, and **C1[anxiety]C1**. Omega-3s are anti-inflammatory and can help calm the body, potentially easing digestive discomfort and supporting a more stable mood.",
+          "expected_outcomes": "Can help reduce **C1[inflammation]C1**, improve **C1[mood]C1**, and support overall hormonal balance.",
+          "dosage_and_timing": "Aim for 1000-2000 mg of combined EPA and DHA daily. Taking with a meal is recommended.",
+          "situational_cyclical_considerations": "No specific cyclical considerations, but consistent daily intake is beneficial."
         }
       ],
-      "conclusion": "These supplements may help support your hormonal health by addressing your low estradiol and associated symptoms.  Remember to discuss these with your doctor before starting any new supplement regimen, and continue prioritizing a healthy diet, regular exercise, and stress management techniques."
+      "conclusion": "These supplements are like a gentle nudge to help your body function optimally. It's always a good idea to chat with your doctor before starting any new supplement, just to make sure they're the perfect fit for you and won't interact with anything else."
     }
   }
 }
