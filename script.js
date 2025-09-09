@@ -1669,12 +1669,19 @@ Holistic <br />Coaches, Clinicians</span>
                                       }
                                     )}</p></div></div>
                          </div>
-                         <h4>Cycle Impact</h4>
-                         <p class="p-grey">${handleMarkup(bm.cycle_impact)}</p>
-                         <h4 class="why-it-matters-h4">Why It Matters</h4>
-                         <p class="p-grey">${handleMarkup(
-                           bm.why_it_matters
-                         )}</p>
+  ${
+    bm.cycle_impact
+      ? `<h4>Cycle Impact</h4>
+     <p class="p-grey">${handleMarkup(bm.cycle_impact)}</p>`
+      : ""
+  }
+  ${
+    bm.why_it_matters
+      ? `<h4 class="why-it-matters-h4">Why It Matters</h4>
+     <p class="p-grey">${handleMarkup(bm.why_it_matters)}</p>`
+      : ""
+  }
+
                    </div>`;
                      })
                      .join("")}
