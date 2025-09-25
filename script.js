@@ -1957,7 +1957,7 @@ Holistic <br />Coaches, Clinicians</span>
                                <p class="range-p">Range: ${
                                  bm.range
                                    ?.replace(":", ":</b><br>")
-                                   .replaceAll(", ", "<br>") ?? "-"
+                                   .replaceAll(", ", "<br>") ?? "N/A"
                                }</p>
                                <div class="result-show"><h1 class="result-value-${
                                  bm.status
