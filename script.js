@@ -12,896 +12,311 @@ document.addEventListener("DOMContentLoaded", () => {
   // let pillarChartInstance = null;
 
   const defaultData = {
-    lab_analysis: {
-      overall_summary:
-        "Your lab results show a few areas that need attention, particularly your **C1[chloride]C1** level being slightly high and your **C1[Mean Corpuscular Hemoglobin]C1** and **C1[MCH Concentration]C1** being low. These can sometimes be linked to nutrient levels. You also have a high **C2[LDL,Calc]C2** (**C2[122 mg/dL]C2**) and **C2[Non-HDL,Chol,Calc]C2** (**C2[131 mg/dL]C2**), which are important for heart health. Your **C2[Hemoglobin A1c]C2** (**C2[5.3 %]C2**) is in a good range, suggesting your blood sugar is well-managed. Given your symptoms of **C1[fatigue]C1**, **C1[mood swings]C1**, and **C1[difficulty concentrating]C1**, we'll focus on supporting your energy and hormonal balance.",
-      biomarkers_tested_count: 50,
-      biomarker_categories_summary: {
-        description_text:
-          "Out of 18 tests, 13 are good, 2 need watching, and 3 need action.",
-        optimal_count: 45,
-        keep_in_mind_count: 1,
-        attention_needed_count: 4,
+  "lab_analysis": {
+    "overall_summary": "Hello Chaeyeon! Based on your lab results from July 2025 and your health assessment, we can see a few areas that might be contributing to your symptoms like fatigue, hair loss, and mood swings. Your thyroid-stimulating hormone (TSH) is within the normal range, but your free T3 and free T4 are also looking good, which is great for your metabolism and energy. However, your iron levels, specifically your ferritin, are on the lower side of optimal. Think of ferritin as your body's iron storage tank; when it's low, it's like running on an almost empty battery, which can definitely explain your **C1[fatigue]C1** and **C1[hair loss]C1**. Your lipid panel shows that your total cholesterol and LDL cholesterol are a bit high, and your non-HDL cholesterol is also elevated. These are important markers for heart health, and while they might not be directly causing your current symptoms, it's a good idea to keep an eye on them. Your Vitamin D level is optimal, which is fantastic for your immune system and mood. Your hormone levels (FSH, LH, Estradiol, Prolactin) appear to be within normal ranges for the follicular phase of your cycle, which is a good sign for hormonal balance. However, your testosterone is elevated, which can sometimes contribute to symptoms like hair loss and affect your energy. We also noted a slightly low MCHC, which is a measure of how much hemoglobin is in your red blood cells, and this could also play a role in your fatigue. Overall, focusing on improving your iron stores and supporting your hormonal balance will be key to helping you feel more energized and balanced.",
+    "biomarkers_tested_count": 93,
+    "biomarker_categories_summary": {
+      "description_text": "Out of your total 93 biomarker tests, 85 fall within optimal ranges, showing strong health markers. 3 need attention and monitoring to support your well-being. 5 require urgent action to address potential health concerns. This summary prioritizes your key health focus areas clearly.",
+      "optimal_count": 85,
+      "keep_in_mind_count": 3,
+      "attention_needed_count": 5
+    },
+    "detailed_biomarkers": [
+      {
+        "name": "ESTRADIOL",
+        "status": "optimal",
+        "status_label": "Good (Green)",
+        "result": "79 pg/mL",
+        "range": "19-144",
+        "why_it_matters": "Estradiol is the primary estrogen hormone in women, crucial for reproductive health, bone strength, and mood. Your level is within the normal range for the follicular phase, supporting a healthy menstrual cycle and overall well-being.",
+        "cycle_impact": "Essential for follicle development, uterine lining growth, and mood regulation."
       },
-      detailed_biomarkers: [
-        {
-          name: "Neutrophil Percent, Auto",
-          status: "optimal",
-          status_label: "Good (Green)",
-          result: "69.4 %",
-          range: "No Ref. Range %",
-          cycle_impact:
-            "Neutrophils are a type of white blood cell that helps fight infection. Their levels can fluctuate but are not directly tied to your menstrual cycle.",
-          why_it_matters:
-            "Your neutrophil percentage is within a typical range, indicating your immune system is functioning as expected.",
-        },
-        {
-          name: "Lymphocyte Percent, Auto",
-          status: "optimal",
-          status_label: "Good (Green)",
-          result: "19.1 %",
-          range: "No Ref. Range %",
-          cycle_impact:
-            "Lymphocytes are another type of white blood cell involved in immune response. Their levels can change with stress or illness, which can indirectly affect your cycle.",
-          why_it_matters:
-            "Your lymphocyte percentage is within a normal range, suggesting a balanced immune response.",
-        },
-        {
-          name: "Monocyte Percent, Auto",
-          status: "optimal",
-          status_label: "Good (Green)",
-          result: "8.2 %",
-          range: "No Ref. Range %",
-          cycle_impact:
-            "Monocytes are a type of white blood cell that helps clear out dead cells and fight infection. Fluctuations can occur with inflammation, which might indirectly influence hormonal balance.",
-          why_it_matters:
-            "Your monocyte percentage is within a normal range, indicating your body's cleanup and immune processes are working well.",
-        },
-        {
-          name: "Eosinophil Percent, Auto",
-          status: "optimal",
-          status_label: "Good (Green)",
-          result: "2.6 %",
-          range: "No Ref. Range %",
-          cycle_impact:
-            "Eosinophils are white blood cells that often increase during allergic reactions or parasitic infections. While not directly linked to your cycle, significant increases can indicate underlying inflammation.",
-          why_it_matters:
-            "Your eosinophil percentage is within a normal range, suggesting no significant allergic response or parasitic issue.",
-        },
-        {
-          name: "Basophil Percent, Auto",
-          status: "optimal",
-          status_label: "Good (Green)",
-          result: "0.4 %",
-          range: "No Ref. Range %",
-          cycle_impact:
-            "Basophils are a type of white blood cell involved in allergic responses. Their levels are generally stable and not directly related to your menstrual cycle.",
-          why_it_matters:
-            "Your basophil percentage is within a normal range, indicating no significant allergic activity.",
-        },
-        {
-          name: "Immature Granulocytes%",
-          status: "optimal",
-          status_label: "Good (Green)",
-          result: "0.3 %",
-          range: "0.00 - 0.04 %",
-          cycle_impact:
-            "Immature granulocytes are a sign of the bone marrow releasing new white blood cells. A small amount is normal, but higher amounts can indicate stress on the body.",
-          why_it_matters:
-            "Your level of immature granulocytes is within the normal range, suggesting your bone marrow is functioning well.",
-        },
-        {
-          name: "Absolute Neut Count",
-          status: "optimal",
-          status_label: "Good (Green)",
-          result: "4.72 x10E3/uL",
-          range: "1.80 - 6.90 x10E3/uL",
-          cycle_impact:
-            "This count represents a specific type of white blood cell. While not directly tied to your cycle, significant changes can reflect overall health status.",
-          why_it_matters:
-            "Your absolute neutrophil count is within the normal range, indicating a healthy immune cell count.",
-        },
-        {
-          name: "Absolute Lymphocyte Count",
-          status: "optimal",
-          status_label: "Good (Green)",
-          result: "1.30 x10E3/uL",
-          range: "1.30 - 3.40 x10E3/uL",
-          cycle_impact:
-            "This count reflects a type of white blood cell. Stress or illness can affect these levels, which might indirectly influence hormonal balance.",
-          why_it_matters:
-            "Your absolute lymphocyte count is at the lower end of the normal range, which is good. It suggests your immune system is balanced.",
-        },
-        {
-          name: "Absolute Mono Count",
-          status: "optimal",
-          status_label: "Good (Green)",
-          result: "0.56 x10E3/uL",
-          range: "0.20 - 0.80 x10E3/uL",
-          cycle_impact:
-            "Monocytes are important for immune response and clearing debris. Their levels can be influenced by inflammation, which might affect hormonal health.",
-          why_it_matters:
-            "Your absolute monocyte count is within the normal range, indicating healthy immune cell function.",
-        },
-        {
-          name: "Absolute Eos Count",
-          status: "optimal",
-          status_label: "Good (Green)",
-          result: "0.18 x10E3/uL",
-          range: "0.00 - 0.50 x10E3/uL",
-          cycle_impact:
-            "Eosinophils are involved in allergic responses and fighting parasites. Their levels are generally not directly related to your menstrual cycle.",
-          why_it_matters:
-            "Your absolute eosinophil count is within the normal range, suggesting no significant allergic reactions or parasitic infections.",
-        },
-        {
-          name: "Absolute Baso Count",
-          status: "optimal",
-          status_label: "Good (Green)",
-          result: "0.03 x10E3/uL",
-          range: "0.00 - 0.10 x10E3/uL",
-          cycle_impact:
-            "Basophils are involved in allergic reactions. Their levels are usually stable and not directly linked to your menstrual cycle.",
-          why_it_matters:
-            "Your absolute basophil count is within the normal range, indicating no significant allergic activity.",
-        },
-        {
-          name: "Absolute Immature Gran Count",
-          status: "optimal",
-          status_label: "Good (Green)",
-          result: "0.02 x10E3/uL",
-          range: "0.00 - 0.04 x10E3/uL",
-          cycle_impact:
-            "This count represents immature white blood cells. A small amount is normal, but higher levels can indicate the body is under stress.",
-          why_it_matters:
-            "Your absolute immature granulocyte count is within the normal range, suggesting your bone marrow is functioning well.",
-        },
-        {
-          name: "White Blood Cell Count",
-          status: "optimal",
-          status_label: "Good (Green)",
-          result: "6.81 x10E3/uL",
-          range: "4.16 - 9.95 x10E3/uL",
-          cycle_impact:
-            "White blood cells are part of your immune system. Their levels can be affected by stress or illness, which can indirectly influence your hormonal balance.",
-          why_it_matters:
-            "Your white blood cell count is within the normal range, indicating your immune system is balanced.",
-        },
-        {
-          name: "Red Blood Cell Count",
-          status: "optimal",
-          status_label: "Good (Green)",
-          result: "4.77 x10E6/uL",
-          range: "3.96 - 5.09 x10E6/uL",
-          cycle_impact:
-            "Red blood cells carry oxygen throughout your body. Adequate oxygen is crucial for energy production, which can impact how you feel during your cycle.",
-          why_it_matters:
-            "Your red blood cell count is within the normal range, suggesting good oxygen transport to your tissues.",
-        },
-        {
-          name: "Hemoglobin",
-          status: "optimal",
-          status_label: "Good (Green)",
-          result: "12.5 g/dL",
-          range: "11.6 - 15.2 g/dL",
-          cycle_impact:
-            "Hemoglobin carries oxygen in your red blood cells. Low levels can lead to **C1[fatigue]C1** and can be more common with heavy periods.",
-          why_it_matters:
-            "Your hemoglobin level is good, indicating you have enough oxygen-carrying capacity in your blood.",
-        },
-        {
-          name: "Hematocrit",
-          status: "optimal",
-          status_label: "Good (Green)",
-          result: "40.9 %",
-          range: "34.9 - 45.2 %",
-          cycle_impact:
-            "Hematocrit is the percentage of red blood cells in your blood. It's related to hemoglobin and oxygen transport, which can affect your energy levels throughout your cycle.",
-          why_it_matters:
-            "Your hematocrit level is within the normal range, supporting adequate oxygen delivery.",
-        },
-        {
-          name: "Mean Corpuscular Volume",
-          status: "optimal",
-          status_label: "Good (Green)",
-          result: "85.7 fL",
-          range: "79.3 - 98.6 fL",
-          cycle_impact:
-            "This measures the average size of your red blood cells. It can be affected by nutrient deficiencies, which might influence your energy during your cycle.",
-          why_it_matters:
-            "Your red blood cells are a normal size, suggesting your body is producing them effectively.",
-        },
-        {
-          name: "Mean Corpuscular Hemoglobin",
-          status: "attention_needed",
-          status_label: "Needs Attention (Red)",
-          result: "26.2 pg",
-          range: "26.4 - 33.4 pg",
-          cycle_impact:
-            "This measures the average amount of hemoglobin in each red blood cell. Low levels can contribute to **C1[fatigue]C1** and may be linked to iron or B12 deficiency, which can impact your cycle.",
-          why_it_matters:
-            "Your Mean Corpuscular Hemoglobin is slightly low. This could indicate a potential issue with iron or vitamin B12 absorption, which are important for energy and can affect your menstrual cycle.",
-        },
-        {
-          name: "MCH Concentration",
-          status: "attention_needed",
-          status_label: "Needs Attention (Red)",
-          result: "30.6 g/dL",
-          range: "31.5 - 35.5 g/dL",
-          cycle_impact:
-            "This measures the concentration of hemoglobin in your red blood cells. A low value can be associated with **C1[fatigue]C1** and may suggest nutrient deficiencies that can affect your cycle.",
-          why_it_matters:
-            "Your MCH Concentration is slightly low. This, along with the low MCH, suggests you might benefit from checking your iron and B12 levels more closely, as these can impact your energy and menstrual cycle.",
-        },
-        {
-          name: "Red Cell Distribution Width-SD",
-          status: "optimal",
-          status_label: "Good (Green)",
-          result: "42.6 fL",
-          range: "36.9 - 48.3 fL",
-          cycle_impact:
-            "This measures the variation in the size of your red blood cells. Significant changes can sometimes be linked to nutrient deficiencies that might affect energy levels during your cycle.",
-          why_it_matters:
-            "The variation in your red blood cell size is within the normal range, indicating consistent red blood cell production.",
-        },
-        {
-          name: "Red Cell Distribution Width-CV",
-          status: "optimal",
-          status_label: "Good (Green)",
-          result: "13.8 %",
-          range: "11.1 - 15.5 %",
-          cycle_impact:
-            "This measures the variation in the size of your red blood cells as a percentage. It's related to RDW-SD and can be influenced by nutrient status, potentially affecting energy during your cycle.",
-          why_it_matters:
-            "The variation in your red blood cell size, as a percentage, is within the normal range.",
-        },
-        {
-          name: "Platelet Count, Auto",
-          status: "optimal",
-          status_label: "Good (Green)",
-          result: "313 x10E3/uL",
-          range: "143 - 398 x10E3/uL",
-          cycle_impact:
-            "Platelets help your blood clot. While not directly tied to your cycle, significant changes can indicate underlying health issues.",
-          why_it_matters:
-            "Your platelet count is within the normal range, indicating your blood's clotting ability is functioning well.",
-        },
-        {
-          name: "Mean Platelet Volume",
-          status: "optimal",
-          status_label: "Good (Green)",
-          result: "10.8 fL",
-          range: "9.3 - 13.0 fL",
-          cycle_impact:
-            "This measures the average size of your platelets. It can sometimes be related to inflammation or platelet production, which are not directly linked to your cycle.",
-          why_it_matters:
-            "Your mean platelet volume is within the normal range, suggesting your platelets are of a typical size.",
-        },
-        {
-          name: "Nucleated RBC%, automated",
-          status: "optimal",
-          status_label: "Good (Green)",
-          result: "0.0 %",
-          range: "No Ref. Range %",
-          cycle_impact:
-            "Nucleated red blood cells are immature red blood cells. A small amount is normal, but higher levels can indicate stress on the bone marrow.",
-          why_it_matters:
-            "Your level of nucleated red blood cells is zero, which is normal.",
-        },
-        {
-          name: "Absolute Nucleated RBC Count",
-          status: "optimal",
-          status_label: "Good (Green)",
-          result: "0.00 x10E3/uL",
-          range: "0.00 - 0.00 x10E3/uL",
-          cycle_impact:
-            "This count represents immature red blood cells. A zero count is normal and indicates healthy red blood cell production.",
-          why_it_matters:
-            "Your absolute nucleated red blood cell count is zero, which is normal.",
-        },
-        {
-          name: "Neutrophil Abs (Prelim)",
-          status: "optimal",
-          status_label: "Good (Green)",
-          result: "4.72 x10E3/uL",
-          range: "See Absolute Neut Ct. x10E3/uL",
-          cycle_impact:
-            "This is a count of a specific type of white blood cell. While not directly tied to your cycle, significant changes can reflect overall health status.",
-          why_it_matters:
-            "Your absolute neutrophil count is within the normal range, indicating a healthy immune cell count.",
-        },
-        {
-          name: "Sodium",
-          status: "optimal",
-          status_label: "Good (Green)",
-          result: "139 mmol/L",
-          range: "135 - 146 mmol/L",
-          cycle_impact:
-            "Sodium is an electrolyte important for fluid balance. Hormonal shifts can sometimes affect fluid balance, but this level is normal.",
-          why_it_matters:
-            "Your sodium level is within the normal range, indicating good hydration and electrolyte balance.",
-        },
-        {
-          name: "Potassium",
-          status: "optimal",
-          status_label: "Good (Green)",
-          result: "4.7 mmol/L",
-          range: "3.6 - 5.3 mmol/L",
-          cycle_impact:
-            "Potassium is another electrolyte crucial for nerve and muscle function, including your heart. Hormonal changes can sometimes influence electrolyte balance.",
-          why_it_matters:
-            "Your potassium level is within the normal range, supporting healthy nerve and muscle function.",
-        },
-        {
-          name: "Chloride",
-          status: "keep_in_mind",
-          status_label: "Keep in Mind (Yellow)",
-          result: "107 mmol/L",
-          range: "96 - 106 mmol/L",
-          cycle_impact:
-            "Chloride is an electrolyte that works with sodium to maintain fluid balance. Slight variations can occur, but it's not directly linked to your cycle.",
-          why_it_matters:
-            "Your chloride level is slightly high. This can sometimes be related to hydration or kidney function, but a slight elevation like this is often not a concern.",
-        },
-        {
-          name: "Total CO2",
-          status: "optimal",
-          status_label: "Good (Green)",
-          result: "23 mmol/L",
-          range: "20 - 30 mmol/L",
-          cycle_impact:
-            "Total CO2 is related to your body's acid-base balance and can be influenced by breathing and metabolism. It's not directly tied to your menstrual cycle.",
-          why_it_matters:
-            "Your total CO2 level is within the normal range, indicating your body's acid-base balance is stable.",
-        },
-        {
-          name: "Anion Gap",
-          status: "optimal",
-          status_label: "Good (Green)",
-          result: "9 mmol/L",
-          range: "8 - 19 mmol/L",
-          cycle_impact:
-            "The anion gap is a calculation that helps assess your body's acid-base balance. It's not directly related to your menstrual cycle.",
-          why_it_matters:
-            "Your anion gap is within the normal range, suggesting your body's acid-base balance is well-regulated.",
-        },
-        {
-          name: "Glucose",
-          status: "optimal",
-          status_label: "Good (Green)",
-          result: "97 mg/dL",
-          range: "65 - 99 mg/dL",
-          cycle_impact:
-            "Glucose is your body's primary energy source. Stable blood sugar is important for consistent energy throughout your cycle, and yours looks good.",
-          why_it_matters:
-            "Your glucose level is within the normal range, indicating your body is managing blood sugar effectively.",
-        },
-        {
-          name: "Creatinine",
-          status: "optimal",
-          status_label: "Good (Green)",
-          result: "0.66 mg/dL",
-          range: "0.60 - 1.30 mg/dL",
-          cycle_impact:
-            "Creatinine is a waste product from muscle activity. It's filtered by your kidneys. Kidney function is important for overall health, which can indirectly support hormonal balance.",
-          why_it_matters:
-            "Your creatinine level is within the normal range, suggesting your kidneys are filtering waste effectively.",
-        },
-        {
-          name: "Estimated GFR",
-          status: "optimal",
-          status_label: "Good (Green)",
-          result: ">89 mL/min/1.73m2",
-          range: "See Comment",
-          cycle_impact:
-            "Your estimated Glomerular Filtration Rate (eGFR) indicates how well your kidneys are filtering waste. Healthy kidney function is important for overall detoxification, which can support hormonal balance.",
-          why_it_matters:
-            "Your eGFR is excellent, showing your kidneys are working very well.",
-        },
-        {
-          name: "Urea Nitrogen",
-          status: "optimal",
-          status_label: "Good (Green)",
-          result: "7 mg/dL",
-          range: "7 - 22 mg/dL",
-          cycle_impact:
-            "Urea nitrogen is a waste product filtered by the kidneys. Normal levels indicate good kidney function, which is important for overall health and hormonal balance.",
-          why_it_matters:
-            "Your urea nitrogen level is at the lower end of the normal range, indicating good kidney function.",
-        },
-        {
-          name: "Calcium",
-          status: "optimal",
-          status_label: "Good (Green)",
-          result: "9.1 mg/dL",
-          range: "8.6 - 10.4 mg/dL",
-          cycle_impact:
-            "Calcium is vital for bone health and muscle function. Hormonal changes, especially around menopause, can affect calcium levels and bone density.",
-          why_it_matters:
-            "Your calcium level is within the normal range, supporting bone and muscle health.",
-        },
-        {
-          name: "Total Protein",
-          status: "optimal",
-          status_label: "Good (Green)",
-          result: "7.2 g/dL",
-          range: "6.1 - 8.2 g/dL",
-          cycle_impact:
-            "Total protein reflects the amount of protein in your blood, which is essential for many bodily functions, including hormone transport and immune support.",
-          why_it_matters:
-            "Your total protein level is within the normal range, indicating adequate protein for bodily functions.",
-        },
-        {
-          name: "Albumin",
-          status: "optimal",
-          status_label: "Good (Green)",
-          result: "4.4 g/dL",
-          range: "3.9 - 5.0 g/dL",
-          cycle_impact:
-            "Albumin is a protein made by the liver that helps transport hormones and other substances. Good levels support overall hormonal balance.",
-          why_it_matters:
-            "Your albumin level is within the normal range, indicating your liver is producing enough protein for transport functions.",
-        },
-        {
-          name: "Bilirubin,Total",
-          status: "optimal",
-          status_label: "Good (Green)",
-          result: "0.5 mg/dL",
-          range: "0.1 - 1.2 mg/dL",
-          cycle_impact:
-            "Bilirubin is a byproduct of red blood cell breakdown, processed by the liver. While not directly tied to your cycle, liver health is important for hormone metabolism.",
-          why_it_matters:
-            "Your total bilirubin level is within the normal range, indicating your liver is processing waste products effectively.",
-        },
-        {
-          name: "Alkaline Phosphatase",
-          status: "optimal",
-          status_label: "Good (Green)",
-          result: "58 U/L",
-          range: "37 - 113 U/L",
-          cycle_impact:
-            "Alkaline phosphatase can be elevated with bone turnover or liver issues. While not directly linked to your cycle, it's a marker of overall metabolic health.",
-          why_it_matters:
-            "Your alkaline phosphatase level is within the normal range, suggesting no significant bone or liver issues.",
-        },
-        {
-          name: "Aspartate Aminotransferase",
-          status: "optimal",
-          status_label: "Good (Green)",
-          result: "24 U/L",
-          range: "13 - 62 U/L",
-          cycle_impact:
-            "Aspartate Aminotransferase (AST) is an enzyme found in the liver and other tissues. Normal levels suggest good liver health, which is important for hormone metabolism.",
-          why_it_matters:
-            "Your AST level is within the normal range, indicating good liver health.",
-        },
-        {
-          name: "Alanine Aminotransferase",
-          status: "optimal",
-          status_label: "Good (Green)",
-          result: "13 U/L",
-          range: "8 - 70 U/L",
-          cycle_impact:
-            "Alanine Aminotransferase (ALT) is an enzyme primarily found in the liver. Normal levels are a good indicator of liver health, which is crucial for processing hormones.",
-          why_it_matters:
-            "Your ALT level is within the normal range, indicating good liver health.",
-        },
-        {
-          name: "Hemoglobin A1c",
-          status: "optimal",
-          status_label: "Good (Green)",
-          result: "5.3 %",
-          range: "below <5.7 % HbA1c",
-          cycle_impact:
-            "This test shows your average blood sugar over the last 3 months. Stable blood sugar is key for consistent energy and mood throughout your cycle.",
-          why_it_matters:
-            "Your Hgb A1c is excellent, meaning your blood sugar control is good. This is important for preventing energy crashes and supporting overall hormonal balance.",
-        },
-        {
-          name: "Cholesterol",
-          status: "optimal",
-          status_label: "Good (Green)",
-          result: "185 mg/dL",
-          range: "See Comment",
-          cycle_impact:
-            "Cholesterol is a building block for hormones. While this total level is good, the breakdown (LDL and HDL) is more important for understanding heart health.",
-          why_it_matters:
-            "Your total cholesterol is in a good range. It's a building block for hormones, so having adequate levels is important.",
-        },
-        {
-          name: "Cholesterol,LDL,Calc",
-          status: "attention_needed",
-          status_label: "Needs Attention (Red)",
-          result: "122 mg/dL",
-          range: "below <100 mg/dL",
-          cycle_impact:
-            "LDL is often called 'bad' cholesterol. High levels can contribute to inflammation, which can affect hormone balance and energy levels.",
-          why_it_matters:
-            "Your LDL cholesterol is higher than recommended. This can be linked to diet and lifestyle and is a factor in heart health, which is interconnected with overall hormonal well-being.",
-        },
-        {
-          name: "Cholesterol, HDL",
-          status: "optimal",
-          status_label: "Good (Green)",
-          result: "54 mg/dL",
-          range: "above >50 mg/dL",
-          cycle_impact:
-            "HDL is 'good' cholesterol that helps clear out LDL. Higher levels are generally protective for heart health, which is linked to overall hormonal balance.",
-          why_it_matters:
-            "Your HDL cholesterol is in a good range, indicating your body has a healthy amount of 'good' cholesterol.",
-        },
-        {
-          name: "Triglycerides",
-          status: "optimal",
-          status_label: "Good (Green)",
-          result: "43 mg/dL",
-          range: "below <150 mg/dL",
-          cycle_impact:
-            "Triglycerides are a type of fat in your blood. High levels can be linked to blood sugar issues and inflammation, which can impact hormonal balance and energy.",
-          why_it_matters:
-            "Your triglyceride level is excellent, suggesting your body is managing fats well, likely due to good blood sugar control.",
-        },
-        {
-          name: "Non-HDL,Chol,Calc",
-          status: "attention_needed",
-          status_label: "Needs Attention (Red)",
-          result: "131 mg/dL",
-          range: "below <130 mg/dL",
-          cycle_impact:
-            "Non-HDL cholesterol includes all the 'bad' cholesterol particles. Higher levels are associated with increased risk for heart disease and can be linked to inflammation that affects hormones.",
-          why_it_matters:
-            "Your Non-HDL cholesterol is slightly elevated. This, along with the high LDL, suggests focusing on heart-healthy habits is important for your overall well-being and hormonal balance.",
-        },
-        {
-          name: "TSH",
-          status: "optimal",
-          status_label: "Good (Green)",
-          result: "1.3 mcIU/mL",
-          range: "0.3 - 4.7 mcIU/mL",
-          cycle_impact:
-            "TSH is a hormone that tells your thyroid to make thyroid hormones. Thyroid hormones regulate metabolism and energy, which can significantly impact your cycle and how you feel.",
-          why_it_matters:
-            "Your TSH is in a great range, suggesting your thyroid is functioning well and producing enough thyroid hormone to support your metabolism and energy levels.",
-        },
-        {
-          name: "Vitamin B12",
-          status: "optimal",
-          status_label: "Good (Green)",
-          result: "453 pg/mL",
-          range: "254 - 1,060 pg/mL",
-          cycle_impact:
-            "Vitamin B12 is crucial for energy production and nerve function. Low levels can cause **C1[fatigue]C1** and neurological symptoms, and can affect your cycle.",
-          why_it_matters:
-            "Your Vitamin B12 level is within the normal range, which is good for energy and nerve health. However, given your low MCH and MCH concentration, it's still worth ensuring you're absorbing it well.",
-        },
-      ],
-      crucial_biomarkers_to_measure: [
-        {
-          name: "Iron Panel (Ferritin, Serum Iron, TIBC)",
-          importance:
-            "Test your Iron Panel, especially Ferritin, to understand your iron stores. Low iron can cause **C1[fatigue]C1**, **C1[mood swings]C1**, and **C1[difficulty concentrating]C1**, which you're experiencing. This is important because your MCH and MCH concentration are low.",
-        },
-        {
-          name: "Vitamin D (25-hydroxy)",
-          importance:
-            "Test your Vitamin D levels. Low Vitamin D is common and can affect mood, energy, and immune function, which may be contributing to your **C1[fatigue]C1** and **C1[mood swings]C1**.",
-        },
-        {
-          name: "Magnesium",
-          importance:
-            "Test your Magnesium levels. Magnesium plays a role in energy production, stress management, and hormone balance. Low magnesium can worsen **C1[fatigue]C1**, **C1[mood swings]C1**, and **C1[anxiety]C1**.",
-        },
-      ],
-      health_recommendation_summary: [
-        "Focus on nutrient-dense foods to support your energy and address low MCH/MCH concentration. Think colorful fruits and vegetables, lean proteins, and healthy fats.",
-        "Prioritize consistent meal times. Eating at regular intervals helps stabilize blood sugar and energy levels, which can reduce afternoon crashes and **C1[fatigue]C1**.",
-        "Incorporate stress-management techniques daily. Since you report high stress, practices like yoga, meditation, or deep breathing can help improve your **C1[mood swings]C1** and **C1[anxiety]C1**.",
-        "Aim for 7-9 hours of sleep per night. While you get 6 hours, improving sleep quality can significantly boost your energy and reduce daytime **C1[fatigue]C1**.",
-        "Stay hydrated by drinking more water. Aim for at least 64 oz daily to support energy levels and overall bodily functions.",
-        "Retest your Iron Panel (especially Ferritin), Vitamin D, and Magnesium to get a clearer picture of your nutrient status and address your symptoms of **C1[fatigue]C1** and **C1[mood swings]C1**.",
-        "Consider a follow-up with your doctor to discuss your elevated LDL and Non-HDL cholesterol, as heart health is linked to hormonal well-being.",
-        "Continue your current exercise routine of 4-5 times per week, as physical activity is excellent for managing stress and improving energy.",
-      ],
-    },
-    four_pillars: {
-      introduction:
-        "Stefanie, your health journey shows a few key areas we can focus on to help you feel your best. Your energy levels and mood swings suggest we need to pay close attention to how you eat, sleep, move, and recover. Your labs show a slightly elevated LDL cholesterol, which is your 'bad' cholesterol, and your Non-HDL cholesterol is also high. While your other labs are within normal ranges, these lipid results, combined with your reported **C1[after-meal fatigue]C1** and **C1[afternoon energy dips]C1**, suggest we can optimize your nutrition and stress management to improve your overall well-being.",
-      pillars: [
-        {
-          name: "Eat Well",
-          score: 4,
-          score_rationale: [
-            "Your Eat Well score is 4 because you mentioned having an **C1[irregular meal schedule]C1** and sometimes skipping or delaying meals.",
-            "Eating consistently helps stabilize your energy and mood, which is important for managing your **C1[mood swings]C1** and **C1[afternoon energy dips]C1**.",
-          ],
-          why_it_matters:
-            "Eating regular, balanced meals helps keep your blood sugar steady, which is like keeping a steady flow of energy to your brain and body. This can directly impact your **C1[fatigue]C1** and **C1[difficulty concentrating]C1**.",
-          root_cause_correlation:
-            "An irregular eating pattern can disrupt your body's natural rhythms, potentially affecting hormone balance and contributing to **C1[bloating]C1** and **C1[mood swings]C1**.",
-          science_based_explanation:
-            "When you skip meals or eat irregularly, your body might not get the consistent fuel it needs, leading to energy crashes. Stable blood sugar also helps your brain function better, reducing **C1[difficulty concentrating]C1**.",
-          additional_guidance: {
-            description:
-              "To support your energy and hormonal balance, here are some food recommendations and foods to be mindful of.",
-            structure: {
-              recommended_foods: [
-                {
-                  name: "Whole Grains",
-                  description:
-                    "Like oats, quinoa, and brown rice. They provide sustained energy and fiber, which can help with **C1[bloating]C1** and keep your blood sugar stable.",
-                },
-                {
-                  name: "Lean Proteins",
-                  description:
-                    "Such as chicken, fish, beans, and lentils. Protein helps you feel full and supports muscle health, which is important for your **C1[resistance training]C1**.",
-                },
-                {
-                  name: "Healthy Fats",
-                  description:
-                    "Found in avocados, nuts, seeds, and olive oil. These are important for hormone production and can help manage your **C1[intense food cravings]C1**.",
-                },
-                {
-                  name: "Fruits and Vegetables",
-                  description:
-                    "Aim for a variety of colors to get a wide range of vitamins and minerals. They are rich in fiber and antioxidants, which can help with **C1[fatigue]C1** and overall well-being.",
-                },
-              ],
-              cautious_foods: [
-                {
-                  name: "Refined Sugars and Processed Foods",
-                  description:
-                    "These can cause rapid spikes and crashes in blood sugar, worsening **C1[afternoon energy dips]C1** and potentially impacting your mood.",
-                },
-                {
-                  name: "Excessive Saturated and Trans Fats",
-                  description:
-                    "These can contribute to higher LDL cholesterol, as seen in your labs (**C2[LDL,Calc]C2[122 mg/dL]C2** is high). Focus on unsaturated fats instead.",
-                },
-                {
-                  name: "Large Meals Late at Night",
-                  description:
-                    "These can interfere with sleep quality and digestion, potentially worsening **C1[bloating]C1** and **C1[acid reflux]C1**.",
-                },
-              ],
-            },
-          },
-        },
-        {
-          name: "Sleep Well",
-          score: 5,
-          score_rationale: [
-            "Your Sleep Well score is 5 because while you get 6 hours of sleep, you describe your sleep quality as 'fair' and experience **C1[frequent daytime fatigue]C1**.",
-            "This suggests that even though you're in bed, you might not be getting restorative sleep, which impacts your energy and **C1[mood swings]C1**.",
-          ],
-          why_it_matters:
-            "Quality sleep is crucial for hormone regulation, stress management, and energy restoration. Poor sleep can worsen **C1[fatigue]C1**, **C1[anxiety]C1**, and **C1[difficulty concentrating]C1**.",
-          root_cause_correlation:
-            "Stress and an irregular schedule can disrupt your natural sleep-wake cycle, leading to less restful sleep and contributing to your **C1[daytime fatigue]C1**.",
-          science_based_explanation:
-            "During deep sleep, your body repairs itself and regulates hormones like cortisol and melatonin. Not getting enough quality sleep can throw these off, making you feel tired and irritable, and potentially worsening **C1[mood swings]C1**.",
-          additional_guidance: {
-            description:
-              "To improve your sleep quality and combat daytime fatigue, here are some tips.",
-            structure: {
-              recommended_recovery_tips: [
-                {
-                  name: "Consistent Sleep Schedule",
-                  description:
-                    "Try to go to bed and wake up around the same time every day, even on weekends. This helps regulate your body's internal clock.",
-                },
-                {
-                  name: "Create a Relaxing Bedtime Routine",
-                  description:
-                    "Engage in calming activities like reading, gentle stretching, or taking a warm bath before bed to signal to your body that it's time to wind down.",
-                },
-                {
-                  name: "Optimize Your Sleep Environment",
-                  description:
-                    "Ensure your bedroom is dark, quiet, and cool. Consider blackout curtains or earplugs if needed.",
-                },
-                {
-                  name: "Limit Screen Time Before Bed",
-                  description:
-                    "The blue light from screens can interfere with melatonin production, making it harder to fall asleep. Your **C1[excessive screen time]C1** might be a factor.",
-                },
-              ],
-              avoid_habits_rest_recover: [
-                {
-                  name: "Late-Night Caffeine or Alcohol",
-                  description:
-                    "While you don't consume much caffeine, be mindful of timing. Alcohol can disrupt sleep architecture, leading to less restful sleep.",
-                },
-                {
-                  name: "Heavy Meals Close to Bedtime",
-                  description:
-                    "This can cause digestive discomfort and make it harder to fall asleep, potentially worsening **C1[bloating]C1**.",
-                },
-              ],
-            },
-          },
-        },
-        {
-          name: "Move Well",
-          score: 7,
-          score_rationale: [
-            "Your Move Well score is 7 because you exercise 4-5 times per week with a mix of resistance training, yoga, and walking.",
-            "This is a good foundation, but your reported **C1[frequent daytime fatigue]C1** and **C1[afternoon energy dips]C1** suggest we can fine-tune your movement to better support your energy levels.",
-          ],
-          why_it_matters:
-            "Regular movement helps manage stress, improve mood, and can positively influence hormone balance and energy levels. It's also great for cardiovascular health, which is important given your family history of **C1[heart disease]C1**.",
-          root_cause_correlation:
-            "While exercise is generally beneficial, if it's not balanced with adequate recovery or if done at too high an intensity without proper nutrition, it can sometimes contribute to **C1[fatigue]C1**.",
-          science_based_explanation:
-            "Exercise helps your body become more efficient at using energy and can improve insulin sensitivity, which helps prevent blood sugar crashes. Yoga, in particular, can help manage stress, which is a major contributor to your **C1[mood swings]C1** and **C1[anxiety]C1**.",
-          additional_guidance: {
-            description:
-              "You have a good exercise routine. Let's focus on how to optimize it for energy and stress management.",
-            structure: {
-              recommended_workouts: [
-                {
-                  name: "Continue Resistance Training",
-                  description:
-                    "This is excellent for building muscle, which helps with metabolism and body composition. Aim for 2-3 sessions per week.",
-                },
-                {
-                  name: "Prioritize Yoga and Mindfulness",
-                  description:
-                    "Given your **C1[high stress levels]C1** and **C1[mood swings]C1**, continuing and perhaps deepening your yoga practice is highly recommended. It directly addresses stress and can improve your **C1[sleep quality]C1**.",
-                },
-                {
-                  name: "Incorporate Brisk Walking",
-                  description:
-                    "Aim for 30 minutes of brisk walking most days of the week. This is a great way to boost energy, improve cardiovascular health, and manage stress without being overly taxing.",
-                },
-              ],
-              avoid_habits_move: [
-                {
-                  name: "Overtraining",
-                  description:
-                    "If you feel excessively fatigued after workouts, it might be a sign of overtraining. Ensure you're allowing adequate rest between intense sessions.",
-                },
-                {
-                  name: "Exercising Too Close to Bedtime",
-                  description:
-                    "While you don't mention this, intense exercise too close to bedtime can sometimes interfere with sleep for some individuals.",
-                },
-              ],
-            },
-          },
-        },
-        {
-          name: "Recover Well",
-          score: 3,
-          score_rationale: [
-            "Your Recover Well score is 3 because you report **C1[high stress levels]C1** that frequently impact your mood, energy, or ability to relax.",
-            "You also experience **C1[frequent daytime fatigue]C1** and **C1[afternoon energy dips]C1**, indicating your body isn't recovering effectively from daily stressors.",
-          ],
-          why_it_matters:
-            "Effective recovery is essential for managing stress, balancing hormones, and preventing burnout. When you don't recover well, it can exacerbate **C1[fatigue]C1**, **C1[anxiety]C1**, and **C1[irritability]C1**.",
-          root_cause_correlation:
-            "High stress, irregular sleep, and an inconsistent routine can all prevent your body from entering a restorative state, leading to persistent **C1[fatigue]C1** and **C1[mood swings]C1**.",
-          science_based_explanation:
-            "When you're stressed, your body releases cortisol. While short-term cortisol is helpful, chronic high levels can disrupt sleep, impair cognitive function (leading to **C1[difficulty concentrating]C1**), and contribute to weight gain around the midsection. Your listed stress-reducing techniques are great, but their effectiveness might be limited by other factors like sleep and nutrition.",
-          additional_guidance: {
-            description:
-              "You're already practicing many great stress-reducing techniques! Let's refine them and ensure they're working effectively for you.",
-            structure: {
-              recommended_recovery_tips: [
-                {
-                  name: "Prioritize Your Stress Management Techniques",
-                  description:
-                    "You listed many excellent techniques like yoga, meditation, journaling, and deep breathing. Make sure you're scheduling these into your week, especially during times of high stress, to combat **C1[anxiety]C1** and **C1[irritability]C1**.",
-                },
-                {
-                  name: "Mindful Eating Practices",
-                  description:
-                    "Pay attention to how you feel after eating. Your report of feeling **C1[extremely tired or sluggish after eating]C1** suggests that your body may be struggling to digest or process your meals efficiently. Eating slowly and mindfully can help.",
-                },
-                {
-                  name: "Hydration",
-                  description:
-                    "You're consuming 48-64 oz of water, which is a good start. Ensure you're staying consistently hydrated throughout the day, as dehydration can worsen **C1[fatigue]C1** and **C1[difficulty concentrating]C1**.",
-                },
-                {
-                  name: "Address Environmental Stressors",
-                  description:
-                    "You mentioned exposure to **C1[harsh lighting or excessive screen time]C1**. Consider using blue light filters on your devices, taking regular breaks from screens, and ensuring your workspace lighting is comfortable.",
-                },
-              ],
-              avoid_habits_rest_recover: [
-                {
-                  name: "Irregular Meal Schedule",
-                  description:
-                    "As mentioned in 'Eat Well,' an irregular schedule can contribute to stress on your body and impact energy levels, worsening **C1[afternoon energy dips]C1**.",
-                },
-                {
-                  name: "Reliance on Caffeine/Sugar for Energy",
-                  description:
-                    "You mentioned needing caffeine or sugar to combat afternoon crashes. While you don't consume much caffeine, relying on quick fixes can create a cycle of energy highs and lows, rather than addressing the root cause of your **C1[fatigue]C1**.",
-                },
-              ],
-            },
-          },
-        },
-      ],
-    },
-    supplements: {
-      description:
-        "Based on your health goals and lab results, here are some supplement suggestions that might help you feel your best. Remember, these are like adding extra tools to your toolbox to support your body's natural processes.",
-      structure: {
-        recommendations: [
-          {
-            name: "Magnesium",
-            rationale:
-              "You mentioned experiencing **C1[mood swings]C1**, **C1[fatigue]C1**, and **C1[difficulty concentrating]C1**. Magnesium is known to help calm the nervous system, which can be really helpful for managing stress and improving mood. It's like a natural chill pill for your body.",
-            expected_outcomes:
-              "May help improve **C1[sleep quality]C1**, reduce **C1[anxiety]C1**, and support energy levels.",
-            dosage_and_timing:
-              "Consider 200-400 mg daily, preferably in the evening, as it can promote relaxation.",
-            situational_cyclical_considerations:
-              "Some women find it particularly helpful in the week leading up to their period to ease **C1[bloating]C1** and **C1[cramps]C1**.",
-          },
-          {
-            name: "Vitamin B12",
-            rationale:
-              "You're experiencing **C1[frequent daytime fatigue]C1**. Vitamin B12 is crucial for energy production in your body, helping your cells convert food into fuel. Think of it as a spark plug for your energy.",
-            expected_outcomes:
-              "Can help boost **C1[energy levels]C1** and combat **C1[fatigue]C1**.",
-            dosage_and_timing:
-              "A daily dose of 500-1000 mcg is common. It can be taken anytime during the day.",
-            situational_cyclical_considerations:
-              "No specific cyclical considerations, but consistent daily intake is key for energy support.",
-          },
-          {
-            name: "Vitamin D",
-            rationale:
-              "You're experiencing **C1[mood swings]C1** and **C1[anxiety]C1**. Vitamin D plays a role in mood regulation and overall well-being. It's like sunshine for your mood.",
-            expected_outcomes:
-              "May help improve **C1[mood]C1**, support immune function, and contribute to overall vitality.",
-            dosage_and_timing:
-              "A common recommendation is 2000-4000 IU daily. Taking it with a meal that contains fat can improve absorption.",
-            situational_cyclical_considerations:
-              "No specific cyclical considerations, but consistent daily intake is important.",
-          },
-          {
-            name: "Iron",
-            rationale:
-              "Your lab results show **C2[Mean Corpuscular Hemoglobin Low]C2** (**C2[26.2 pg]C2**) and **C2[MCH Concentration Low]C2** (**C2[30.6 g/dL]C2**), which can be indicators of lower iron levels. This can contribute to **C1[fatigue]C1** and **C1[hair loss]C1**, which you've reported.",
-            expected_outcomes:
-              "Can help improve **C1[energy levels]C1**, reduce **C1[fatigue]C1**, and support healthy **C1[hair growth]C1**.",
-            dosage_and_timing:
-              "Dosage varies, but often around 25-65 mg of elemental iron daily. It's best taken on an empty stomach for absorption, but if it causes upset, take it with a small amount of food. Avoid taking it with calcium or caffeine.",
-            situational_cyclical_considerations:
-              "Continue daily, especially if your periods are moderate to heavy, as this is a common way iron is lost.",
-          },
-          {
-            name: "Zinc",
-            rationale:
-              "You've mentioned **C1[hair loss]C1** and **C1[mood swings]C1**. Zinc is important for hair follicle health and can also play a role in mood regulation. It's like a building block for healthy hair and a stabilizer for your mood.",
-            expected_outcomes:
-              "May help reduce **C1[hair loss]C1** and support emotional balance.",
-            dosage_and_timing:
-              "A typical dose is 15-30 mg daily. It's often best absorbed when taken with food.",
-            situational_cyclical_considerations:
-              "No specific cyclical considerations, but consistent daily intake is beneficial.",
-          },
-          {
-            name: "Omega-3 Fatty Acids (EPA/DHA)",
-            rationale:
-              "You experience **C1[bloating]C1**, **C1[mood swings]C1**, and **C1[anxiety]C1**. Omega-3s are anti-inflammatory and can help calm the body, potentially easing digestive discomfort and supporting a more stable mood.",
-            expected_outcomes:
-              "Can help reduce **C1[inflammation]C1**, improve **C1[mood]C1**, and support overall hormonal balance.",
-            dosage_and_timing:
-              "Aim for 1000-2000 mg of combined EPA and DHA daily. Taking with a meal is recommended.",
-            situational_cyclical_considerations:
-              "No specific cyclical considerations, but consistent daily intake is beneficial.",
-          },
+      {
+        "name": "SEX HORMONE BINDING GLOBULIN",
+        "status": "optimal",
+        "status_label": "Good (Green)",
+        "result": "102 nmol/L",
+        "range": "17-124 nmol/L",
+        "why_it_matters": "SHBG binds to sex hormones like testosterone and estrogen, influencing how much is available in your body. Your level is optimal, suggesting a good balance of free and bound hormones, which is important for energy and mood."
+      },
+      {
+        "name": "MAGNESIUM, RBC",
+        "status": "optimal",
+        "status_label": "Good (Green)",
+        "result": "5.2 mg/dL",
+        "range": "4.0-6.4 mg/dL",
+        "why_it_matters": "Magnesium is a vital mineral involved in hundreds of bodily processes, including energy production, muscle function, and stress management. Your red blood cell magnesium level is optimal, which is great for supporting your energy, sleep, and mood, especially when dealing with stress."
+      },
+      {
+        "name": "TESTOSTERONE, TOTAL, MS",
+        "status": "attention_needed",
+        "status_label": "Needs Action (Red)",
+        "result": "81 ng/dL",
+        "range": "2-45 ng/dL",
+        "why_it_matters": "Testosterone is an important hormone for women, influencing energy, mood, libido, and muscle mass. Your level is elevated, which can sometimes contribute to symptoms like **C1[hair loss]C1**, increased energy, or mood changes. Supporting hormonal balance is key to feeling your best."
+      },
+      {
+        "name": "VITAMIN D,25-OH,TOTAL,IA",
+        "status": "optimal",
+        "status_label": "Good (Green)",
+        "result": "40 ng/mL",
+        "range": "30-100 ng/mL",
+        "why_it_matters": "Vitamin D is crucial for immune function, bone health, and mood regulation. Your level is optimal, which is fantastic for supporting your overall well-being and can help with energy and mood stability."
+      },
+      {
+        "name": "MERCURY, BLOOD",
+        "status": "optimal",
+        "status_label": "Good (Green)",
+        "result": "4 mcg/L",
+        "range": "<=10 mcg/L",
+        "why_it_matters": "Mercury is a heavy metal that can accumulate in the body and potentially cause health issues. Your blood mercury level is well within the safe range, indicating no significant exposure or accumulation."
+      }
+    ],
+    "crucial_biomarkers_to_measure": [
+      {
+        "name": "MCH",
+        "importance": "Retest MCH to assess red blood cell health, as your current level is slightly low and may contribute to **C1[fatigue]C1**."
+      },
+      {
+        "name": "MCHC",
+        "importance": "Retest MCHC to assess red blood cell health, as your current level is slightly low and may contribute to **C1[fatigue]C1**."
+      }
+    ],
+    "health_recommendation_summary": [
+      "Focus on increasing your intake of iron-rich foods like lean red meat, spinach, and lentils to improve your ferritin levels and combat **C1[fatigue]C1** and **C1[hair loss]C1**.",
+      "Consider a gentle iron supplement, like ferrous bisglycinate, if dietary changes aren't enough, but always check with your healthcare provider first.",
+      "Incorporate stress-management techniques like yoga and meditation, which you already practice, to help balance hormones and improve energy.",
+      "Review your diet to support heart health by reducing processed foods and focusing on whole, unprocessed options to help manage elevated cholesterol.",
+      "Retest your iron panel (Ferritin, Iron, TIBC) in 3 months to see how your levels are responding to dietary changes.",
+      "Consider retesting your hormone levels, particularly testosterone, during a specific phase of your cycle (e.g., day 3 of your period) for a more complete picture if symptoms persist.",
+      "Discuss your elevated cholesterol markers (Total Cholesterol, LDL, Non-HDL, ApoB) with your healthcare provider to create a personalized plan."
+    ]
+  },
+  "four_pillars": {
+    "introduction": "Your health journey shows a focus on hormonal balance and energy. While you're doing well with some aspects like sleep quality and regular exercise, we can focus on optimizing your nutrition, movement, and stress management to support your hormonal health and reduce fatigue.",
+    "pillars": [
+      {
+        "name": "Eat Well",
+        "score": 5,
+        "score_rationale": [
+          "Your 'Eat Well' score is 5 because while you eat occasionally processed foods and drink moderate caffeine, your meal schedule is somewhat irregular, and you experience afternoon energy crashes.",
+          "Eating regular, balanced meals helps stabilize your blood sugar and energy levels throughout the day."
         ],
-        conclusion:
-          "These supplements are like a gentle nudge to help your body function optimally. It's always a good idea to chat with your doctor before starting any new supplement, just to make sure they're the perfect fit for you and won't interact with anything else.",
+        "why_it_matters": "Eating nourishing foods helps provide your body with the building blocks it needs to create hormones, which can help with **C1[bloating]C1** and **C1[mood swings]C1**.",
+        "root_cause_correlation": "A balanced diet rich in fiber and nutrients can help regulate your digestion, addressing **C1[regular bloating]C1** and **C1[constipation]C1**.",
+        "science_based_explanation": "Fiber acts like a gentle broom for your digestive system, helping to move things along smoothly and bind to excess hormones, which can ease **C1[bloating]C1** and support hormonal balance.",
+        "additional_guidance": {
+          "description": "To support your hormonal balance and energy levels, here are some food recommendations.",
+          "structure": {
+            "recommended_foods": [
+              {
+                "name": "Leafy Greens",
+                "description": "Spinach, kale, and other greens are packed with vitamins and minerals that support hormone production and energy, like magnesium which can help with **C1[fatigue]C1**."
+              },
+              {
+                "name": "Lean Proteins",
+                "description": "Chicken, fish, beans, and lentils provide the amino acids your body needs to build hormones and help you feel full, supporting stable energy and reducing **C1[afternoon energy crashes]C1**."
+              },
+              {
+                "name": "Healthy Fats",
+                "description": "Avocado, nuts, seeds, and olive oil are crucial for hormone synthesis and can help reduce inflammation, which may contribute to **C1[headaches]C1**."
+              },
+              {
+                "name": "Complex Carbohydrates",
+                "description": "Whole grains, sweet potatoes, and quinoa provide sustained energy release, helping to prevent **C1[energy dips]C1** and support your mood."
+              }
+            ],
+            "cautious_foods": [
+              {
+                "name": "Excessive Caffeine",
+                "description": "While you consume 1-2 cups of coffee, relying on it to combat **C1[frequent daytime fatigue]C1** can disrupt sleep and stress hormones. Consider gradually reducing intake or switching to herbal teas."
+              },
+              {
+                "name": "Refined Sugars",
+                "description": "These can cause rapid blood sugar spikes and crashes, worsening **C1[energy dips]C1** and potentially impacting mood. Limit sweets and sugary drinks."
+              },
+              {
+                "name": "Highly Processed Foods",
+                "description": "These often lack essential nutrients and can contribute to inflammation and digestive issues like **C1[bloating]C1**. Aim to reduce intake to less than once a week."
+              }
+            ]
+          }
+        }
       },
-    },
-  };
+      {
+        "name": "Move Well",
+        "score": 8,
+        "score_rationale": [
+          "Your 'Move Well' score is 8 because you exercise 2-3 times per week with yoga and resistance training, which is great for building strength and managing stress.",
+          "Consistent movement is key for hormonal balance and energy."
+        ],
+        "why_it_matters": "Regular movement helps your body use energy efficiently and can improve circulation, which is beneficial for managing **C1[fatigue]C1** and supporting overall hormonal health.",
+        "root_cause_correlation": "Strength training can help improve body composition and muscle mass, which is important for metabolism and can indirectly support hormonal balance, potentially helping with **C1[loss of muscle mass]C1**.",
+        "science_based_explanation": "Resistance training builds muscle, which acts like a metabolic engine, helping to regulate blood sugar and energy levels, thereby reducing **C1[afternoon energy crashes]C1**.",
+        "additional_guidance": {
+          "description": "You're already doing a great job with your exercise routine. Here are some ways to optimize it further.",
+          "structure": {
+            "recommended_workouts": [
+              {
+                "name": "Continue Yoga",
+                "description": "Your yoga practice is excellent for stress reduction and flexibility, which can help manage **C1[high stress levels]C1** and **C1[mood swings]C1**."
+              },
+              {
+                "name": "Incorporate Interval Training",
+                "description": "Adding short bursts of higher intensity exercise (like brisk walking or cycling intervals) 1-2 times a week can boost metabolism and improve cardiovascular health, helping with **C1[fatigue]C1**."
+              },
+              {
+                "name": "Focus on Compound Strength Movements",
+                "description": "Continue with resistance training, focusing on exercises that work multiple muscle groups (like squats, deadlifts, and rows) to maximize muscle building and metabolic benefits."
+              }
+            ],
+            "avoid_habits_move": [
+              {
+                "name": "Overtraining",
+                "description": "While you exercise regularly, be mindful not to overdo it, as excessive exercise can sometimes disrupt hormonal balance and increase **C1[fatigue]C1**."
+              },
+              {
+                "name": "Sedentary Periods",
+                "description": "Try to break up long periods of sitting with short walks or stretches, especially if you experience **C1[daytime fatigue]C1**."
+              }
+            ]
+          }
+        }
+      },
+      {
+        "name": "Sleep Well",
+        "score": 7,
+        "score_rationale": [
+          "Your 'Sleep Well' score is 7 because you get 6-7 hours of sleep and describe your quality as good, with infrequent difficulty falling asleep.",
+          "However, you do experience frequent daytime fatigue, suggesting sleep quality or timing could be optimized."
+        ],
+        "why_it_matters": "Quality sleep is crucial for hormone regulation, including stress hormones like cortisol, and can significantly impact your energy levels and **C1[mood swings]C1**.",
+        "root_cause_correlation": "Consistent sleep patterns help regulate your body's natural rhythms, which can improve energy and reduce **C1[frequent daytime fatigue]C1** and **C1[afternoon energy crashes]C1**.",
+        "science_based_explanation": "During sleep, your body repairs and regenerates, and hormone levels are balanced. Poor or insufficient sleep can disrupt this process, leading to increased **C1[fatigue]C1** and hormonal imbalances.",
+        "additional_guidance": {
+          "description": "While your sleep is generally good, the frequent daytime fatigue suggests we can enhance your sleep hygiene.",
+          "structure": {
+            "recommended_recovery_tips": [
+              {
+                "name": "Consistent Sleep Schedule",
+                "description": "Aim to go to bed and wake up around the same time each day, even on weekends. This helps regulate your body's internal clock, improving sleep quality and reducing **C1[daytime fatigue]C1**."
+              },
+              {
+                "name": "Wind-Down Routine",
+                "description": "Create a relaxing routine before bed, such as reading, gentle stretching, or a warm bath. This signals to your body that it's time to rest, helping with **C1[difficulty falling asleep]C1**."
+              },
+              {
+                "name": "Optimize Sleep Environment",
+                "description": "Ensure your bedroom is dark, quiet, and cool. This environment promotes deeper, more restorative sleep, which can combat **C1[frequent daytime fatigue]C1**."
+              },
+              {
+                "name": "Mindfulness and Deep Breathing",
+                "description": "Practicing deep breathing exercises before bed can calm your nervous system, helping you relax and fall asleep more easily, especially if you experience **C1[high stress levels]C1**."
+              }
+            ],
+            "avoid_habits_rest_recover": [
+              {
+                "name": "Late-Night Caffeine or Heavy Meals",
+                "description": "Consuming caffeine or large meals close to bedtime can interfere with sleep quality, potentially worsening **C1[daytime fatigue]C1**."
+              },
+              {
+                "name": "Screen Time Before Bed",
+                "description": "The blue light emitted from screens can suppress melatonin, a hormone that regulates sleep. Try to avoid screens for at least an hour before bed."
+              }
+            ]
+          }
+        }
+      },
+      {
+        "name": "Recover Well",
+        "score": 4,
+        "score_rationale": [
+          "Your 'Recover Well' score is 4 because you report high stress levels that frequently impact your mood and energy, and you experience frequent daytime fatigue.",
+          "While you practice stress-reducing techniques, the impact of stress on your daily life indicates a need for more robust recovery strategies."
+        ],
+        "why_it_matters": "Managing stress is vital for hormonal balance, as chronic stress can lead to elevated cortisol, impacting your menstrual cycle, energy, and **C1[hair loss]C1**.",
+        "root_cause_correlation": "High stress can disrupt your digestive system, contributing to **C1[regular bloating]C1**, **C1[gas]C1**, and **C1[constipation]C1**.",
+        "science_based_explanation": "When you're stressed, your body releases cortisol, a hormone that can interfere with reproductive hormones and nutrient absorption, potentially leading to **C1[fatigue]C1** and **C1[hair loss]C1**.",
+        "additional_guidance": {
+          "description": "You're already using helpful techniques like yoga and meditation. Let's explore ways to deepen your recovery and manage stress more effectively.",
+          "structure": {
+            "recommended_recovery_tips": [
+              {
+                "name": "Prioritize Stress Management",
+                "description": "Continue with your yoga, meditation, and deep breathing. Consider adding journaling to process your thoughts and emotions, which can help reduce the impact of **C1[high stress levels]C1** on your **C1[mood swings]C1**."
+              },
+              {
+                "name": "Mindful Eating",
+                "description": "Pay attention to how different foods make you feel. Eating slowly and savoring your meals can improve digestion and reduce **C1[bloating]C1**."
+              },
+              {
+                "name": "Hydration",
+                "description": "You're drinking a good amount of water, which is great for overall health and can help with **C1[fatigue]C1** and digestion."
+              },
+              {
+                "name": "Magnesium Supplement",
+                "description": "You are taking Magnesium, which is excellent for stress management. Magnesium helps calm your nervous system, like putting your stress alarm on silent mode, which is especially important if you feel anxious before your period. It can also help with **C1[fatigue]C1** and **C1[mood swings]C1**."
+              }
+            ],
+            "avoid_habits_rest_recover": [
+              {
+                "name": "Over-scheduling",
+                "description": "Try to build in downtime and avoid overcommitting, as this can contribute to **C1[high stress levels]C1** and **C1[frequent daytime fatigue]C1**."
+              },
+              {
+                "name": "Skipping Meals",
+                "description": "Irregular eating can destabilize blood sugar and exacerbate stress responses, potentially worsening **C1[energy dips]C1** and **C1[mood swings]C1**."
+              }
+            ]
+          }
+        }
+      }
+    ]
+  },
+  "supplements": {
+    "description": "Based on your health assessment and lab results, here are some targeted supplement recommendations to help you feel your best. These are designed to support your **C1[hormonal balance]C1**, **C1[energy levels]C1**, and overall well-being.",
+    "structure": {
+      "recommendations": [
+        {
+          "name": "Magnesium Glycinate",
+          "rationale": "You reported **C1[mood swings]C1**, **C1[fatigue]C1**, and **C1[afternoon energy crashes]C1**. Magnesium is like a calming balm for your nervous system, helping to regulate stress hormones and improve energy. It can also help with bloating and headaches, which you experience during your cycle.",
+          "expected_outcomes": "May help to **C1[reduce stress]C1**, improve **C1[sleep quality]C1**, and boost **C1[energy levels]C1**, making your cycle symptoms more manageable.",
+          "dosage_and_timing": "200-400 mg daily, preferably in the evening to support relaxation and sleep.",
+          "situational_cyclical_considerations": "Can be taken daily throughout your cycle. Consider increasing to 400 mg in the week leading up to your period if you notice increased PMS symptoms like bloating or moodiness."
+        },
+        {
+          "name": "Vitamin D3",
+          "rationale": "Your Vitamin D level is **C2[40 ng/mL]C2**, which is within the optimal range, but it's always good to ensure you're maintaining it, especially given your reported **C1[fatigue]C1**. Vitamin D plays a crucial role in hormone production, immune function, and mood regulation, all vital for women's health.",
+          "expected_outcomes": "Supports **C1[stable energy]C1**, **C1[improved mood]C1**, and overall immune health.",
+          "dosage_and_timing": "2000-4000 IU daily, with a meal for better absorption.",
+          "situational_cyclical_considerations": "Take daily. Levels can fluctuate seasonally, so consistent intake is key."
+        },
+        {
+          "name": "Omega-3 Fatty Acids (EPA/DHA)",
+          "rationale": "You are already taking Omega-3s, which is great! These are important for reducing inflammation, supporting hormone balance, and improving mood. Given your **C1[mood swings]C1** and **C1[bloating]C1**, continuing these can be very beneficial.",
+          "expected_outcomes": "Helps to **C1[reduce inflammation]C1**, support **C1[hormonal balance]C1**, and improve **C1[mood and cognitive function]C1**.",
+          "dosage_and_timing": "1000-2000 mg combined EPA and DHA daily, with a meal.",
+          "situational_cyclical_considerations": "Take daily. Can be particularly helpful for managing inflammatory symptoms like bloating."
+        },
+        {
+          "name": "Iron Bisglycinate",
+          "rationale": "While your iron levels are within the standard range, your Ferritin is **C2[32 ng/mL]C2**. For women, a more optimal range for energy and preventing hair loss is often considered to be above 50 ng/mL. Low ferritin can contribute to **C1[fatigue]C1** and **C1[hair loss]C1**, which you've reported.",
+          "expected_outcomes": "Aims to improve **C1[energy levels]C1** and reduce **C1[hair thinning]C1** by ensuring your body has adequate iron stores.",
+          "dosage_and_timing": "25-50 mg of elemental iron daily, taken on an empty stomach if tolerated, or with a small snack. Avoid taking with calcium or caffeine.",
+          "situational_cyclical_considerations": "Take daily. If you experience constipation, try taking it with a small amount of food or switching to a gentler form like bisglycinate."
+        },
+        {
+          "name": "B Complex Vitamins",
+          "rationale": "You mentioned experiencing **C1[afternoon energy crashes]C1** and **C1[frequent daytime fatigue]C1**. B vitamins are essential for energy production and stress management. They act like tiny powerhouses in your cells, helping to convert food into usable energy, which can combat those energy dips.",
+          "expected_outcomes": "Supports **C1[sustained energy]C1** throughout the day and helps your body manage **C1[stress]C1** more effectively.",
+          "dosage_and_timing": "One capsule daily, preferably in the morning with breakfast.",
+          "situational_cyclical_considerations": "Take daily. Stress can deplete B vitamins, so consistent intake is beneficial."
+        }
+      ],
+      "conclusion": "These recommendations are a starting point to help you feel more balanced and energized. Remember to listen to your body and consult with your healthcare provider before starting any new supplement regimen, especially to ensure they are right for you and won't interact with anything else."
+    }
+  }
+};
 
   jsonInput.value = JSON.stringify(defaultData, null, 2);
   // Render the initial view on page load
@@ -1083,7 +498,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function handleMarkup(text) {
-    if (typeof text !== "string") return text;
+    if (typeof text !== 'string' || text === null) return '';
     return text.replace(
       /\*\*C(1|2)\[(.*?)\]C\1\*\*/g,
       (match, p1, p2) => `<span class="c${p1}">${p2}</span>`
